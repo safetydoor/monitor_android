@@ -6,7 +6,7 @@
         android:id="@+id/layout_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/title_height"
-        android:background="@drawable/tab_bar"
+        android:background="@color/colorPrimary"
         android:orientation="vertical" >
 		<ImageView 
             android:id="@+id/back_btn"

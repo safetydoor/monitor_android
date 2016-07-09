@@ -31,7 +31,7 @@
 	        android:id="@+id/layout_bottom"
 	        android:layout_width="match_parent"
 	        android:layout_height="@dimen/cut_img_bottom_height"
-	        android:background="@drawable/tab_bar"
+	        android:background="@color/colorPrimary"
 	        android:layout_alignParentBottom="true"
 	         >
 	        <ImageView 

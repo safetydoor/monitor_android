@@ -8,7 +8,7 @@
         android:id="@+id/layout_top"
         android:layout_width="match_parent"
         android:layout_height="@dimen/p2p_call_top_bar_height"
-        android:background="@drawable/tab_bar"
+        android:background="@color/colorPrimary"
         >
         
         <TextView
