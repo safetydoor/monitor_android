@@ -1,0 +1,509 @@
+<com.jwkj.widget.BounceScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:id="@+id/control_main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_left_right_margin"
+            android:layout_marginRight="@dimen/item_left_right_margin"
+            android:layout_marginTop="@dimen/item_group_margin_top"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/time_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_up" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_time"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_time" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_time"
+                    android:text="@string/time_control"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/video_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_media"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_media" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_media"
+                    android:text="@string/audio_video_control"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/security_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_security"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_security" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_security"
+                    android:text="@string/security_control"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/net_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_net"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_net" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_net"
+                    android:text="@string/network_control"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/alarm_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_alarm"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_alarm" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_alarm"
+                    android:text="@string/alarm_control"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/record_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_record"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_record" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_record"
+                    android:text="@string/record_control"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/defenceArea_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_defence_area"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_defence_area" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_defence_area"
+                    android:text="@string/defence_area_control"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+            
+             <RelativeLayout
+                android:id="@+id/ap_statechange"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:visibility="gone"
+                android:background="@drawable/tiao_bg_center" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_apmodechange"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ap_statechange" />
+
+                <TextView
+                    android:id="@+id/tx_apmodecange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_apmodechange"
+                    android:text="@string/ap_modecahnge_line"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/modify_wifipwd_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_bottom"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/icon_ctl_modify_wifipwd"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/modify_wifi_pwd" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_modify_wifipwd"
+                    android:text="@string/set_wifi_pwd"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/language_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/icon_language"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/languages" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_language"
+                    android:text="@string/language_set"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sd_card_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_sd_card"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/sd_card" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_sd_card"
+                    android:text="@string/sd_card_set"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+            
+
+            <RelativeLayout
+                android:id="@+id/remote_control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_center"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_remote"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_remote" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_remote"
+                    android:text="@string/remote_control"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+           
+
+            <RelativeLayout
+                android:id="@+id/check_device_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/tiao_bg_bottom" >
+
+                <ImageView
+                    android:id="@+id/icon_ctl_remotes"
+                    android:layout_width="@dimen/item_left_icon_width_height"
+                    android:layout_height="@dimen/item_left_icon_width_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_ctl_update_device" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/icon_ctl_remotes"
+                    android:text="@string/check_device_update"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/update_progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/up_arrow"
+                    android:text=""
+                    android:textColor="@color/text_color_gray"
+                    android:textSize="@dimen/text_size_small"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/up_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</com.jwkj.widget.BounceScrollView>

@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/keyboard_num_column_bg"
+    android:layout_gravity="center"
+    >
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/keyboard_search_list_item_height"
+	    android:background="@drawable/keyboard_num_column_bg"
+	    android:gravity="center_vertical"
+	    >
+    <TextView 
+	    android:id="@+id/name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="@dimen/text_size_normal"
+	    android:textColor="@color/text_color_white"
+	    android:layout_alignParentLeft="true"
+	    android:layout_marginLeft="@dimen/inner_margin_left"
+	    android:text="张三"
+    	/>
+    
+	<TextView 
+	    android:id="@+id/account"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="@dimen/text_size_normal"
+	    android:textColor="@color/text_color_white"
+	    android:layout_marginRight="@dimen/inner_margin_left"
+	    android:layout_alignParentRight="true"
+	    android:text="011126"
+    	/>
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_list_item"
+        >  
+        <TextView 
+            android:id="@+id/bellName"
+            android:layout_width="220dp"  
+            android:layout_height="@dimen/list_comming_ring_ietm_height"  
+            android:layout_alignParentLeft="true"  
+            android:text="just"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical" 
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_normal"
+            />  
+        <RadioButton 
+            android:id="@+id/checkButton"
+            android:layout_width="wrap_content"  
+            android:layout_height="@dimen/list_comming_ring_ietm_height"  
+            android:layout_alignParentRight="true"  
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="false"
+            android:focusable="false"
+             />  
+</RelativeLayout>  

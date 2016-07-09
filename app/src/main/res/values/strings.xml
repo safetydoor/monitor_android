@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Monitor</string>
+    <string name="title_activity_login">登陆</string>
+    <string name="title_activity_register">注册</string>
+    <string name="title_activity_main">Monitor</string>
+    <string name="title_activity_live_list">直播列表</string>
+    <string name="title_activity_live_player">在线直播</string>
+
+    <!-- Strings related to login -->
+    <string name="text_phoneNumber">手机号</string>
+    <string name="text_password">密码</string>
+    <string name="text_login">登陆</string>
+    <string name="text_register">注册</string>
+    <string name="error_invalid_phoneNumber">手机号码格式不正确</string>
+    <string name="error_invalid_password">密码太短，不能低于6位</string>
+    <string name="error_incorrect_password">手机号或密码错误</string>
+    <string name="error_field_required">手机号未填写</string>
+</resources>

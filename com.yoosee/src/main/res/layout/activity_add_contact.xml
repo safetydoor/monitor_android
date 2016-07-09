@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/tab_bar"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/tab_btn_width"
+            android:layout_height="@dimen/tab_button_height"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/tab_btn_margin"
+            android:background="@drawable/tab_button"
+            android:padding="@dimen/tab_btn_padding"
+            android:scaleType="center"
+            android:src="@drawable/back"
+            android:textColor="@color/text_color_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/add_online_device"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="@dimen/tab_btn_width"
+            android:layout_height="@dimen/tab_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/tab_btn_margin"
+            android:background="@drawable/tab_button"
+            android:text="@string/next"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/text_save_size"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_manually_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ctl_setting_bar_height"
+            android:background="@drawable/tiao_bg_up" >
+
+            <EditText
+                android:id="@+id/input_device_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/inner_margin_left"
+                android:layout_marginRight="@dimen/inner_margin_right"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:hint="@string/input_device_id"
+                android:inputType="number"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small_edit" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ctl_setting_bar_height"
+            android:background="@drawable/tiao_bg_center" >
+
+            <EditText
+                android:id="@+id/input_contact_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/inner_margin_left"
+                android:layout_marginRight="@dimen/inner_margin_right"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:hint="@string/input_contact_name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small_edit" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ctl_setting_bar_height"
+            android:background="@drawable/tiao_bg_bottom" >
+
+            <EditText
+                android:id="@+id/input_contact_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/inner_margin_left"
+                android:layout_marginRight="@dimen/inner_margin_right"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:hint="@string/input_contact_pwd"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:text=""
+                android:maxLength="30"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small_edit" />
+        </RelativeLayout>
+
+        <com.jwkj.widget.MyPassLinearLayout
+            android:id="@+id/ll_p"
+            style="@style/ll_my_pas" >
+        </com.jwkj.widget.MyPassLinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp" >
+
+            <Button
+                android:id="@+id/bt_ensure"
+                style="@style/button_bottom_style"
+                android:text="@string/confirm" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

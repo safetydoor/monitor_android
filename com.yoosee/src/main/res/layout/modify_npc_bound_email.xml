@@ -1,0 +1,564 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/tab_bar"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="@dimen/tab_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/tab_btn_margin"
+            android:background="@drawable/tab_button"
+            android:padding="@dimen/tab_btn_padding"
+            android:scaleType="center"
+            android:src="@drawable/back"
+            android:textColor="@color/text_color_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/modify_email"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="@dimen/tab_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/tab_btn_margin"
+            android:background="@drawable/tab_button"
+            android:text="@string/save"
+            android:textColor="@color/text_color_white" />
+    </RelativeLayout>
+    <LinearLayout 
+        android:id="@+id/l_Automatic_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+    <LinearLayout
+        android:id="@+id/ll_sendemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            android:id="@+id/rl_send"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edit_height"
+            android:layout_weight="1.5"
+            android:background="@drawable/corner_tiao_single_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp" >
+
+            <TextView
+                android:id="@+id/tx_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/send_guy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/ed_sendemail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/inner_margin_left"
+                android:layout_marginRight="@dimen/inner_margin_right"
+                android:background="#00000000"
+                android:gravity="left|center_vertical"
+                android:hint="@string/input_email"
+                android:inputType="textEmailAddress"
+                android:maxLength="32"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_emial_smtp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edit_height"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/corner_tiao_single_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="4dp"
+            android:visibility="visible"
+          >
+
+            <TextView
+                android:id="@+id/et_smtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/inner_margin_left"
+                android:layout_marginRight="@dimen/inner_margin_right"
+                android:drawableRight="@drawable/email_dropdown"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:background="@drawable/corner_tiao_single_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tx_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/send_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:layout_weight="3"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:hint="@string/inputpassword"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <CheckBox
+            android:id="@+id/cb_sen_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tx_sen_self"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="@string/send_self"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_cNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:background="@drawable/corner_tiao_single_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/get_guy"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:hint="@string/input_email"
+            android:maxLength="63"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+    </LinearLayout>
+    <LinearLayout 
+        android:id="@+id/l_manual_set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+      
+       <LinearLayout
+        android:id="@+id/layout_addressee"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:background="@drawable/corner_tiao_single_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tx_addressee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/addressee"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal" />
+
+        <EditText
+            android:id="@+id/et_addressee"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:layout_weight="3"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:hint="@string/hide_addressee"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp">   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dottedline"
+        android:layerType="software"/>
+    </RelativeLayout>
+       <LinearLayout
+        android:id="@+id/layout_sender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:background="@drawable/corner_tiao_single_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+       >
+        <TextView
+            android:id="@+id/tx_sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/sender"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal" />
+
+        <EditText
+            android:id="@+id/et_sender"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:layout_weight="3"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:hint="@string/hide_sender"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout> 
+    <LinearLayout
+        android:id="@+id/layout_smpt_address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:background="@drawable/corner_tiao_single_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tx_smpt_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/smtp_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal" />
+
+        <EditText
+            android:id="@+id/et_smpt_address"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:layout_weight="3"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:hint="@string/hide_smtp_address"
+            android:maxLength="63"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/layout_port"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:background="@drawable/corner_tiao_single_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/port"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal" />
+
+        <EditText
+            android:id="@+id/et_port"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:layout_weight="3"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:hint="@string/input_port"
+            android:maxLength="5"
+            android:singleLine="true"
+            android:inputType="number"
+            android:text=""
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_small" />
+         <TextView
+                android:id="@+id/tv_choosee_port"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/inner_margin_left"
+                android:layout_marginRight="@dimen/inner_margin_right"
+                android:drawableRight="@drawable/email_dropdown"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_small" 
+                android:visibility="visible"/>
+      
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_mpassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:background="@drawable/corner_tiao_single_bg"
+        android:orientation="horizontal"
+        android:paddingLeft="4dp"
+       >
+
+        <TextView
+            android:id="@+id/tx_mpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/send_password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_normal" />
+
+        <EditText
+            android:id="@+id/et_mpassword"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:layout_weight="3"
+            android:background="#00000000"
+            android:gravity="left|center_vertical"
+            android:hint="@string/input_password"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_small" />
+    </LinearLayout> 
+     <LinearLayout
+                android:id="@+id/encryption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tiao_bg_single"
+                android:layout_marginTop="@dimen/item_group_margin_top"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <TextView
+                    android:id="@+id/tv_encryption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/encryption"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal" 
+                    android:textStyle="bold"/>
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_encrypt"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/text_size_small" 
+                        android:checked="true"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/ssl_encrypt"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <RadioButton
+                        android:id="@+id/radio_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/tls_encrypt"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/text_size_small" />
+                </RadioGroup>
+    </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tx_error_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:text="@string/email_error_tips"
+        android:textColor="#FF0000"
+        android:textSize="@dimen/text_size_small"
+        android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/l_btn_clear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="@dimen/item_left_right_margin"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_dialog_ok"
+            android:text="@string/unbind" />
+        <View 
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_checked"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_dialog_ok"
+            android:text="@string/email_checked" />
+    </LinearLayout>
+     <LinearLayout 
+        android:id="@+id/manual_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/item_left_right_margin"
+        android:layout_marginTop="@dimen/item_group_margin_top"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+        <ImageView
+			android:id="@+id/img_manual_set"
+			android:layout_width="@dimen/check_box_width"
+			android:layout_height="@dimen/check_box_height"
+			android:layout_marginRight="@dimen/inner_margin_right"
+			android:src="@drawable/check_off"
+			android:scaleType="centerCrop"
+			android:layout_gravity="center_vertical"
+			/>
+        <TextView 
+            android:id="@+id/tv_manual_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/manual_setting"
+            android:textColor="@color/text_color_black"
+            android:textSize="@dimen/text_size_normal"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+</LinearLayout>

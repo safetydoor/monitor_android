@@ -1,0 +1,21 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+    <ImageSwitcher 
+        android:id="@+id/img_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/list_gallery"
+        />
+    <Gallery
+        android:id="@+id/list_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spacing="1dp"
+        android:unselectedAlpha="0.8"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        />
+</RelativeLayout>

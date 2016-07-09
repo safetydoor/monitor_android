@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="snooze_dismiss_drawables">
+        <item>@drawable/ic_item_go</item>
+        <item>@null</item>
+        <item>@drawable/ic_item_ignore</item>
+        <item>@null</item>
+    </array>
+    <array name="snooze_dismiss_descriptions">
+        <item>dismiss</item>
+        <item>@null</item>
+        <item>snooze</item>
+        <item>@null</item>
+    </array>
+    <array name="snooze_dismiss_direction_descriptions">
+        <item>right</item>
+        <item>@null</item>
+        <item>left</item>
+        <item>@null</item>
+    </array>
+
+    <string-array name="language_list">
+        <item>简体中文</item>
+        <item>English</item>
+    </string-array>
+    
+
+</resources>

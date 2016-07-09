@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" 
+    >
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/tab_bar"
+        android:orientation="vertical" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/recent"
+            android:id="@+id/title"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_white"
+            android:textSize="@dimen/title_text_size"
+            />
+        <ImageView 
+            android:id="@+id/clear"
+            android:layout_width="@dimen/tab_btn_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/tab_btn_margin"
+            android:textColor="@color/text_color_white"
+            android:background="@drawable/tab_button"
+            android:src="@drawable/delete"
+            android:padding="@dimen/tab_btn_padding"
+            android:scaleType="center"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@null"
+        android:focusable="true"
+        android:scrollbars="none" 
+        android:divider="@color/gray"
+        android:dividerHeight="@dimen/separator_height"
+        />
+
+</LinearLayout>

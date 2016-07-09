@@ -1,0 +1,28 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@drawable/point_left5"
+        android:duration="300">
+    </item>
+    <item
+        android:drawable="@drawable/point_left4"
+        android:duration="300">
+    </item>
+    <item
+        android:drawable="@drawable/point_left3"
+        android:duration="300">
+    </item>
+    
+    <item
+        android:drawable="@drawable/point_left2"
+        android:duration="300">
+    </item>
+    <item
+        android:drawable="@drawable/point_left1"
+        android:duration="300">
+    </item>
+    
+   
+
+</animation-list>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:background="@drawable/selector_list_item">
+    <RelativeLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="@dimen/contact_item_height"
+		    >
+		    <RelativeLayout 
+		        android:id="@+id/layout_header"
+		       android:layout_width="@dimen/contact_head_img_width"
+		        android:layout_height="@dimen/contact_head_img_height" 
+		        android:layout_alignParentLeft="true"
+		        android:layout_centerVertical="true"
+		        android:layout_marginLeft="@dimen/inner_margin_left"
+		        >
+		        <com.jwkj.widget.HeaderView
+		       	    android:id="@+id/user_icon"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:scaleType="fitCenter"
+			        android:src="@drawable/header_icon" 
+			        android:layout_centerInParent="true"
+		        	/>
+		    </RelativeLayout>
+		    
+		    <LinearLayout 
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:orientation="vertical"
+		        android:layout_toRightOf="@+id/layout_header"
+		        android:layout_toLeftOf="@+id/layout_defence_btn"
+		        android:layout_marginLeft="@dimen/inner_margin_left"
+		        >
+		        <RelativeLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="0dp"
+		            android:layout_weight="1"
+		            >
+		            <TextView
+			            android:id="@+id/user_name"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentBottom="true"
+			            android:layout_alignParentLeft="true"
+			            android:singleLine="true"
+			            android:text="盛大"
+			            android:textColor="@color/text_color_black"
+			            android:textSize="@dimen/text_size_large"
+			            android:textStyle="bold"
+			            android:layout_marginRight="@dimen/inner_margin_right"
+			            android:layout_marginLeft="@dimen/inner_margin_left"
+			             />
+		            
+		            
+		            
+		        </RelativeLayout>
+		        <RelativeLayout 
+		            android:layout_width="match_parent"
+		            android:layout_height="0dp"
+		            android:layout_weight="1"
+		            >
+		            
+		            
+		            <ImageView 
+			            android:id="@+id/login_type"
+			            android:layout_width="@dimen/contact_type_icon_width_height"
+			            android:layout_height="@dimen/contact_type_icon_width_height"
+			            android:layout_alignParentLeft="true"
+			            android:layout_centerVertical="true"
+						android:scaleType="centerCrop"
+						android:src="@drawable/ic_device_type_ipc"
+						android:layout_marginLeft="@dimen/inner_margin_left"
+			            />
+		        </RelativeLayout>
+		    </LinearLayout>
+	    
+	    	<RelativeLayout 
+		                android:id="@+id/layout_defence_btn"
+		                android:layout_width="@dimen/contact_defence_btn_width"
+		                android:layout_height="@dimen/contact_defence_btn_height"
+		                android:layout_centerVertical="true"
+		                android:layout_alignParentRight="true"
+		                android:layout_marginRight="@dimen/inner_margin_right"
+		                >
+		                <ImageView 
+		                    android:id="@+id/image_defence_state"
+		                    android:layout_width="@dimen/contact_item_btn_icon_width_height"
+		                    android:layout_height="@dimen/contact_item_btn_icon_width_height"
+		                    android:scaleType="fitCenter"
+		                    android:layout_centerInParent="true"
+		                    android:src="@drawable/ic_add_item"
+		                    />
+		              
+		    </RelativeLayout>
+	        
+	        
+	        
+	        <TextView 
+	            android:visibility="gone"
+	            android:id="@+id/msgCount"
+	            android:layout_width="20dp"
+	            android:layout_height="20dp"
+	           	android:text="1"
+	           	android:paddingTop="1dp"
+	           	android:textColor="#ffffff"
+	           	android:gravity="center_horizontal"
+	           	android:background="@drawable/msgcount_back"
+	            android:textSize="10sp"
+	            android:layout_toRightOf="@+id/layout_header"
+	            />
+	        
+	        
+	        </RelativeLayout>
+
+</RelativeLayout>

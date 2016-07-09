@@ -1,0 +1,247 @@
+<com.jwkj.widget.BounceScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@drawable/main_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/setting_time_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ctl_setting_bar_height"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:layout_marginTop="@dimen/item_group_margin_top"
+            android:background="@drawable/tiao_bg_up" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/device_time"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:background="@drawable/tiao_bg_center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="@dimen/ctl_datepick_year_width"
+                    android:layout_height="@dimen/ctl_datepick_item_height"
+                    android:gravity="center"
+                    android:text="@string/year"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ctl_datepick_item_height"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/month"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ctl_datepick_item_height"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/day"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ctl_datepick_item_height"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/hour"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal" />
+
+                <TextView
+                    android:id="@+id/text5"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ctl_datepick_item_height"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/minutes"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.jwkj.wheel.widget.WheelView
+                    android:id="@+id/date_year"
+                    android:layout_width="@dimen/ctl_datepick_year_width"
+                    android:layout_height="wrap_content" />
+
+                <com.jwkj.wheel.widget.WheelView
+                    android:id="@+id/date_month"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.jwkj.wheel.widget.WheelView
+                    android:id="@+id/date_day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.jwkj.wheel.widget.WheelView
+                    android:id="@+id/date_hour"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <com.jwkj.wheel.widget.WheelView
+                    android:id="@+id/date_minute"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting_urban_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:background="@drawable/tiao_bg_center"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_setting_urban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/inner_margin_left"
+                android:text="@string/urban_settings"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_setting_urban"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/tv_utc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/UTC"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/text_size_normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" >
+
+                    <com.jwkj.wheel.widget.WheelView
+                        android:id="@+id/w_urban"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/bt_set_timezone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/determine_and_cancel"
+                        android:text="@string/confirm"
+                        android:textColor="@color/text_color_white" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/setting_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ctl_setting_bar_height"
+            android:layout_marginLeft="@dimen/inner_margin_left"
+            android:layout_marginRight="@dimen/inner_margin_right"
+            android:background="@drawable/tiao_bg_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/inner_margin_left"
+                android:text="@string/time_setting"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/inner_margin_right"
+                android:text="2013-06-12 14:22"
+                android:textColor="@color/text_color_gray"
+                android:textSize="@dimen/text_size_normal"
+                android:visibility="gone" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="@dimen/inner_item_progress_width_height"
+                android:layout_height="@dimen/inner_item_progress_width_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/inner_margin_right"
+                android:indeterminateDrawable="@anim/progress_white"
+                android:indeterminateDuration="560000" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.jwkj.widget.BounceScrollView>
