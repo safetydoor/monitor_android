@@ -101,9 +101,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         // TODO Auto-generated method stub
         Log.e("life", "MainActivity->>onCreate");
         P2PHandler.getInstance().p2pInit(this, new P2PListener(), new SettingListener());
-        Log.e("life", "MainActivity->>onCreate2");
         super.onCreate(arg0);
-        Log.e("life", "MainActivity->>onCreate3");
         mContext = this;
         isConnectApWifi = getIntent().getBooleanExtra("isConnectApWifi", false);
         isConnectWifi(isConnectApWifi);

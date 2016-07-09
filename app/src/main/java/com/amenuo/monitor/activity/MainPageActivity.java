@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.amenuo.monitor.action.TwiceBack;
 import com.amenuo.monitor.view.MainLumpView;
 import com.amenuo.monitor.R;
+import com.jwkj.activity.MainActivity;
 
 public class MainPageActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -60,7 +61,7 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         int resId = v.getId();
         Intent intent = new Intent();
         if (resId == R.id.main_page_camera_lumpView) {
-//            intent.setClass(this, MainActivity.class);
+            intent.setClass(this, MainActivity.class);
 
         } else if (resId == R.id.main_page_live_lumpView) {
             intent.setClass(this, LiveListActivity.class);

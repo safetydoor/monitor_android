@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_monitor_register);
         // Set up the login form.
         mPhoneNumberView = (EditText) findViewById(R.id.phoneNumber);
 

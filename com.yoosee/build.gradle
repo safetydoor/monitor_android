@@ -1,11 +1,11 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.yoosee"
+//        applicationId "com.yoosee"
         minSdkVersion 14
         targetSdkVersion 22
         versionCode 1
