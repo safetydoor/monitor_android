@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.amenuo.monitor.R;
+import com.jwkj.activity.LogoActivity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -77,7 +78,8 @@ public class LoginActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClass(LoginActivity.this, RegisterActivity.class);
+//                intent.setClass(LoginActivity.this, RegisterActivity.class);
+                intent.setClass(LoginActivity.this, LogoActivity.class);
                 startActivity(intent);
             }
         });
