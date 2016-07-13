@@ -44,10 +44,12 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         mTrafficLumpView = (MainLumpView) this.findViewById(R.id.main_page_traffic_lumpView);
         mTrafficLumpView.setImageResource(R.drawable.main_traffic);
         mTrafficLumpView.setText("实时路况");
+        mTrafficLumpView.setOnClickListener(this);
 
         mConvenienceLumpView = (MainLumpView) this.findViewById(R.id.main_page_convenience_lumpView);
         mConvenienceLumpView.setImageResource(R.drawable.main_convenience);
         mConvenienceLumpView.setText("便民服务");
+        mConvenienceLumpView.setOnClickListener(this);
 
 //        mMarketLumpView = (MainLumpView) this.findViewById(R.id.main_page_market_lumpView);
 //        mMarketLumpView.setImageResource(R.drawable.main_market);
@@ -65,6 +67,8 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
 
         } else if (resId == R.id.main_page_live_lumpView) {
             intent.setClass(this, LiveListActivity.class);
+        }else{
+            intent.setClass(this, WebviewActivity.class);
         }
 
         startActivity(intent);

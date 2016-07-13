@@ -61,9 +61,9 @@ public class MainLumpImageView extends ImageView {
     private final void init() {
         ColorMatrix colorMatrix = new ColorMatrix();
         colorMatrix.set(new float[]{
-                0.8f, 0, 0, 0, 0.7f,
-                0, 0.8f, 0, 0, 0.7f,
-                0, 0, 0.8f, 0, 0.7f,
+                0.6f, 0, 0, 0, 0.8f,
+                0, 0.6f, 0, 0, 0.8f,
+                0, 0, 0.6f, 0, 0.8f,
                 0, 0, 0, 1f, 0
         });
 

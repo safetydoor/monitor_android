@@ -141,7 +141,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 replaceFragment(R.id.fragContainer, contactFrag, fragTags[0]);
                 changeIconShow();
                 if (!NpcCommon.mThreeNum.equals("0517401")) {
-                    new GetAccountInfoTask().execute();
+                    //new GetAccountInfoTask().execute();
                 }
 //	           WifiUtils.getInstance().isApDevice();
             }

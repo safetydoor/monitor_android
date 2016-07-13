@@ -41,7 +41,7 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".activity.LiveListActivity"
-            android:label="@string/title_activity_live_list"></activity>>
+            android:label="@string/title_activity_live_list"></activity>
         <activity
             android:name=".activity.LivePlayerActivity"
             android:label="@string/title_activity_live_player">
@@ -57,6 +57,12 @@
             android:label="@string/title_activity_main">
 
         </activity>
+        <activity
+            android:name=".activity.WebviewActivity"
+            android:label="@string/title_activity_main">
+
+        </activity>
+
     </application>
 
 </manifest>
