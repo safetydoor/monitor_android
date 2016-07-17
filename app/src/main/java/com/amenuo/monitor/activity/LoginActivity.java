@@ -3,6 +3,7 @@ package com.amenuo.monitor.activity;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
@@ -10,12 +11,13 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -23,15 +25,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.amenuo.monitor.R;
-import com.jwkj.activity.LogoActivity;
-import com.jwkj.entity.Account;
-import com.jwkj.global.AccountPersist;
-import com.jwkj.global.NpcCommon;
+//import com.jwkj.activity.LogoActivity;
+//import com.jwkj.entity.Account;
+//import com.jwkj.global.AccountPersist;
+//import com.jwkj.global.NpcCommon;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LoginActivity extends AppCompatActivity{
+public class LoginActivity extends Activity implements OnClickListener{
 
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
@@ -43,16 +45,24 @@ public class LoginActivity extends AppCompatActivity{
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
-    private TextView mRegisterTextView;
+    private Button mRegisterButton;
+    private Button mFindPwdButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //隐藏状态栏
+        //定义全屏参数
+        int flag= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        //获得当前窗体对象
+        Window window=this.getWindow();
+        //设置当前窗体为全屏显示
+        window.setFlags(flag, flag);
         setContentView(R.layout.activity_monitor_login);
         // Set up the login form.
-        mPhoneNumberView = (EditText) findViewById(R.id.phoneNumber);
+        mPhoneNumberView = (EditText) findViewById(R.id.login_phoneNumber);
 
-        mPasswordView = (EditText) findViewById(R.id.password);
+        mPasswordView = (EditText) findViewById(R.id.login_password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -64,27 +74,20 @@ public class LoginActivity extends AppCompatActivity{
             }
         });
 
-        Button mSignInButton = (Button) findViewById(R.id.sign_in_button);
-        mSignInButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                attemptLogin();
-            }
-        });
+        Button mSignInButton = (Button) findViewById(R.id.login);
+        mSignInButton.setOnClickListener(this);
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
-        mRegisterTextView = (TextView)findViewById(R.id.login_register);
-        mRegisterTextView.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG ); //下划线
-        mRegisterTextView.getPaint().setAntiAlias(true);//抗锯齿
-        mRegisterTextView.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setClass(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
+        mRegisterButton = (Button) findViewById(R.id.login_register_btn);
+        mRegisterButton.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG ); //下划线
+        mRegisterButton.getPaint().setAntiAlias(true);//抗锯齿
+        mRegisterButton.setOnClickListener(this);
+
+        mFindPwdButton = (Button)findViewById(R.id.login_findpwd_btn);
+        mFindPwdButton.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG ); //下划线
+        mFindPwdButton.getPaint().setAntiAlias(true);//抗锯齿
+        mFindPwdButton.setOnClickListener(this);
     }
 
     /**
@@ -235,6 +238,20 @@ public class LoginActivity extends AppCompatActivity{
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        int resId = v.getId();
+        if (resId == R.id.login_register_btn){
+            Intent intent = new Intent();
+            intent.setClass(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
+        }else if(resId == R.id.login){
+            attemptLogin();
+        }else if (resId == R.id.login_findpwd_btn){
+
+        }
+    }
+
     /**
      * Represents an asynchronous login/registration task used to authenticate
      * the user.
@@ -288,22 +305,22 @@ public class LoginActivity extends AppCompatActivity{
         }
 
         private  void saveLoginState(){
-            Account account = AccountPersist.getInstance()
-                    .getActiveAccountInfo(LoginActivity.this);
-            if (null == account) {
-                account = new Account();
-            }
-            account.three_number = "03122580";
-            account.phone = "18612233302";
-            account.email = "";
-            account.sessionId = "509882562";
-            account.rCode1 = "305707964";
-            account.rCode2 = "1414084427";
-            account.countryCode = "86";
-            AccountPersist.getInstance()
-                    .setActiveAccount(LoginActivity.this, account);
-            NpcCommon.mThreeNum = AccountPersist.getInstance()
-                    .getActiveAccountInfo(LoginActivity.this).three_number;
+//            Account account = AccountPersist.getInstance()
+//                    .getActiveAccountInfo(LoginActivity.this);
+//            if (null == account) {
+//                account = new Account();
+//            }
+//            account.three_number = "03122580";
+//            account.phone = "18612233302";
+//            account.email = "";
+//            account.sessionId = "509882562";
+//            account.rCode1 = "305707964";
+//            account.rCode2 = "1414084427";
+//            account.countryCode = "86";
+//            AccountPersist.getInstance()
+//                    .setActiveAccount(LoginActivity.this, account);
+//            NpcCommon.mThreeNum = AccountPersist.getInstance()
+//                    .getActiveAccountInfo(LoginActivity.this).three_number;
         }
     }
 }

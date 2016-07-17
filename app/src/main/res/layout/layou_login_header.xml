@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="209dp"
+    android:background="@drawable/login_header_bg">
+
+    <ImageView
+        android:layout_width="94dp"
+        android:layout_height="94dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/login_header_logo" />
+</RelativeLayout>
+

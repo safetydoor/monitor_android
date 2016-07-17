@@ -489,14 +489,15 @@ public class MainActivity extends BaseActivity implements OnClickListener {
     }
 
     private boolean verifyLogin() {
-        Account activeUser = AccountPersist.getInstance().getActiveAccountInfo(
-                mContext);
-
-        if (activeUser != null && !activeUser.three_number.equals("0517401")) {
-            NpcCommon.mThreeNum = activeUser.three_number;
-            return true;
-        }
-        return false;
+        return true;
+//        Account activeUser = AccountPersist.getInstance().getActiveAccountInfo(
+//                mContext);
+//
+//        if (activeUser != null && !activeUser.three_number.equals("0517401")) {
+//            NpcCommon.mThreeNum = activeUser.three_number;
+//            return true;
+//        }
+//        return false;
     }
 
     @Override

@@ -3,76 +3,60 @@ package com.amenuo.monitor.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 
 import com.amenuo.monitor.action.TwiceBack;
+import com.amenuo.monitor.adapter.MainPageAdapter;
+import com.amenuo.monitor.utils.PLog;
+import com.amenuo.monitor.view.HeaderGridView;
+import com.amenuo.monitor.view.MainHeaderView;
 import com.amenuo.monitor.view.MainLumpView;
 import com.amenuo.monitor.R;
-import com.jwkj.activity.MainActivity;
+//import com.jwkj.activity.MainActivity;
 
-public class MainPageActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainPageActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private MainLumpView mWeatherLumpView;
-    private MainLumpView mLiveLumpView;
-    private MainLumpView mCameraLumpView;
-    private MainLumpView mTrafficLumpView;
-    private MainLumpView mConvenienceLumpView;
-    private MainLumpView mMarketLumpView;
+    private HeaderGridView mGridView;
     private TwiceBack mTwiceBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        mWeatherLumpView = (MainLumpView) this.findViewById(R.id.main_page_weather_lumpView);
-        mWeatherLumpView.setImageResource(R.drawable.main_weather);
-        mWeatherLumpView.setText("天气预报");
+//        mWeatherLumpView = new MainLumpView(this);
+//        mWeatherLumpView.setImageResource(R.drawable.main_weather);
+//        mWeatherLumpView.setText("天气预报");
 
-        mLiveLumpView = (MainLumpView) this.findViewById(R.id.main_page_live_lumpView);
-        mLiveLumpView.setImageResource(R.drawable.main_live);
-        mLiveLumpView.setText("电视直播");
-        mLiveLumpView.setOnClickListener(this);
-
-        mCameraLumpView = (MainLumpView) this.findViewById(R.id.main_page_camera_lumpView);
-        mCameraLumpView.setImageResource(R.drawable.main_camera);
-        mCameraLumpView.setText("智能摄像头");
-        mCameraLumpView.setOnClickListener(this);
-
-        mTrafficLumpView = (MainLumpView) this.findViewById(R.id.main_page_traffic_lumpView);
-        mTrafficLumpView.setImageResource(R.drawable.main_traffic);
-        mTrafficLumpView.setText("实时路况");
-        mTrafficLumpView.setOnClickListener(this);
-
-        mConvenienceLumpView = (MainLumpView) this.findViewById(R.id.main_page_convenience_lumpView);
-        mConvenienceLumpView.setImageResource(R.drawable.main_convenience);
-        mConvenienceLumpView.setText("便民服务");
-        mConvenienceLumpView.setOnClickListener(this);
-
-//        mMarketLumpView = (MainLumpView) this.findViewById(R.id.main_page_market_lumpView);
-//        mMarketLumpView.setImageResource(R.drawable.main_market);
-//        mMarketLumpView.setText("商场信息");
+        MainHeaderView mainHeaderView = new MainHeaderView(this);
+        mGridView = (HeaderGridView)this.findViewById(R.id.main_gridView);
+        mGridView.addHeaderView(mainHeaderView);
+        mGridView.setAdapter(new MainPageAdapter(this));
+        mGridView.setOnItemClickListener(this);
 
         mTwiceBack = new TwiceBack();
     }
 
-    @Override
-    public void onClick(View v) {
-        int resId = v.getId();
-        Intent intent = new Intent();
-        if (resId == R.id.main_page_camera_lumpView) {
-            intent.setClass(this, MainActivity.class);
-
-        } else if (resId == R.id.main_page_live_lumpView) {
-            intent.setClass(this, LiveListActivity.class);
-        }else{
-            intent.setClass(this, WebviewActivity.class);
-        }
-
-        startActivity(intent);
-    }
+//    @Override
+//    public void onClick(View v) {
+//        int resId = v.getId();
+//        Intent intent = new Intent();
+//        if (resId == R.id.main_page_camera_lumpView) {
+//            intent.setClass(this, MainActivity.class);
+//
+//        } else if (resId == R.id.main_page_live_lumpView) {
+//            intent.setClass(this, LiveListActivity.class);
+//        }else{
+//            intent.setClass(this, WebviewActivity.class);
+//        }
+//
+//        startActivity(intent);
+//    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -84,5 +68,21 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
             }
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+        PLog.e("posotion:"+position);
+        position = position - 2; // headerview占用了2个position
+        Intent intent = new Intent();
+        if (position == 0){
+//            intent.setClass(this, MainActivity.class);
+        }else if(position == 1){
+            intent.setClass(this, LiveListActivity.class);
+        }else{
+//            intent.setClass(this, MainActivity.class);
+        }
+//        startActivity(intent);
     }
 }
