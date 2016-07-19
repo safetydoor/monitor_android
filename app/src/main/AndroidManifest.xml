@@ -26,13 +26,9 @@
         android:theme="@style/AppTheme"
         tools:replace="android:label,android:icon,android:name">
         <activity
-            android:name="com.amenuo.monitor.activity.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="@string/title_activity_login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.mob.tools.MobUIShell"
@@ -41,28 +37,25 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
             android:name=".activity.LiveListActivity"
-            android:label="@string/title_activity_live_list"></activity>
+            android:label="@string/title_activity_live_list" />
         <activity
             android:name=".activity.LivePlayerActivity"
-            android:label="@string/title_activity_live_player">
-
-        </activity>
+            android:label="@string/title_activity_live_player"></activity>
         <activity
             android:name=".activity.RegisterActivity"
-            android:label="@string/title_activity_register">
-
-        </activity>
+            android:label="@string/title_activity_register"></activity>
         <activity
             android:name=".activity.MainPageActivity"
             android:label="@string/title_activity_main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".activity.WebviewActivity"
-            android:label="@string/title_activity_main">
-
-        </activity>
-
+            android:label="@string/title_activity_main"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="TitleBar">
+        <attr name="middleTitle" format="string" />
+        <attr name="leftIcon" format="color|reference" />
+    </declare-styleable>
+</resources>

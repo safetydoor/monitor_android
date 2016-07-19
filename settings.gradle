@@ -1,1 +1,1 @@
-include ':app', ':vitamio', ":com.yoosee"
+include ':app', ':vitamio', ":com.yoosee", ':slidingMenu'

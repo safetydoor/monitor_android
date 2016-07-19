@@ -3,15 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.amenuo.monitor.activity.MainPageActivity">
 
+    <com.amenuo.monitor.view.TitleBar
+        android:id="@+id/main_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:middleTitle="@string/title_activity_main"
+        app:leftIcon="@drawable/login_head"
+        />
     <com.amenuo.monitor.view.HeaderGridView
         android:id="@+id/main_gridView"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@color/colorGrayBG"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"

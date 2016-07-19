@@ -3,60 +3,65 @@ package com.amenuo.monitor.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
 
 
-import com.amenuo.monitor.action.TwiceBack;
+import com.amenuo.monitor.action.SlidingMenuAction;
+import com.amenuo.monitor.action.TwiceBackAction;
 import com.amenuo.monitor.adapter.MainPageAdapter;
 import com.amenuo.monitor.utils.PLog;
 import com.amenuo.monitor.view.HeaderGridView;
 import com.amenuo.monitor.view.MainHeaderView;
-import com.amenuo.monitor.view.MainLumpView;
 import com.amenuo.monitor.R;
+import com.amenuo.monitor.view.MainLeftView;
+import com.amenuo.monitor.view.TitleBar;
 //import com.jwkj.activity.MainActivity;
 
 public class MainPageActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
-    private MainLumpView mWeatherLumpView;
     private HeaderGridView mGridView;
-    private TwiceBack mTwiceBack;
+    private MainHeaderView mMainHeaderView;
+    private MainLeftView mMainLeftView;
+    private TwiceBackAction mTwiceBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_page);
-//        mWeatherLumpView = new MainLumpView(this);
-//        mWeatherLumpView.setImageResource(R.drawable.main_weather);
-//        mWeatherLumpView.setText("天气预报");
 
-        MainHeaderView mainHeaderView = new MainHeaderView(this);
+        setContentView(R.layout.activity_main_page);
+
+        final SlidingMenuAction slidingMenuAction = new SlidingMenuAction(this);
+
+        mMainLeftView = new MainLeftView(this);
+        mMainLeftView.setOnItemClickListener(new MainLeftView.OnItemClickListener() {
+            @Override
+            public void onItemClick() {
+                slidingMenuAction.toogle();
+            }
+        });
+        mMainHeaderView = new MainHeaderView(this);
+
+        slidingMenuAction.setMenu(mMainLeftView);
+        mMainHeaderView.setSlidingMenu(slidingMenuAction.getSlidingMenu());
+
         mGridView = (HeaderGridView)this.findViewById(R.id.main_gridView);
-        mGridView.addHeaderView(mainHeaderView);
+        mGridView.addHeaderView(mMainHeaderView);
         mGridView.setAdapter(new MainPageAdapter(this));
         mGridView.setOnItemClickListener(this);
 
-        mTwiceBack = new TwiceBack();
-    }
+        TitleBar titleBar = (TitleBar)findViewById(R.id.main_titlebar);
+        titleBar.setLeftOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                slidingMenuAction.toogle();
+            }
+        });
 
-//    @Override
-//    public void onClick(View v) {
-//        int resId = v.getId();
-//        Intent intent = new Intent();
-//        if (resId == R.id.main_page_camera_lumpView) {
-//            intent.setClass(this, MainActivity.class);
-//
-//        } else if (resId == R.id.main_page_live_lumpView) {
-//            intent.setClass(this, LiveListActivity.class);
-//        }else{
-//            intent.setClass(this, WebviewActivity.class);
-//        }
-//
-//        startActivity(intent);
-//    }
+        mTwiceBack = new TwiceBackAction();
+    }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

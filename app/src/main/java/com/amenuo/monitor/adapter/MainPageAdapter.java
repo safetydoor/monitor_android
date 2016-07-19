@@ -23,15 +23,10 @@ public class MainPageAdapter extends BaseAdapter {
     public MainPageAdapter(Context context){
 
         mLumpModels = new ArrayList<MainLumpModel>();
-        mLumpModels.add(new MainLumpModel("电视直播", R.drawable.main_live));
-        mLumpModels.add(new MainLumpModel("智能摄像头", R.drawable.main_camera));
-        mLumpModels.add(new MainLumpModel("实时路况", R.drawable.main_traffic));
-        mLumpModels.add(new MainLumpModel("便民服务", R.drawable.main_convenience));
-        mLumpModels.add(new MainLumpModel("超市", R.drawable.main_market));
-        mLumpModels.add(new MainLumpModel("超市", R.drawable.main_market));
-        mLumpModels.add(new MainLumpModel("超市", R.drawable.main_market));
-        mLumpModels.add(new MainLumpModel("超市", R.drawable.main_market));
-        mLumpModels.add(new MainLumpModel("超市", R.drawable.main_market));
+        mLumpModels.add(new MainLumpModel(1, "智能摄像头", null));
+        mLumpModels.add(new MainLumpModel(2, "电视直播", null));
+        mLumpModels.add(new MainLumpModel(3, "生活缴费", null));
+        mLumpModels.add(new MainLumpModel(4, "实时路况", null));
         mContext = context;
     }
 
@@ -59,7 +54,7 @@ public class MainPageAdapter extends BaseAdapter {
         }else{
             mainLumpView = (MainLumpView) convertView;
         }
-        mainLumpView.setImageResource(model.getDrawableId());
+        mainLumpView.setImageResource(model.getBgDrawableId());
         mainLumpView.setText(model.getName());
 
         return mainLumpView;

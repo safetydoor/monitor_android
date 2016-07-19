@@ -36,5 +36,6 @@ dependencies {
     compile name: 'SMSSDK-2.1.0', ext: 'aar'
     compile name: 'SMSSDKGUI-2.1.0', ext: 'aar'
     compile project(':vitamio')
-    compile project(':com.yoosee')
+//    compile project(':com.yoosee')
+    compile project(':slidingMenu')
 }

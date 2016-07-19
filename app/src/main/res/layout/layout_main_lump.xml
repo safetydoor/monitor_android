@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="125dp"
     >
 
     <com.amenuo.monitor.view.MainLumpImageView
@@ -9,9 +9,10 @@
         android:layout_height="match_parent"
         android:id="@+id/main_lump_image"
         android:scaleType="center" />
+
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:adjustViewBounds="true"
@@ -19,11 +20,12 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="36dp"
         android:id="@+id/main_lump_text"
-        android:textColor="@color/colorIcon"
+        android:textColor="@color/white"
         android:background="@drawable/main_lump_bg_shape"
         android:layout_alignParentBottom="true"
         android:textAlignment="center"
+        android:gravity="center_vertical"
         android:textSize="18sp" />
 </RelativeLayout>

@@ -15,15 +15,17 @@ import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.amenuo.monitor.R;
-import com.amenuo.monitor.utils.PLog;
+import com.amenuo.monitor.action.CountDownAction;
+import com.amenuo.monitor.task.RegisterTask;
+import com.amenuo.monitor.utils.Constants;
+import com.amenuo.monitor.utils.InputVerifyUtils;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -33,13 +35,11 @@ import java.util.regex.Pattern;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 
-public class RegisterActivity extends Activity implements OnClickListener {
+public class RegisterActivity extends Activity implements OnClickListener, RegisterTask.Callback {
 
 
-    private static final int MSG_WHAT_COUNTDOWN = 1;
-    private UserRegisterTask mAuthTask = null;
-    private Timer mTimer;
-    private TimerTask mTask;
+    private RegisterTask mAuthTask = null;
+    private CountDownAction mCountDownAction;
     // UI references.
     private EditText mPhoneNumberView;
     private EditText mPasswordView;
@@ -47,6 +47,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
     private View mProgressView;
     private View mRegisterFormView;
     private Button mGetVerificationCodeViewButton;
+
     private EventHandler eh = new EventHandler() {
 
         @Override
@@ -67,13 +68,14 @@ public class RegisterActivity extends Activity implements OnClickListener {
             }
         }
     };
-    Handler handler = new Handler() {
+
+    Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
-            if (msg.what == MSG_WHAT_COUNTDOWN) {
+            if (msg.what == Constants.MSG_WHAT_COUNTDOWN) {
                 int second = (int) mGetVerificationCodeViewButton.getTag();
                 second--;
                 if (second == -1) {
-                    stopCountDown();
+                    mCountDownAction.stop();
                     String text = getApplicationContext().getResources().getString(R.string.text_getVerificationCode);
                     mGetVerificationCodeViewButton.setText(text);
                     mGetVerificationCodeViewButton.setEnabled(true);
@@ -91,14 +93,6 @@ public class RegisterActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //隐藏状态栏
-        //定义全屏参数
-        int flag = WindowManager.LayoutParams.FLAG_FULLSCREEN;
-        //获得当前窗体对象
-        Window window = this.getWindow();
-        //设置当前窗体为全屏显示
-        window.setFlags(flag, flag);
-        setContentView(R.layout.activity_monitor_register);
         // Set up the register form.
         mPhoneNumberView = (EditText) findViewById(R.id.register_phoneNumber);
         mVerificationCodeView = (EditText) findViewById(R.id.register_verificationCode);
@@ -127,12 +121,15 @@ public class RegisterActivity extends Activity implements OnClickListener {
 
         SMSSDK.registerEventHandler(eh); //注册短信回调
         SMSSDK.getSupportedCountries();
+
+        mCountDownAction = new CountDownAction(mHandler);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         SMSSDK.unregisterAllEventHandler();
+        mCountDownAction.stop();
     }
 
     /**
@@ -158,24 +155,20 @@ public class RegisterActivity extends Activity implements OnClickListener {
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
-        if (TextUtils.isEmpty(password) || !isPasswordValid(password)) {
+        if (InputVerifyUtils.verifyPassword(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         }
 
-        if (TextUtils.isEmpty(verificationCode)){
+        if (InputVerifyUtils.verifyVerificationCode(verificationCode)){
             mVerificationCodeView.setError(getString(R.string.error_invalid_password));
             focusView = mVerificationCodeView;
             cancel = true;
         }
 
         // Check for a valid email address.
-        if (TextUtils.isEmpty(phoneNumber)) {
-            mPhoneNumberView.setError(getString(R.string.error_field_required));
-            focusView = mPhoneNumberView;
-            cancel = true;
-        } else if (!isPhoneNumberValid(phoneNumber)) {
+        if (InputVerifyUtils.verifyPhoneNumber(phoneNumber)) {
             mPhoneNumberView.setError(getString(R.string.error_invalid_phoneNumber));
             focusView = mPhoneNumberView;
             cancel = true;
@@ -187,19 +180,9 @@ public class RegisterActivity extends Activity implements OnClickListener {
             // Show a progress spinner, and kick off a background task to
             // perform the user register attempt.
             showProgress(true);
-            mAuthTask = new UserRegisterTask(phoneNumber, password);
-            mAuthTask.execute((Void) null);
+            mAuthTask = new RegisterTask(this);
+            mAuthTask.execute(phoneNumber, verificationCode, password);
         }
-    }
-
-    private boolean isPhoneNumberValid(String phoneNumber) {
-        Pattern pattern = Pattern.compile("^1\\d{10}$");
-        Matcher matcher = pattern.matcher(phoneNumber);
-        return matcher.matches();
-    }
-
-    private boolean isPasswordValid(String password) {
-        return password.length() >= 6;
     }
 
     /**
@@ -243,7 +226,7 @@ public class RegisterActivity extends Activity implements OnClickListener {
         int resId = v.getId();
         if (resId == R.id.register_getVerificationCode) {
             String phoneNumber = mPhoneNumberView.getText().toString();
-            if (!isPhoneNumberValid(phoneNumber)) {
+            if (!InputVerifyUtils.verifyPhoneNumber(phoneNumber)) {
                 mPhoneNumberView.setError(getString(R.string.error_invalid_phoneNumber));
                 mPhoneNumberView.requestFocus();
                 return;
@@ -251,83 +234,23 @@ public class RegisterActivity extends Activity implements OnClickListener {
             SMSSDK.getVerificationCode("86", phoneNumber);
             mGetVerificationCodeViewButton.setTag(60);
             mGetVerificationCodeViewButton.setEnabled(false);
-            startCountDown();
+            mCountDownAction.start();
         } else if (resId == R.id.register) {
             attemptRegister();
         }
     }
 
-    private void startCountDown() {
-        stopCountDown();
-        mTimer = new Timer();
-        mTask = new TimerTask() {
-            @Override
-            public void run() {
-                Message message = new Message();
-                message.what = MSG_WHAT_COUNTDOWN;
-                handler.sendMessage(message);
-            }
-        };
-        mTimer.schedule(mTask, 10, 1000);
-    }
-
-    private void stopCountDown() {
-        if (mTask != null) {
-            mTask.cancel();
+    @Override
+    public void onRegisterResult(boolean success) {
+        if (success){
+            Intent intent = new Intent();
+            intent.setClass(this, MainPageActivity.class);
+            startActivity(intent);
+            finish();
+        }else{
+            String errorString = getResources().getString(R.string.error_field_login);
+            Toast.makeText(this, errorString,Toast.LENGTH_LONG).show();
         }
-        if (mTimer != null) {
-            mTimer.cancel();
-        }
-        mTask = null;
-        mTimer = null;
-    }
-
-    /**
-     * Represents an asynchronous login/registration task used to authenticate
-     * the user.
-     */
-    public class UserRegisterTask extends AsyncTask<Void, Void, Boolean> {
-
-        private final String mPhoneNumber;
-        private final String mPassword;
-
-        UserRegisterTask(String phoneNumber, String password) {
-            mPhoneNumber = phoneNumber;
-            mPassword = password;
-        }
-
-        @Override
-        protected Boolean doInBackground(Void... params) {
-
-            try {
-                // Simulate network access.
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                return false;
-            }
-
-            return true;
-        }
-
-        @Override
-        protected void onPostExecute(final Boolean success) {
-            mAuthTask = null;
-            if (success) {
-                Intent intent = new Intent();
-//                intent.setClass(RegisterActivity.this, LogoActivity.class);
-                startActivity(intent);
-                finish();
-            } else {
-                mPasswordView.setError(getString(R.string.error_incorrect_password));
-                mPasswordView.requestFocus();
-                showProgress(false);
-            }
-        }
-
-        @Override
-        protected void onCancelled() {
-            mAuthTask = null;
-            showProgress(false);
-        }
+        showProgress(false);
     }
 }
