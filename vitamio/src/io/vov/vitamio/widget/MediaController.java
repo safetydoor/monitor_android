@@ -19,7 +19,9 @@ package io.vov.vitamio.widget;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
 import android.graphics.Rect;
 import android.media.AudioManager;
 import android.os.Build;
@@ -93,7 +95,7 @@ public class MediaController extends FrameLayout {
   private boolean mDragging;
   private boolean mInstantSeeking = false;
   private boolean mFromXml = false;
-  private ImageButton mPauseButton;
+  private ImageButton mPauseButton, mFullScreenButton;
   private AudioManager mAM;
   private OnShownListener mShownListener;
   private OnHiddenListener mHiddenListener;
@@ -123,6 +125,21 @@ public class MediaController extends FrameLayout {
       show(sDefaultTimeout);
     }
   };
+  private View.OnClickListener mFullScreenListener = new View.OnClickListener() {
+    public void onClick(View v) {
+      Activity activity = (Activity) mContext;
+      if (activity != null){
+        if (activity.getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT){
+          Log.e("lpp","SCREEN_ORIENTATION_LANDSCAPE");
+          activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }else{
+          Log.e("lpp","SCREEN_ORIENTATION_PORTRAIT");
+          activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+      }
+    }
+  };
+
   private OnSeekBarChangeListener mSeekListener = new OnSeekBarChangeListener() {
     public void onStartTrackingTouch(SeekBar bar) {
       mDragging = true;
@@ -245,6 +262,9 @@ public class MediaController extends FrameLayout {
       mPauseButton.requestFocus();
       mPauseButton.setOnClickListener(mPauseListener);
     }
+
+    mFullScreenButton = (ImageButton) v.findViewById(getResources().getIdentifier("mediacontroller_fullscreen", "id", mContext.getPackageName()));
+    mFullScreenButton.setOnClickListener(mFullScreenListener);
 
     mProgress = (SeekBar) v.findViewById(getResources().getIdentifier("mediacontroller_seekbar", "id", mContext.getPackageName()));
     if (mProgress != null) {

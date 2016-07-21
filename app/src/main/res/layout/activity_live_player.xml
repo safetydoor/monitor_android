@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         app:leftIcon="@drawable/common_back_icon"
+        android:visibility="gone"
         app:middleTitle="@string/title_activity_live_player"
         />
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

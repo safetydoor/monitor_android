@@ -1,6 +1,8 @@
 package com.amenuo.monitor.activity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -108,4 +110,20 @@ public class LivePlayerActivity extends AppCompatActivity implements MediaPlayer
     public void onBufferingUpdate(MediaPlayer mp, int percent) {
         loadRateView.setText(percent + "%");
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+    }
+
+//    @Override
+//    public void onConfigurationChanged(Configuration newConfig) {
+//        super.onConfigurationChanged(newConfig);
+//        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
+//            mTitleBar.setVisibility(View.GONE);
+//        }else{
+//            mTitleBar.setVisibility(View.VISIBLE);
+//        }
+//    }
 }
