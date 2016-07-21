@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    >
+
+    <com.amenuo.monitor.view.MainLumpImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_ad_image"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:id="@+id/main_ad_text"
+        android:textColor="@color/white"
+        android:background="@drawable/main_lump_bg_shape"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textSize="18sp" />
+</RelativeLayout>

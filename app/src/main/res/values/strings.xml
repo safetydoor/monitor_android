@@ -7,6 +7,7 @@
     <string name="title_activity_main">泰达时尚家园</string>
     <string name="title_activity_live_list">直播列表</string>
     <string name="title_activity_live_player">在线直播</string>
+    <string name="title_activity_follow">关注</string>
 
     <!-- Strings related to login -->
     <string name="text_phoneNumber">手机号</string>
@@ -25,5 +26,6 @@
     <string name="error_field_register">注册失败</string>
     <string name="text_about">关于</string>
     <string name="text_exit">退出</string>
+    <string name="text_follow">关注</string>
 
 </resources>

@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amenuo.monitor.R;
+import com.amenuo.monitor.action.LoginStateAction;
 import com.amenuo.monitor.action.PressHideKeyboardAction;
 import com.amenuo.monitor.task.LoginTask;
 import com.amenuo.monitor.utils.InputVerifyUtils;
@@ -190,6 +191,7 @@ public class LoginActivity extends Activity implements OnClickListener, LoginTas
     @Override
     public void onLoginResult(boolean success) {
         if (success){
+            LoginStateAction.saveState();
             Intent intent = new Intent();
             intent.setClass(this, MainPageActivity.class);
             startActivity(intent);

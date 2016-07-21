@@ -22,7 +22,7 @@ public class LoginTask extends AsyncTask<String, Void, Boolean> {
             String phoneNumber = params[0].toString();
             String password = params[1].toString();
             Thread.sleep(2000);
-            if (phoneNumber.equals("13400000001") && password.equals("a123456")) {
+            if (phoneNumber.equals("13400000000") && password.equals("123456")) {
                 return true;
             }
         } catch (InterruptedException e) {

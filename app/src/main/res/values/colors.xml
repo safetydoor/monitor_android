@@ -5,6 +5,8 @@
     <!--<color name="colorPrimaryLight">#FFCCBC</color>-->
     <!--<color name="colorIcon">#FFFFFF</color>-->
     <color name="colorAccent">#3395fa</color>
+    <color name="colorAccentLight">#71b6fd</color>
+    <color name="colorAccentDark">#9fa0a0</color>
     <color name="colorPrimaryText">#373737</color>
     <color name="colorSecondaryText">#727272</color>
     <color name="colorDivider">#e7e7e7</color>

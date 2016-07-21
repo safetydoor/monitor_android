@@ -1,9 +1,11 @@
 package com.amenuo.monitor.activity;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import android.widget.LinearLayout;
 
 import com.amenuo.monitor.R;
 import com.amenuo.monitor.utils.PLog;
+import com.amenuo.monitor.view.TitleBar;
 
 public class WebviewActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,35 +26,53 @@ public class WebviewActivity extends AppCompatActivity implements View.OnClickLi
     private ImageView mBack;
     private ImageView mForward;
     private ImageView mRefresh;
-    private ImageView mClose;
     private View mProgressView;
     private int mScreenWidth;
     private ViewWrapper mViewWrapper;
+    private TitleBar mTitleBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webview);
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String address = intent.getStringExtra("address");
+
+        // TODELETE
+        if (TextUtils.isEmpty(address)){
+            address = "http://www.baidu.com";
+        }
+        mTitleBar = (TitleBar)findViewById(R.id.webview_titlebar);
+        mTitleBar.setMiddleTitle(name);
+
         mWebView = (WebView)this.findViewById(R.id.webview_webview);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
         mWebView.getSettings().setSupportMultipleWindows(true);
         mWebView.setWebViewClient(mMyWebViewClient);
         mWebView.setWebChromeClient(mMyWebChromeClient);
-        mWebView.loadUrl("http://www.baidu.com");
+        mWebView.loadUrl(address);
 
         mBack = (ImageView)this.findViewById(R.id.webview_back);
         mForward = (ImageView)this.findViewById(R.id.webview_forward);
         mRefresh = (ImageView)this.findViewById(R.id.webview_refresh);
-        mClose = (ImageView)this.findViewById(R.id.webview_close);
         mProgressView = this.findViewById(R.id.webview_progress);
         mBack.setOnClickListener(this);
         mForward.setOnClickListener(this);
         mRefresh.setOnClickListener(this);
-        mClose.setOnClickListener(this);
 
         WindowManager wm = this.getWindowManager();
         mScreenWidth = wm.getDefaultDisplay().getWidth();
         mViewWrapper = new ViewWrapper(mProgressView);
+
+        mTitleBar = (TitleBar)this.findViewById(R.id.webview_titlebar);
+        mTitleBar.setLeftOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mWebView.stopLoading();
+                finish();
+            }
+        });
     }
 
     @Override
@@ -100,7 +121,7 @@ public class WebviewActivity extends AppCompatActivity implements View.OnClickLi
         @Override
         public void onReceivedTitle(WebView view, String title) {
             super.onReceivedTitle(view, title);
-            setTitle(title);
+            mTitleBar.setMiddleTitle(title);
         }
     };
 
@@ -134,8 +155,6 @@ public class WebviewActivity extends AppCompatActivity implements View.OnClickLi
             if (mWebView.canGoForward()){
                 mWebView.goForward();
             }
-        }else if(resId == R.id.webview_close){
-            this.finish();
         }else if(resId == R.id.webview_refresh){
             mWebView.reload();
         }

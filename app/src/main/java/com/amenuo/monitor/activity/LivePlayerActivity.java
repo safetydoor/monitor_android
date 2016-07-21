@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.amenuo.monitor.R;
 import com.amenuo.monitor.utils.PLog;
+import com.amenuo.monitor.view.TitleBar;
 
 import io.vov.vitamio.LibsChecker;
 import io.vov.vitamio.MediaPlayer;
@@ -23,6 +24,7 @@ public class LivePlayerActivity extends AppCompatActivity implements MediaPlayer
     private VideoView mVideoView;
     private ProgressBar pb;
     private TextView downloadRateView, loadRateView;
+    private TitleBar mTitleBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +33,15 @@ public class LivePlayerActivity extends AppCompatActivity implements MediaPlayer
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String address = intent.getStringExtra("address");
-        String title = getResources().getString(R.string.title_activity_live_player);
-        title = title + "-" + name;
-        this.setTitle(title);
 
+        mTitleBar = (TitleBar)this.findViewById(R.id.live_player_titlebar);
+        mTitleBar.setMiddleTitle(name);
+        mTitleBar.setLeftOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         mVideoView = (VideoView) findViewById(R.id.buffer);
         pb = (ProgressBar) findViewById(R.id.probar);
 

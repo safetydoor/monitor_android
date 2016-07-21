@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:background="@color/white"
     tools:context="com.amenuo.monitor.activity.LoginActivity">
 
     <!-- Login progress -->

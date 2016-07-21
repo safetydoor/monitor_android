@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.amenuo.monitor.view;
+package com.amenuo.monitor.lib;
 
 import android.content.Context;
 import android.database.DataSetObservable;

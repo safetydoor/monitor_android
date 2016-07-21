@@ -14,6 +14,7 @@ import com.amenuo.monitor.R;
 import com.amenuo.monitor.fragment.MainAdFragment;
 import com.amenuo.monitor.fragment.MainWeatherFragment;
 import com.amenuo.monitor.lib.CirclePageIndicator;
+import com.amenuo.monitor.model.AdModel;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 
 /**
@@ -70,9 +71,14 @@ public class MainHeaderView extends FrameLayout {
             if (position == 0){
                 return MainWeatherFragment.getInstance();
             }else{
-                return MainAdFragment.getInstance();
+                MainAdFragment adFragment = MainAdFragment.getInstance();
+                AdModel adModel = new AdModel(
+                        "点击进入广告",
+                        "http://www.tmall.com",
+                        "http://img5.imgtn.bdimg.com/it/u=1319787381,824476088&fm=21&gp=0.jpg");
+                adFragment.setAd(adModel);
+                return adFragment;
             }
-
         }
 
         @Override
