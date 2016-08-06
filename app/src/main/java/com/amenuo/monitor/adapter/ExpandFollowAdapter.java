@@ -1,33 +1,34 @@
 package com.amenuo.monitor.adapter;
 
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.amenuo.monitor.R;
-import com.amenuo.monitor.lib.SectionedBaseAdapter;
 import com.amenuo.monitor.manager.LumpCategoryManager;
 import com.amenuo.monitor.manager.LumpManager;
 import com.amenuo.monitor.model.LumpCategoryModel;
 import com.amenuo.monitor.model.LumpModel;
-import com.amenuo.monitor.utils.PLog;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 /**
- * Created by laps on 7/19/16.
+ * Created by laps on 8/5/16.
  */
-public class FollowAdapter extends SectionedBaseAdapter implements View.OnClickListener {
+public class ExpandFollowAdapter extends BaseExpandableListAdapter implements View.OnClickListener {
 
     private Context mContext;
     private LayoutInflater mLayoutInflater;
     private List<LumpCategoryModel> lumpCategoryModels;
 
-    public FollowAdapter(Context context) {
+    public ExpandFollowAdapter(Context context) {
         this.mContext = context;
         this.lumpCategoryModels = LumpCategoryManager.getInstance().getLumpCategoryList();
         this.mLayoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -40,28 +41,50 @@ public class FollowAdapter extends SectionedBaseAdapter implements View.OnClickL
     }
 
     @Override
-    public Object getItem(int section, int position) {
-        return lumpCategoryModels.get(section).getLumpModels().get(position);
-    }
-
-    @Override
-    public long getItemId(int section, int position) {
-        return ((LumpModel) getItem(section, position)).getId();
-    }
-
-    @Override
-    public int getSectionCount() {
+    public int getGroupCount() {
         return lumpCategoryModels.size();
     }
 
     @Override
-    public int getCountForSection(int section) {
-        return lumpCategoryModels.get(section).getLumpModels().size();
+    public int getChildrenCount(int groupPosition) {
+        return lumpCategoryModels.get(groupPosition).getLumpModels().size();
     }
 
     @Override
-    public View getItemView(int section, int position, View convertView, ViewGroup parent) {
+    public Object getGroup(int groupPosition) {
+        return lumpCategoryModels.get(groupPosition);
+    }
 
+    @Override
+    public Object getChild(int groupPosition, int childPosition) {
+        return lumpCategoryModels.get(groupPosition).getLumpModels().get(childPosition);
+    }
+
+    @Override
+    public long getGroupId(int groupPosition) {
+        return 0;
+    }
+
+    @Override
+    public long getChildId(int groupPosition, int childPosition) {
+        return 0;
+    }
+
+    @Override
+    public boolean hasStableIds() {
+        return false;
+    }
+
+    @Override
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+        View view = mLayoutInflater.inflate(R.layout.layout_follow_list_section, null);
+        TextView nameTextView = (TextView) view.findViewById(R.id.follow_list_section_text);
+        nameTextView.setText(lumpCategoryModels.get(groupPosition).getName());
+        return view;
+    }
+
+    @Override
+    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         ImageView iconImageView = null;
         TextView nameTextView = null;
         TextView descTextView = null;
@@ -69,7 +92,7 @@ public class FollowAdapter extends SectionedBaseAdapter implements View.OnClickL
         View dividerView = null;
         View view = null;
         LumpViewHolder viewHolder = null;
-        LumpModel lumpModel = (LumpModel) getItem(section, position);
+        LumpModel lumpModel = (LumpModel) getChild(groupPosition, childPosition);
         if (convertView == null) {
             view = mLayoutInflater.inflate(R.layout.layout_follow_list_item, null);
             iconImageView = (ImageView) view.findViewById(R.id.follow_list_item_icon);
@@ -94,14 +117,22 @@ public class FollowAdapter extends SectionedBaseAdapter implements View.OnClickL
             followButton = viewHolder.getFollowButton();
             dividerView = viewHolder.getDividerView();
         }
-//        viewHolder.setLumpModel(lumpModel);
-        iconImageView.setImageResource(lumpModel.getIconResId());
+        Picasso.with(this.mContext)
+                .load(lumpModel.getIconUrl())
+                .fit()
+                .into(iconImageView);
         iconImageView.setBackgroundResource(lumpModel.getBgDrawableId());
         nameTextView.setText(lumpModel.getName());
         descTextView.setText(lumpModel.getDesc());
-        followButton.setSelected(lumpModel.isFollowed());
+        Boolean isFollowed = lumpModel.isFollowed();
+        followButton.setSelected(isFollowed);
+        if (isFollowed){
+            followButton.setText("取消");
+        }else{
+            followButton.setText("关注");
+        }
         followButton.setTag(lumpModel);
-        if (position == getCountForSection(section) - 1) {
+        if (childPosition == getChildrenCount(groupPosition) - 1) {
             dividerView.setVisibility(View.GONE);
         } else {
             dividerView.setVisibility(View.VISIBLE);
@@ -110,16 +141,12 @@ public class FollowAdapter extends SectionedBaseAdapter implements View.OnClickL
     }
 
     @Override
-    public View getSectionHeaderView(int section, View convertView, ViewGroup parent) {
-        View view = mLayoutInflater.inflate(R.layout.layout_follow_list_section, null);
-        TextView nameTextView = (TextView) view.findViewById(R.id.follow_list_section_text);
-        nameTextView.setText(lumpCategoryModels.get(section).getName());
-        return view;
+    public boolean isChildSelectable(int groupPosition, int childPosition) {
+        return false;
     }
 
     @Override
     public void onClick(View v) {
-        PLog.e("follow adapter onClick :" + Thread.currentThread().getName());
         LumpModel lumpModel = (LumpModel) v.getTag();
         if (lumpModel != null) {
             Boolean isFollowed = lumpModel.isFollowed();
@@ -133,5 +160,4 @@ public class FollowAdapter extends SectionedBaseAdapter implements View.OnClickL
             this.notifyDataSetChanged();
         }
     }
-
 }

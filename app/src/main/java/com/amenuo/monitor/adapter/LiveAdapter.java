@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.amenuo.monitor.R;
+import com.amenuo.monitor.manager.LiveManager;
 import com.amenuo.monitor.model.LiveModel;
 
 import java.io.BufferedReader;
@@ -28,33 +29,14 @@ public class LiveAdapter extends BaseAdapter {
 
     public LiveAdapter(Context context) {
         this.mContext = context;
-        this.mLives = getLivesFromAssets();
+        this.mLives = LiveManager.getInstance().getLiveList();
         this.mInflater = (LayoutInflater) this.mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    public List<LiveModel> getLivesFromAssets() {
-        List<LiveModel> liveModels = new ArrayList<LiveModel>();
-        try {
-            InputStream inputStream = this.mContext.getResources().openRawResource(R.raw.live);
-            InputStreamReader inputReader = new InputStreamReader(inputStream);
-            BufferedReader bufReader = new BufferedReader(inputReader);
-            String line = "";
-
-            while ((line = bufReader.readLine()) != null) {
-                if (!line.trim().equals("")) {
-                    String[] arr = line.split(",");
-                    if (arr.length == 2) {
-                        LiveModel live = new LiveModel();
-                        live.setName(arr[0]);
-                        live.setAddress(arr[1]);
-                        liveModels.add(live);
-                    }
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return liveModels;
+    @Override
+    public void notifyDataSetChanged() {
+        this.mLives = LiveManager.getInstance().getLiveList();
+        super.notifyDataSetChanged();
     }
 
     @Override

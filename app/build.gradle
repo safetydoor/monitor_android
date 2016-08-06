@@ -32,8 +32,7 @@ dependencies {
     compile 'com.android.support:design:22.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.makeramen:roundedimageview:2.2.1'
-    compile name: 'SMSSDK-2.1.0', ext: 'aar'
-    compile name: 'SMSSDKGUI-2.1.0', ext: 'aar'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile project(':vitamio')
     compile project(':com.yoosee')
     compile project(':slidingMenu')

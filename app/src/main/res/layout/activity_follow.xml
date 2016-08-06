@@ -15,7 +15,15 @@
         app:leftIcon="@drawable/common_back_icon"
         app:middleTitle="@string/title_activity_follow"
         />
-    <com.amenuo.monitor.lib.PinnedHeaderListView
+    <ProgressBar
+        android:id="@+id/follow_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+    <ExpandableListView
         android:id="@+id/follow_listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

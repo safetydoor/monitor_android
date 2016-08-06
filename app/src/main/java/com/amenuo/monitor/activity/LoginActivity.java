@@ -19,10 +19,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amenuo.monitor.R;
-import com.amenuo.monitor.action.LoginStateAction;
 import com.amenuo.monitor.action.PressHideKeyboardAction;
 import com.amenuo.monitor.task.LoginTask;
 import com.amenuo.monitor.utils.InputVerifyUtils;
+import com.amenuo.monitor.utils.NetUtils;
+import com.amenuo.monitor.utils.PToast;
 
 public class LoginActivity extends Activity implements OnClickListener, LoginTask.Callback{
 
@@ -114,9 +115,14 @@ public class LoginActivity extends Activity implements OnClickListener, LoginTas
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            mAuthTask = new LoginTask(this);
-            mAuthTask.execute(phoneNumber, password);
+            if (NetUtils.isAvailable(this)){
+                mAuthTask = new LoginTask(this);
+                mAuthTask.execute(phoneNumber, password);
+            }else {
+                PToast.show("网络连接失败，请稍后重试");
+            }
         }
+        PressHideKeyboardAction.hideSoftInput(mPhoneNumberView.getWindowToken());
     }
 
     @Override
@@ -191,7 +197,6 @@ public class LoginActivity extends Activity implements OnClickListener, LoginTas
     @Override
     public void onLoginResult(boolean success) {
         if (success){
-            LoginStateAction.saveState();
             Intent intent = new Intent();
             intent.setClass(this, MainPageActivity.class);
             startActivity(intent);
@@ -199,7 +204,8 @@ public class LoginActivity extends Activity implements OnClickListener, LoginTas
         }else{
             String errorString = getResources().getString(R.string.error_field_login);
             Toast.makeText(this, errorString,Toast.LENGTH_LONG).show();
+            showProgress(false);
         }
-        showProgress(false);
+        mAuthTask = null;
     }
 }

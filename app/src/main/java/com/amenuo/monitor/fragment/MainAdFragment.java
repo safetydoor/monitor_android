@@ -46,8 +46,8 @@ public class MainAdFragment extends Fragment implements View.OnClickListener {
         mTextView = (TextView) root.findViewById(R.id.main_ad_text);
         if (mAdModel != null) {
             setImageUrl(mAdModel.getImageUrl());
-            if (!TextUtils.isEmpty(mAdModel.getTitle())) {
-                mTextView.setText(mAdModel.getTitle());
+            if (!TextUtils.isEmpty(mAdModel.getName())) {
+                mTextView.setText(mAdModel.getName());
             }
         }
         return root;
@@ -79,7 +79,7 @@ public class MainAdFragment extends Fragment implements View.OnClickListener {
         Intent intent = new Intent();
         intent.setClass(getActivity(), WebviewActivity.class);
         if (mAdModel != null){
-            intent.putExtra("name", mAdModel.getTitle());
+            intent.putExtra("name", mAdModel.getName());
             intent.putExtra("address", mAdModel.getAdUrl());
         }
         getActivity().startActivity(intent);

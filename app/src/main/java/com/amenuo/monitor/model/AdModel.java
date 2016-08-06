@@ -5,18 +5,19 @@ package com.amenuo.monitor.model;
  */
 public class AdModel {
 
-    public AdModel(String title, String adUrl, String imageUrl){
-        this.title = title;
+    public AdModel(){}
+    public AdModel(String name, String adUrl, String imageUrl){
+        this.name = name;
         this.adUrl = adUrl;
         this.imageUrl = imageUrl;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
 
@@ -37,7 +38,7 @@ public class AdModel {
         this.adUrl = adUrl;
     }
 
-    private String title;
+    private String name;
     private String imageUrl;
     private String adUrl;
 }

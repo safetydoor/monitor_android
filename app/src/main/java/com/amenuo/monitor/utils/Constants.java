@@ -6,4 +6,8 @@ package com.amenuo.monitor.utils;
 public class Constants {
 
     public static final int MSG_WHAT_COUNTDOWN = 1;
+
+    public static final String KEY_SP_LUMP_LAST_REQUEST_TIME = "KEY_SP_LUMP_LAST_REQUEST_TIME";
+    public static final String KEY_SP_LIVE_LAST_REQUEST_TIME = "KEY_SP_LIVE_LAST_REQUEST_TIME";
+
 }

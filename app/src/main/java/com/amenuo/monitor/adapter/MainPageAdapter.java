@@ -25,7 +25,7 @@ public class MainPageAdapter extends BaseAdapter {
 
     public MainPageAdapter(Context context){
 
-        mLumpModels = LumpManager.getInstance().getFollowedLumpModels();
+        mLumpModels = LumpManager.getInstance().getLumpList();
         mContext = context;
     }
 
@@ -51,13 +51,14 @@ public class MainPageAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LumpModel model = mLumpModels.get(position);
-        MainLumpView mainLumpView;
+        final MainLumpView mainLumpView;
         if (convertView == null){
             mainLumpView = new MainLumpView(mContext);
             mainLumpView.setOnDeleteListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    PLog.e("delete");
+                    PLog.e("delete:"+v.toString());
+                    PLog.e("delete:"+mainLumpView.toString());
                 }
             });
         }else{

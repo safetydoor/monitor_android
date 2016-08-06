@@ -68,6 +68,12 @@ public class MainPageActivity extends AppCompatActivity implements AdapterView.O
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        mMainPageAdapter.notifyDataSetChanged();
+    }
+
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             mTwiceBack.backPress();

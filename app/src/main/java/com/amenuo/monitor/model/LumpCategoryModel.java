@@ -10,6 +10,8 @@ public class LumpCategoryModel {
     private String name;
     private List<LumpModel> lumpModels;
 
+    public LumpCategoryModel(){}
+
     public LumpCategoryModel(String name){
         this.name = name;
     }

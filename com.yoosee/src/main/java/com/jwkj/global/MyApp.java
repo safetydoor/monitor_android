@@ -33,8 +33,8 @@ public class MyApp extends Application {
 		super.onCreate();
 		isActive = true;
 		if (AppConfig.DeBug.isWrightErroLog) {
-			CrashHandler crashHandler = CrashHandler.getInstance();
-			crashHandler.init(getApplicationContext());
+//			CrashHandler crashHandler = CrashHandler.getInstance();
+//			crashHandler.init(getApplicationContext());
 		}
 	}
 

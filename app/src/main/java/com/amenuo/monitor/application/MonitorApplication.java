@@ -1,11 +1,7 @@
 package com.amenuo.monitor.application;
 
-import android.app.Application;
 import android.content.Context;
-
 import com.jwkj.global.MyApp;
-
-import cn.smssdk.SMSSDK;
 
 /**
  * Created by laps on 7/9/16.
@@ -19,7 +15,7 @@ public class MonitorApplication extends MyApp {
     @Override
     public void onCreate() {
         super.onCreate();
-        SMSSDK.initSDK(this, APPKEY, APPSECRET);
+//        SMSSDK.initSDK(this, APPKEY, APPSECRET);
         application = this;
     }
 

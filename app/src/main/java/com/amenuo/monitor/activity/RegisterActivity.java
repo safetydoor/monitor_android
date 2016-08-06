@@ -5,14 +5,13 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
@@ -23,17 +22,11 @@ import android.widget.Toast;
 
 import com.amenuo.monitor.R;
 import com.amenuo.monitor.action.CountDownAction;
+import com.amenuo.monitor.action.PressHideKeyboardAction;
 import com.amenuo.monitor.task.RegisterTask;
+import com.amenuo.monitor.task.VerificationCodeTask;
 import com.amenuo.monitor.utils.Constants;
 import com.amenuo.monitor.utils.InputVerifyUtils;
-
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import cn.smssdk.EventHandler;
-import cn.smssdk.SMSSDK;
 
 public class RegisterActivity extends Activity implements OnClickListener, RegisterTask.Callback {
 
@@ -48,27 +41,6 @@ public class RegisterActivity extends Activity implements OnClickListener, Regis
     private View mRegisterFormView;
     private Button mGetVerificationCodeViewButton;
 
-    private EventHandler eh = new EventHandler() {
-
-        @Override
-        public void afterEvent(int event, int result, Object data) {
-
-            if (result == SMSSDK.RESULT_COMPLETE) {
-                //回调完成
-                if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {
-                    //提交验证码成功
-                } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
-                    //获取验证码成功
-
-                } else if (event == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES) {
-                    //返回支持发送验证码的国家列表
-                }
-            } else {
-                ((Throwable) data).printStackTrace();
-            }
-        }
-    };
-
     Handler mHandler = new Handler() {
         public void handleMessage(Message msg) {
             if (msg.what == Constants.MSG_WHAT_COUNTDOWN) {
@@ -79,9 +51,9 @@ public class RegisterActivity extends Activity implements OnClickListener, Regis
                     String text = getApplicationContext().getResources().getString(R.string.text_getVerificationCode);
                     mGetVerificationCodeViewButton.setText(text);
                     mGetVerificationCodeViewButton.setEnabled(true);
-                }else{
+                } else {
                     mGetVerificationCodeViewButton.setTag(second);
-                    mGetVerificationCodeViewButton.setText(second +"s后重新获取");
+                    mGetVerificationCodeViewButton.setText(second + "秒后重新获取");
                 }
             }
             super.handleMessage(msg);
@@ -93,6 +65,7 @@ public class RegisterActivity extends Activity implements OnClickListener, Regis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_monitor_register);
         // Set up the register form.
         mPhoneNumberView = (EditText) findViewById(R.id.register_phoneNumber);
         mVerificationCodeView = (EditText) findViewById(R.id.register_verificationCode);
@@ -119,16 +92,12 @@ public class RegisterActivity extends Activity implements OnClickListener, Regis
         mRegisterFormView = findViewById(R.id.register_form);
         mProgressView = findViewById(R.id.register_progress);
 
-        SMSSDK.registerEventHandler(eh); //注册短信回调
-        SMSSDK.getSupportedCountries();
-
         mCountDownAction = new CountDownAction(mHandler);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        SMSSDK.unregisterAllEventHandler();
         mCountDownAction.stop();
     }
 
@@ -155,20 +124,20 @@ public class RegisterActivity extends Activity implements OnClickListener, Regis
         View focusView = null;
 
         // Check for a valid password, if the user entered one.
-        if (InputVerifyUtils.verifyPassword(password)) {
+        if (!InputVerifyUtils.verifyPassword(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
             cancel = true;
         }
 
-        if (InputVerifyUtils.verifyVerificationCode(verificationCode)){
+        if (!InputVerifyUtils.verifyVerificationCode(verificationCode)) {
             mVerificationCodeView.setError(getString(R.string.error_invalid_password));
             focusView = mVerificationCodeView;
             cancel = true;
         }
 
         // Check for a valid email address.
-        if (InputVerifyUtils.verifyPhoneNumber(phoneNumber)) {
+        if (!InputVerifyUtils.verifyPhoneNumber(phoneNumber)) {
             mPhoneNumberView.setError(getString(R.string.error_invalid_phoneNumber));
             focusView = mPhoneNumberView;
             cancel = true;
@@ -181,8 +150,9 @@ public class RegisterActivity extends Activity implements OnClickListener, Regis
             // perform the user register attempt.
             showProgress(true);
             mAuthTask = new RegisterTask(this);
-            mAuthTask.execute(phoneNumber, verificationCode, password);
+            mAuthTask.execute(phoneNumber, password, verificationCode);
         }
+        PressHideKeyboardAction.hideSoftInput(mPhoneNumberView.getWindowToken());
     }
 
     /**
@@ -231,25 +201,35 @@ public class RegisterActivity extends Activity implements OnClickListener, Regis
                 mPhoneNumberView.requestFocus();
                 return;
             }
-            SMSSDK.getVerificationCode("86", phoneNumber);
             mGetVerificationCodeViewButton.setTag(60);
             mGetVerificationCodeViewButton.setEnabled(false);
             mCountDownAction.start();
+            new VerificationCodeTask(this).execute(phoneNumber);
         } else if (resId == R.id.register) {
             attemptRegister();
         }
     }
 
     @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+            // 获得当前得到焦点的View，一般情况下就是EditText（特殊情况就是轨迹求或者实体案件会移动焦点）
+            View v = getCurrentFocus();
+
+            if (PressHideKeyboardAction.isShouldHideInput(v, ev)) {
+                PressHideKeyboardAction.hideSoftInput(v.getWindowToken());
+            }
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
     public void onRegisterResult(boolean success) {
-        if (success){
-            Intent intent = new Intent();
-            intent.setClass(this, MainPageActivity.class);
-            startActivity(intent);
+        if (success) {
             finish();
-        }else{
-            String errorString = getResources().getString(R.string.error_field_login);
-            Toast.makeText(this, errorString,Toast.LENGTH_LONG).show();
+        } else {
+            String errorString = getResources().getString(R.string.error_field_register);
+            Toast.makeText(this, errorString, Toast.LENGTH_LONG).show();
         }
         showProgress(false);
     }

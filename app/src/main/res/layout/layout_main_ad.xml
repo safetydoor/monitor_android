@@ -18,6 +18,8 @@
         android:background="@drawable/main_lump_bg_shape"
         android:layout_alignParentBottom="true"
         android:textAlignment="center"
+        android:text="奥斯卡交电话费的"
         android:gravity="center_vertical"
+        android:paddingBottom="5dp"
         android:textSize="18sp" />
 </RelativeLayout>
