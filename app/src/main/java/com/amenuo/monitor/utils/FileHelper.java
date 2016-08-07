@@ -1,7 +1,6 @@
 package com.amenuo.monitor.utils;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -25,8 +24,8 @@ public class FileHelper {
             fout.write(bytes);
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
-            if (fout != null){
+        } finally {
+            if (fout != null) {
                 try {
                     fout.close();
                 } catch (IOException e) {
@@ -49,8 +48,8 @@ public class FileHelper {
             res = EncodingUtils.getString(buffer, "UTF-8");
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
-            if (fin != null){
+        } finally {
+            if (fin != null) {
                 try {
                     fin.close();
                 } catch (IOException e) {

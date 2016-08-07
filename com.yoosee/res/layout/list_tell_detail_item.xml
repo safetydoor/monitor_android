@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bearLin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_list_item"
+    >
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/tell_detail_item_height"
+	    android:background="@drawable/selector_list_item"
+	    >
+	<ImageView 
+	    android:id="@+id/callState"
+	    android:layout_width="@dimen/recent_call_state_img_width"
+	    android:layout_height="@dimen/recent_call_state_img_height"
+	    android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginLeft="@dimen/inner_margin_left"
+	    />
+    
+	<TextView 
+	    android:id="@+id/tellDate"
+	    android:layout_width="wrap_content"
+	    android:layout_height="@dimen/tell_detail_item_height"
+	    android:layout_toLeftOf="@+id/call_type"
+	    android:layout_centerVertical="true"
+	    android:gravity="center_vertical"
+	    android:layout_marginRight="@dimen/inner_margin_right"
+	    android:text="2012-08-08 12:33"
+	    android:textColor="@color/text_color_black"
+        android:textSize="@dimen/text_size_normal"
+	    />
+	
+	<ImageView
+	    android:id="@+id/call_type"
+	    android:layout_width="@dimen/recent_call_state_img_width"
+	    android:layout_height="@dimen/recent_call_state_img_height"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="@dimen/inner_margin_right"
+	    />
+	</RelativeLayout>
+</RelativeLayout>

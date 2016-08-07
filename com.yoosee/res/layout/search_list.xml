@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+
+		<ExpandableListView 
+		    android:layout_width="match_parent"
+			android:layout_height="match_parent" 
+			android:id="@+id/search_list"
+			android:layout_alignParentTop="true" 
+			android:layout_alignParentLeft="true"
+			android:groupIndicator="@null" />
+
+		<com.jwkj.widget.SortBar
+			android:layout_width="@dimen/search_list_bar_width" 
+			android:layout_height="match_parent"
+			android:layout_alignParentTop="true" 
+			android:layout_alignParentRight="true"
+			
+			android:background="#80000000"
+			android:id="@+id/sort_bar" />
+	</RelativeLayout>
+</LinearLayout>

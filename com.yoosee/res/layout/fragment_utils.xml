@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@drawable/tab_bar"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/chat_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tab_image"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size"
+            />
+    </RelativeLayout>
+    <GridView 
+        android:id="@+id/list_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:gravity="center"
+        android:verticalSpacing="2dp"
+        android:horizontalSpacing="5dp"
+        android:stretchMode="columnWidth"
+        android:background="#00ffffff"
+        android:cacheColorHint="@null"
+        >   
+    </GridView>
+   
+</LinearLayout>

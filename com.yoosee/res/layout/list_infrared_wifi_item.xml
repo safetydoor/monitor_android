@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/infrared_wifi_list_height"
+	    android:background="@drawable/main_bg"
+	    >
+    	<TextView 
+		    android:id="@+id/text_name"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:textSize="@dimen/text_size_small"
+		    android:textColor="@color/text_color_black"
+		    android:layout_alignParentLeft="true"
+		    android:layout_marginLeft="@dimen/inner_margin_left"
+		    android:layout_marginRight="@dimen/inner_margin_right"
+		    android:text="张三"
+		    android:layout_centerVertical="true"
+		    android:layout_toLeftOf="@+id/wifi_type"
+	    	/>
+    
+		<ImageView 
+	        android:id="@+id/wifi_type"
+	        android:layout_width="15dp"
+	        android:layout_height="15dp"
+	        android:src="@drawable/ic_infrared_wifi_lock"
+	        android:scaleType="center"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="@dimen/inner_margin_right"
+	        />
+	</RelativeLayout>
+</RelativeLayout>

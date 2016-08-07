@@ -1,0 +1,318 @@
+# view res/layout/activity_about.xml #generated:36
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:569
+-keep class com.jwkj.APdeviceMonitorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:47
+-keep class com.jwkj.CallActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:97
+-keep class com.jwkj.MonitorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:252
+-keep class com.jwkj.PlayBackActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:243
+-keep class com.jwkj.PlayBackListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:106
+-keep class com.jwkj.VideoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:577
+-keep class com.jwkj.WaittingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:89
+-keep class com.jwkj.activity.AboutActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:130
+-keep class com.jwkj.activity.AccountInfoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:310
+-keep class com.jwkj.activity.AddAlarmMaskIdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:560
+-keep class com.jwkj.activity.AddApDeviceActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:332
+-keep class com.jwkj.activity.AddContactActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:343
+-keep class com.jwkj.activity.AddContactNextActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:523
+-keep class com.jwkj.activity.AddWaitActicity { <init>(...); }
+
+# view AndroidManifest.xml #generated:173
+-keep class com.jwkj.activity.AlarmActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:611
+-keep class com.jwkj.activity.AlarmPictrueActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:487
+-keep class com.jwkj.activity.AlarmPushAccountActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:205
+-keep class com.jwkj.activity.AlarmRecordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:234
+-keep class com.jwkj.activity.AlarmSetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:593
+-keep class com.jwkj.activity.AlarmWithPictrueActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:432
+-keep class com.jwkj.activity.AltogetherRegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:602
+-keep class com.jwkj.activity.ApMonitorActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:477
+-keep class com.jwkj.activity.CreateQRcodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:122
+-keep class com.jwkj.activity.CutImageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:184
+-keep class com.jwkj.activity.DeviceUpdateActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:541
+-keep class com.jwkj.activity.DoorBellActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:550
+-keep class com.jwkj.activity.DoorBellNewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:423
+-keep class com.jwkj.activity.ForgetPassword { <init>(...); }
+
+# view AndroidManifest.xml #generated:215
+-keep class com.jwkj.activity.ForwardActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:225
+-keep class com.jwkj.activity.ForwardDownActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:269
+-keep class com.jwkj.activity.ImageBrowser { <init>(...); }
+
+# view AndroidManifest.xml #generated:496
+-keep class com.jwkj.activity.ImageSeeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:138
+-keep class com.jwkj.activity.LocalDeviceListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.jwkj.activity.LoginActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:15
+-keep class com.jwkj.activity.LogoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:25
+-keep class com.jwkj.activity.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:163
+-keep class com.jwkj.activity.MainControlActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:394
+-keep class com.jwkj.activity.ModifyAccountEmailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:405
+-keep class com.jwkj.activity.ModifyAccountPhoneActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:414
+-keep class com.jwkj.activity.ModifyAccountPhoneActivity2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:299
+-keep class com.jwkj.activity.ModifyAlarmIdActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:585
+-keep class com.jwkj.activity.ModifyApWifiPwd { <init>(...); }
+
+# view AndroidManifest.xml #generated:287
+-keep class com.jwkj.activity.ModifyBoundEmailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:354
+-keep class com.jwkj.activity.ModifyContactActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:365
+-keep class com.jwkj.activity.ModifyLoginPasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:321
+-keep class com.jwkj.activity.ModifyNpcPasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:441
+-keep class com.jwkj.activity.ModifyNpcVisitorPasswordActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:194
+-keep class com.jwkj.activity.QRCodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:468
+-keep class com.jwkj.activity.QRcodeActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:505
+-keep class com.jwkj.activity.RadarAddActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:532
+-keep class com.jwkj.activity.RadarAddFirstActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:60
+-keep class com.jwkj.activity.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:71
+-keep class com.jwkj.activity.RegisterActivity2 { <init>(...); }
+
+# view AndroidManifest.xml #generated:278
+-keep class com.jwkj.activity.SearchListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:147
+-keep class com.jwkj.activity.SettingBellRingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:155
+-keep class com.jwkj.activity.SettingSdBellActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:114
+-keep class com.jwkj.activity.SettingSystemActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:260
+-keep class com.jwkj.activity.SysMsgActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:376
+-keep class com.jwkj.activity.SysNotifyActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:450
+-keep class com.jwkj.activity.ThreeAddContactActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:385
+-keep class com.jwkj.activity.UnbindPhoneActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:80
+-keep class com.jwkj.activity.VerifyPhoneActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:514
+-keep class com.jwkj.activity.WaitDeviceNetworkActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:459
+-keep class com.jwkj.activity.WifiListActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:630
+-keep class com.jwkj.global.AutoStartReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:625
+-keep class com.jwkj.global.LogService { <init>(...); }
+
+# view AndroidManifest.xml #generated:620
+-keep class com.jwkj.global.MainService { <init>(...); }
+
+# view AndroidManifest.xml #generated:10
+-keep class com.jwkj.global.MyApp { <init>(...); }
+
+# view res/layout/activity_alarm_set.xml #generated:108
+# view res/layout/fragment_record_control.xml #generated:354
+# view res/layout/fragment_record_control.xml #generated:360
+# view res/layout/fragment_record_control.xml #generated:376
+# view res/layout/fragment_record_control.xml #generated:382
+# view res/layout/fragment_time_control.xml #generated:101
+# view res/layout/fragment_time_control.xml #generated:106
+# view res/layout/fragment_time_control.xml #generated:112
+# view res/layout/fragment_time_control.xml #generated:118
+# view res/layout/fragment_time_control.xml #generated:124
+# view res/layout/fragment_time_control.xml #generated:180
+# view res/layout/play_back_date_pick.xml #generated:168
+# view res/layout/play_back_date_pick.xml #generated:173
+# view res/layout/play_back_date_pick.xml #generated:179
+# view res/layout/play_back_date_pick.xml #generated:185
+# view res/layout/play_back_date_pick.xml #generated:191
+-keep class com.jwkj.wheel.widget.WheelView { <init>(...); }
+
+# view res/layout/list_alarm_record_item2.xml #generated:16
+-keep class com.jwkj.widget.AlarmHeaderView { <init>(...); }
+
+# view res/layout/activity_system_set.xml #generated:35
+# view res/layout/fragment_control_main.xml #generated:1
+# view res/layout/fragment_info.xml #generated:1
+# view res/layout/fragment_setting.xml #generated:64
+# view res/layout/fragment_time_control.xml #generated:1
+-keep class com.jwkj.widget.BounceScrollView { <init>(...); }
+
+# view res/layout/fragment_apmode.xml #generated:109
+# view res/layout/fragment_apmode.xml #generated:55
+# view res/layout/fragment_apmode.xml #generated:67
+# view res/layout/fragment_apmode.xml #generated:82
+# view res/layout/fragment_apmode.xml #generated:95
+-keep class com.jwkj.widget.DrableButton { <init>(...); }
+
+# view res/layout/activity_add_contact_next.xml #generated:58
+# view res/layout/activity_apmonitor.xml #generated:271
+# view res/layout/activity_call.xml #generated:41
+# view res/layout/activity_control_main.xml #generated:44
+# view res/layout/activity_modify_contact.xml #generated:57
+# view res/layout/activity_playback_list.xml #generated:45
+# view res/layout/activity_test.xml #generated:6
+# view res/layout/fragment_addapdevice.xml #generated:16
+# view res/layout/fragment_apmode.xml #generated:27
+# view res/layout/list_contact_item.xml #generated:34
+# view res/layout/list_contact_item2.xml #generated:18
+# view res/layout/list_contact_item3.xml #generated:18
+# view res/layout/list_device_item.xml #generated:14
+# view res/layout/list_device_item_no_login.xml #generated:14
+# view res/layout/list_ipc_item.xml #generated:23
+# view res/layout/list_recent_item.xml #generated:15
+# view res/layout/message_left.xml #generated:27
+# view res/layout/message_right.xml #generated:30
+-keep class com.jwkj.widget.HeaderView { <init>(...); }
+
+# view res/layout/list_imgbrowser_item.xml #generated:7
+-keep class com.jwkj.widget.MyImageView { <init>(...); }
+
+# view res/layout/fragment_net_control.xml #generated:123
+-keep class com.jwkj.widget.MyListView { <init>(...); }
+
+# view res/layout/activity_add_contact.xml #generated:123
+# view res/layout/activity_add_contact_next.xml #generated:149
+# view res/layout/activity_add_contact_next.xml #generated:203
+# view res/layout/activity_modify_contact.xml #generated:188
+# view res/layout/activity_modify_login_password.xml #generated:120
+# view res/layout/fragment_addapdevice.xml #generated:106
+# view res/layout/modify_npc_pwd.xml #generated:133
+# view res/layout/modify_npc_visitor_pwd.xml #generated:75
+-keep class com.jwkj.widget.MyPassLinearLayout { <init>(...); }
+
+# view res/layout/list_contact_item.xml #generated:190
+# view res/layout/list_contact_item.xml #generated:211
+# view res/layout/list_contact_item.xml #generated:228
+# view res/layout/list_contact_item.xml #generated:245
+-keep class com.jwkj.widget.PictrueTextView { <init>(...); }
+
+# view res/layout/activity_alarm_pictrue.xml #generated:5
+-keep class com.jwkj.widget.PictrueView { <init>(...); }
+
+# view res/layout/search_list.xml #generated:20
+-keep class com.jwkj.widget.SortBar { <init>(...); }
+
+# view res/layout/p2p_monitor.xml #generated:431
+-keep class com.jwkj.widget.VerticalSeekBar { <init>(...); }
+
+# view res/layout/activity_alarm_push_msg.xml #generated:87
+# view res/layout/activity_alarm_set.xml #generated:204
+-keep class com.lib.addBar.AddBar { <init>(...); }
+
+# view res/layout/activity_imagegallay.xml #generated:6
+-keep class com.lib.imagesee.GalleryViewPager { <init>(...); }
+
+# view res/layout/activity_newdoorbell.xml #generated:156
+-keep class com.lib.lockview.GlowPadView { <init>(...); }
+
+# view res/layout/activity_alarm_record.xml #generated:49
+# view res/layout/fragment_apcontact.xml #generated:34
+# view res/layout/fragment_contact.xml #generated:127
+-keep class com.lib.pullToRefresh.PullToRefreshListView { <init>(...); }
+
+# view res/layout/activity_sysmsg.xml #generated:38
+-keep class com.lib.slideexpandable.ActionSlideExpandableListView { <init>(...); }
+
+# view res/layout/activity_apmonitor.xml #generated:60
+# view res/layout/activity_monitor_apdevice.xml #generated:13
+# view res/layout/p2p_monitor.xml #generated:12
+# view res/layout/p2p_playback.xml #generated:9
+# view res/layout/p2p_video.xml #generated:15
+-keep class com.p2p.core.P2PView { <init>(...); }
+

@@ -1,0 +1,1 @@
+zipalign -v 4 00.00.00.02.apk 123.apk

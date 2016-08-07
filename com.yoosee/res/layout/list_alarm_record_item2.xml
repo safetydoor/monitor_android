@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_list_item" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/set_alarm_item_height"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+			<com.jwkj.widget.AlarmHeaderView 
+			    android:id="@+id/header_img"
+			    android:layout_width="@dimen/set_alarm_header_width"
+			    android:layout_height="@dimen/set_alarm_header_height"
+			    android:layout_marginLeft="@dimen/inner_margin_left"
+			    android:layout_centerVertical="true"
+			    android:src="@drawable/header_icon"
+			    />
+            <LinearLayout
+                android:layout_toRightOf="@+id/header_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" 
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/mm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/inner_margin_left"
+                        android:text="@string/allarm_robot"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/robot_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/mm"
+                        android:text="11939"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/text_size_normal" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/nn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/mm"
+                        android:layout_marginLeft="@dimen/inner_margin_left"
+                        android:text="@string/allarm_type"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/allarm_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/nn"
+                        android:text="Motion Detection"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="@dimen/text_size_normal" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/allarm_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="2012-12-03 16:22"
+                android:textColor="@color/text_color_blue"
+                android:textSize="@dimen/text_size_normal" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

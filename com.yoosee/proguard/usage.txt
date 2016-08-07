@@ -1,0 +1,2267 @@
+android.support.annotation.AnimRes
+android.support.annotation.AnimatorRes
+android.support.annotation.AnyRes
+android.support.annotation.ArrayRes
+android.support.annotation.AttrRes
+android.support.annotation.BoolRes
+android.support.annotation.ColorRes
+android.support.annotation.DimenRes
+android.support.annotation.DrawableRes
+android.support.annotation.FractionRes
+android.support.annotation.IdRes
+android.support.annotation.IntDef
+android.support.annotation.IntegerRes
+android.support.annotation.InterpolatorRes
+android.support.annotation.LayoutRes
+android.support.annotation.MenuRes
+android.support.annotation.NonNull
+android.support.annotation.Nullable
+android.support.annotation.PluralsRes
+android.support.annotation.RawRes
+android.support.annotation.StringDef
+android.support.annotation.StringRes
+android.support.annotation.StyleRes
+android.support.annotation.StyleableRes
+android.support.annotation.XmlRes
+com.google.zxing.BarcodeFormat:
+    85:85:public java.lang.String getName()
+    93:100:public static com.google.zxing.BarcodeFormat valueOf(java.lang.String)
+com.google.zxing.Binarizer
+com.google.zxing.BinaryBitmap
+com.google.zxing.ChecksumException
+com.google.zxing.DecodeHintType
+com.google.zxing.FormatException
+com.google.zxing.LuminanceSource
+com.google.zxing.MultiFormatReader
+com.google.zxing.NotFoundException
+com.google.zxing.Reader
+com.google.zxing.ReaderException
+com.google.zxing.Result
+com.google.zxing.ResultMetadataType
+com.google.zxing.ResultPoint
+com.google.zxing.ResultPointCallback
+com.google.zxing.Writer:
+    public abstract com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.client.result.AbstractDoCoMoResultParser
+com.google.zxing.client.result.AddressBookAUResultParser
+com.google.zxing.client.result.AddressBookDoCoMoResultParser
+com.google.zxing.client.result.AddressBookParsedResult
+com.google.zxing.client.result.BizcardResultParser
+com.google.zxing.client.result.BookmarkDoCoMoResultParser
+com.google.zxing.client.result.CalendarParsedResult
+com.google.zxing.client.result.EmailAddressParsedResult
+com.google.zxing.client.result.EmailAddressResultParser
+com.google.zxing.client.result.EmailDoCoMoResultParser
+com.google.zxing.client.result.ExpandedProductParsedResult
+com.google.zxing.client.result.ExpandedProductResultParser
+com.google.zxing.client.result.GeoParsedResult
+com.google.zxing.client.result.GeoResultParser
+com.google.zxing.client.result.ISBNParsedResult
+com.google.zxing.client.result.ISBNResultParser
+com.google.zxing.client.result.ParsedResult
+com.google.zxing.client.result.ParsedResultType
+com.google.zxing.client.result.ProductParsedResult
+com.google.zxing.client.result.ProductResultParser
+com.google.zxing.client.result.ResultParser
+com.google.zxing.client.result.SMSMMSResultParser
+com.google.zxing.client.result.SMSParsedResult
+com.google.zxing.client.result.SMSTOMMSTOResultParser
+com.google.zxing.client.result.TelParsedResult
+com.google.zxing.client.result.TelResultParser
+com.google.zxing.client.result.TextParsedResult
+com.google.zxing.client.result.URIParsedResult
+com.google.zxing.client.result.URIResultParser
+com.google.zxing.client.result.URLTOResultParser
+com.google.zxing.client.result.VCardResultParser
+com.google.zxing.client.result.VEventResultParser
+com.google.zxing.client.result.WifiParsedResult
+com.google.zxing.client.result.WifiResultParser
+com.google.zxing.client.result.optional.AbstractNDEFResultParser
+com.google.zxing.client.result.optional.NDEFRecord
+com.google.zxing.client.result.optional.NDEFSmartPosterParsedResult
+com.google.zxing.client.result.optional.NDEFSmartPosterResultParser
+com.google.zxing.client.result.optional.NDEFTextResultParser
+com.google.zxing.client.result.optional.NDEFURIResultParser
+com.google.zxing.common.BitArray:
+    38:41:public BitArray(int)
+    73:74:public void set(int)
+    82:83:public void flip(int)
+    93:94:public void setBulk(int,int)
+    100:104:public void clear()
+    116:144:public boolean isRange(int,int,boolean)
+    215:215:public int[] getBitArray()
+    222:230:public void reverse()
+com.google.zxing.common.BitMatrix:
+    44:45:public BitMatrix(int)
+    76:78:public void set(int,int)
+    87:89:public void flip(int,int)
+    95:99:public void clear()
+    138:145:public com.google.zxing.common.BitArray getRow(int,com.google.zxing.common.BitArray)
+    154:170:public int[] getTopLeftOnBit()
+com.google.zxing.common.BitSource
+com.google.zxing.common.CharacterSetECI:
+    65:65:public java.lang.String getEncodingName()
+    89:95:public static com.google.zxing.common.CharacterSetECI getCharacterSetECIByValue(int)
+com.google.zxing.common.Collections
+com.google.zxing.common.Comparator
+com.google.zxing.common.DecoderResult
+com.google.zxing.common.DefaultGridSampler
+com.google.zxing.common.DetectorResult
+com.google.zxing.common.ECI:
+    43:49:public static com.google.zxing.common.ECI getECIByValue(int)
+com.google.zxing.common.GlobalHistogramBinarizer
+com.google.zxing.common.GridSampler
+com.google.zxing.common.HybridBinarizer
+com.google.zxing.common.PerspectiveTransform
+com.google.zxing.common.StringUtils
+com.google.zxing.common.detector.MonochromeRectangleDetector
+com.google.zxing.common.detector.WhiteRectangleDetector
+com.google.zxing.common.reedsolomon.GF256:
+    70:70:com.google.zxing.common.reedsolomon.GF256Poly getOne()
+com.google.zxing.common.reedsolomon.GF256Poly:
+    98:115:int evaluateAt(int)
+    171:182:com.google.zxing.common.reedsolomon.GF256Poly multiply(int)
+com.google.zxing.common.reedsolomon.ReedSolomonDecoder
+com.google.zxing.common.reedsolomon.ReedSolomonException
+com.google.zxing.datamatrix.DataMatrixReader
+com.google.zxing.datamatrix.decoder.BitMatrixParser
+com.google.zxing.datamatrix.decoder.DataBlock
+com.google.zxing.datamatrix.decoder.DecodedBitStreamParser
+com.google.zxing.datamatrix.decoder.Decoder
+com.google.zxing.datamatrix.decoder.Version
+com.google.zxing.datamatrix.decoder.Version$1
+com.google.zxing.datamatrix.decoder.Version$ECB
+com.google.zxing.datamatrix.decoder.Version$ECBlocks
+com.google.zxing.datamatrix.detector.Detector
+com.google.zxing.datamatrix.detector.Detector$1
+com.google.zxing.datamatrix.detector.Detector$ResultPointsAndTransitions
+com.google.zxing.datamatrix.detector.Detector$ResultPointsAndTransitionsComparator
+com.google.zxing.multi.ByQuadrantReader
+com.google.zxing.multi.GenericMultipleBarcodeReader
+com.google.zxing.multi.MultipleBarcodeReader
+com.google.zxing.multi.qrcode.QRCodeMultiReader
+com.google.zxing.multi.qrcode.detector.MultiDetector
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder$1
+com.google.zxing.multi.qrcode.detector.MultiFinderPatternFinder$ModuleSizeComparator
+com.google.zxing.oned.CodaBarReader
+com.google.zxing.oned.Code128Reader:
+    private static final int MAX_AVG_VARIANCE
+    private static final int MAX_INDIVIDUAL_VARIANCE
+    private static final int CODE_SHIFT
+    private static final int CODE_CODE_C
+    private static final int CODE_CODE_B
+    private static final int CODE_CODE_A
+    private static final int CODE_FNC_1
+    private static final int CODE_FNC_2
+    private static final int CODE_FNC_3
+    private static final int CODE_FNC_4_A
+    private static final int CODE_FNC_4_B
+    private static final int CODE_START_A
+    private static final int CODE_START_B
+    private static final int CODE_START_C
+    private static final int CODE_STOP
+    34:34:public Code128Reader()
+    167:219:private static int[] findStartPattern(com.google.zxing.common.BitArray)
+    223:238:private static int decodeCode(com.google.zxing.common.BitArray,int[],int)
+    245:463:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Hashtable)
+com.google.zxing.oned.Code39Reader:
+    static final java.lang.String ALPHABET_STRING
+    private final boolean usingCheckDigit
+    private final boolean extendedMode
+    62:65:public Code39Reader()
+    74:77:public Code39Reader(boolean)
+    89:92:public Code39Reader(boolean,boolean)
+    97:167:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Hashtable)
+    178:219:private static int[] findAsteriskPattern(com.google.zxing.common.BitArray)
+    225:265:private static int toNarrowWidePattern(int[])
+    269:274:private static char patternToChar(int)
+    278:330:private static java.lang.String decodeExtended(java.lang.StringBuffer)
+com.google.zxing.oned.Code93Reader
+com.google.zxing.oned.EAN13Reader:
+    private final int[] decodeMiddleCounters
+    67:69:public EAN13Reader()
+    73:107:protected int decodeMiddle(com.google.zxing.common.BitArray,int[],java.lang.StringBuffer)
+    111:111:com.google.zxing.BarcodeFormat getBarcodeFormat()
+    126:132:private static void determineFirstDigit(java.lang.StringBuffer,int)
+com.google.zxing.oned.EAN13Writer:
+    private static final int codeWidth
+com.google.zxing.oned.EAN8Reader
+com.google.zxing.oned.EAN8Writer:
+    private static final int codeWidth
+com.google.zxing.oned.EANManufacturerOrgSupport
+com.google.zxing.oned.ITFReader:
+    private static final int MAX_AVG_VARIANCE
+    private static final int MAX_INDIVIDUAL_VARIANCE
+    private static final int W
+    private static final int N
+    private int narrowLineWidth
+    41:52:public ITFReader()
+    82:113:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Hashtable)
+    135:159:private static void decodeMiddle(com.google.zxing.common.BitArray,int,int,java.lang.StringBuffer)
+    170:180:int[] decodeStart(com.google.zxing.common.BitArray)
+    200:212:private void validateQuietZone(com.google.zxing.common.BitArray,int)
+    222:234:private static int skipWhiteSpace(com.google.zxing.common.BitArray)
+    250:270:int[] decodeEnd(com.google.zxing.common.BitArray)
+    287:317:private static int[] findGuardPattern(com.google.zxing.common.BitArray,int,int[])
+    330:344:private static int decodeDigit(int[])
+com.google.zxing.oned.MultiFormatOneDReader
+com.google.zxing.oned.MultiFormatUPCEANReader
+com.google.zxing.oned.OneDReader:
+    protected static final int INTEGER_MATH_SHIFT
+    protected static final int PATTERN_MATCH_RESULT_SCALE_FACTOR
+    41:41:public OneDReader()
+    47:47:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap)
+    53:76:public com.google.zxing.Result decode(com.google.zxing.BinaryBitmap,java.util.Hashtable)
+    83:83:public void reset()
+    100:172:private com.google.zxing.Result doDecode(com.google.zxing.BinaryBitmap,java.util.Hashtable)
+    189:220:protected static void recordPattern(com.google.zxing.common.BitArray,int,int[])
+    225:237:protected static void recordPatternInReverse(com.google.zxing.common.BitArray,int,int[])
+    253:281:protected static int patternMatchVariance(int[],int[],int)
+    public abstract com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Hashtable)
+com.google.zxing.oned.UPCAReader
+com.google.zxing.oned.UPCEANExtensionSupport
+com.google.zxing.oned.UPCEANReader:
+    private static final int MAX_AVG_VARIANCE
+    private static final int MAX_INDIVIDUAL_VARIANCE
+    private final java.lang.StringBuffer decodeRowStringBuffer
+    private final com.google.zxing.oned.UPCEANExtensionSupport extensionReader
+    private final com.google.zxing.oned.EANManufacturerOrgSupport eanManSupport
+    99:103:protected UPCEANReader()
+    106:121:static int[] findStartGuardPattern(com.google.zxing.common.BitArray)
+    126:126:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,java.util.Hashtable)
+    137:203:public com.google.zxing.Result decodeRow(int,com.google.zxing.common.BitArray,int[],java.util.Hashtable)
+    210:210:boolean checkChecksum(java.lang.String)
+    222:243:private static boolean checkStandardUPCEANChecksum(java.lang.String)
+    247:247:int[] decodeEnd(com.google.zxing.common.BitArray,int)
+    262:299:static int[] findGuardPattern(com.google.zxing.common.BitArray,int,boolean,int[])
+    316:331:static int decodeDigit(com.google.zxing.common.BitArray,int[],int,int[][])
+    abstract com.google.zxing.BarcodeFormat getBarcodeFormat()
+    protected abstract int decodeMiddle(com.google.zxing.common.BitArray,int[],java.lang.StringBuffer)
+com.google.zxing.oned.UPCEANWriter:
+    36:36:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.oned.UPCEReader
+com.google.zxing.oned.rss.AbstractRSSReader
+com.google.zxing.oned.rss.DataCharacter
+com.google.zxing.oned.rss.FinderPattern
+com.google.zxing.oned.rss.Pair
+com.google.zxing.oned.rss.RSS14Reader
+com.google.zxing.oned.rss.RSSUtils
+com.google.zxing.oned.rss.expanded.BitArrayBuilder
+com.google.zxing.oned.rss.expanded.ExpandedPair
+com.google.zxing.oned.rss.expanded.RSSExpandedReader
+com.google.zxing.oned.rss.expanded.decoders.AI013103decoder
+com.google.zxing.oned.rss.expanded.decoders.AI01320xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI01392xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI01393xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI013x0x1xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI013x0xDecoder
+com.google.zxing.oned.rss.expanded.decoders.AI01AndOtherAIs
+com.google.zxing.oned.rss.expanded.decoders.AI01decoder
+com.google.zxing.oned.rss.expanded.decoders.AI01weightDecoder
+com.google.zxing.oned.rss.expanded.decoders.AbstractExpandedDecoder
+com.google.zxing.oned.rss.expanded.decoders.AnyAIDecoder
+com.google.zxing.oned.rss.expanded.decoders.BlockParsedResult
+com.google.zxing.oned.rss.expanded.decoders.CurrentParsingState
+com.google.zxing.oned.rss.expanded.decoders.DecodedChar
+com.google.zxing.oned.rss.expanded.decoders.DecodedInformation
+com.google.zxing.oned.rss.expanded.decoders.DecodedNumeric
+com.google.zxing.oned.rss.expanded.decoders.DecodedObject
+com.google.zxing.oned.rss.expanded.decoders.FieldParser
+com.google.zxing.oned.rss.expanded.decoders.GeneralAppIdDecoder
+com.google.zxing.pdf417.PDF417Reader
+com.google.zxing.pdf417.decoder.BitMatrixParser
+com.google.zxing.pdf417.decoder.DecodedBitStreamParser
+com.google.zxing.pdf417.decoder.Decoder
+com.google.zxing.pdf417.detector.Detector
+com.google.zxing.qrcode.QRCodeReader
+com.google.zxing.qrcode.QRCodeWriter:
+    private static final int QUIET_ZONE_SIZE
+    43:43:public com.google.zxing.common.BitMatrix encode(java.lang.String,com.google.zxing.BarcodeFormat,int,int)
+com.google.zxing.qrcode.decoder.BitMatrixParser
+com.google.zxing.qrcode.decoder.DataBlock
+com.google.zxing.qrcode.decoder.DataMask
+com.google.zxing.qrcode.decoder.DataMask$1
+com.google.zxing.qrcode.decoder.DataMask$DataMask000
+com.google.zxing.qrcode.decoder.DataMask$DataMask001
+com.google.zxing.qrcode.decoder.DataMask$DataMask010
+com.google.zxing.qrcode.decoder.DataMask$DataMask011
+com.google.zxing.qrcode.decoder.DataMask$DataMask100
+com.google.zxing.qrcode.decoder.DataMask$DataMask101
+com.google.zxing.qrcode.decoder.DataMask$DataMask110
+com.google.zxing.qrcode.decoder.DataMask$DataMask111
+com.google.zxing.qrcode.decoder.DecodedBitStreamParser
+com.google.zxing.qrcode.decoder.Decoder
+com.google.zxing.qrcode.decoder.ErrorCorrectionLevel:
+    67:67:public java.lang.String getName()
+    79:82:public static com.google.zxing.qrcode.decoder.ErrorCorrectionLevel forBits(int)
+com.google.zxing.qrcode.decoder.FormatInformation
+com.google.zxing.qrcode.decoder.Mode:
+    55:75:public static com.google.zxing.qrcode.decoder.Mode forBits(int)
+    105:105:public java.lang.String getName()
+com.google.zxing.qrcode.decoder.Version:
+    74:74:public int[] getAlignmentPatternCenters()
+    97:103:public static com.google.zxing.qrcode.decoder.Version getProvisionalVersionForDimension(int)
+    115:137:static com.google.zxing.qrcode.decoder.Version decodeVersionInformation(int)
+    144:179:com.google.zxing.common.BitMatrix buildFunctionPattern()
+com.google.zxing.qrcode.detector.AlignmentPattern
+com.google.zxing.qrcode.detector.AlignmentPatternFinder
+com.google.zxing.qrcode.detector.Detector
+com.google.zxing.qrcode.detector.FinderPattern
+com.google.zxing.qrcode.detector.FinderPatternFinder
+com.google.zxing.qrcode.detector.FinderPatternFinder$CenterComparator
+com.google.zxing.qrcode.detector.FinderPatternFinder$FurthestFromAverageComparator
+com.google.zxing.qrcode.detector.FinderPatternInfo
+com.google.zxing.qrcode.encoder.ByteMatrix:
+    57:58:public void set(int,int,byte)
+com.google.zxing.qrcode.encoder.Encoder:
+    static final java.lang.String DEFAULT_BYTE_MODE_ENCODING
+    52:53:private Encoder()
+    79:80:public static void encode(java.lang.String,com.google.zxing.qrcode.decoder.ErrorCorrectionLevel,com.google.zxing.qrcode.encoder.QRCode)
+    152:152:public static com.google.zxing.qrcode.decoder.Mode chooseMode(java.lang.String)
+com.google.zxing.qrcode.encoder.MaskUtil:
+    25:27:private MaskUtil()
+com.google.zxing.qrcode.encoder.MatrixUtil:
+    private static final int VERSION_INFO_POLY
+    private static final int TYPE_INFO_POLY
+    private static final int TYPE_INFO_MASK_PATTERN
+    29:31:private MatrixUtil()
+com.google.zxing.qrcode.encoder.QRCode:
+    public static final int NUM_MASK_PATTERNS
+    56:56:public com.google.zxing.qrcode.decoder.Mode getMode()
+    91:91:public int getNumECBytes()
+    109:114:public int at(int,int)
+com.hp.hpl.sparta.BuildDocument
+com.hp.hpl.sparta.CharCircBuffer
+com.hp.hpl.sparta.DOMException
+com.hp.hpl.sparta.DefaultLog
+com.hp.hpl.sparta.DefaultParseHandler
+com.hp.hpl.sparta.Document
+com.hp.hpl.sparta.Document$Index
+com.hp.hpl.sparta.Document$Observer
+com.hp.hpl.sparta.DocumentSource
+com.hp.hpl.sparta.Element
+com.hp.hpl.sparta.EmptyEnumeration
+com.hp.hpl.sparta.EncodingMismatchException
+com.hp.hpl.sparta.Node
+com.hp.hpl.sparta.Node$1
+com.hp.hpl.sparta.NodeListWithPosition
+com.hp.hpl.sparta.ParseByteStream
+com.hp.hpl.sparta.ParseCharStream
+com.hp.hpl.sparta.ParseException
+com.hp.hpl.sparta.ParseHandler
+com.hp.hpl.sparta.ParseLog
+com.hp.hpl.sparta.ParseSource
+com.hp.hpl.sparta.Parser
+com.hp.hpl.sparta.Sparta
+com.hp.hpl.sparta.Sparta$1
+com.hp.hpl.sparta.Sparta$2
+com.hp.hpl.sparta.Sparta$Cache
+com.hp.hpl.sparta.Sparta$CacheFactory
+com.hp.hpl.sparta.Sparta$HashtableCache
+com.hp.hpl.sparta.Sparta$Internment
+com.hp.hpl.sparta.Text
+com.hp.hpl.sparta.XPathVisitor
+com.hp.hpl.sparta.XPathVisitor$1
+com.hp.hpl.sparta.XPathVisitor$BooleanStack
+com.hp.hpl.sparta.XPathVisitor$BooleanStack$Item
+com.hp.hpl.sparta.xpath.AllElementTest
+com.hp.hpl.sparta.xpath.AttrCompareExpr
+com.hp.hpl.sparta.xpath.AttrEqualsExpr
+com.hp.hpl.sparta.xpath.AttrExistsExpr
+com.hp.hpl.sparta.xpath.AttrExpr
+com.hp.hpl.sparta.xpath.AttrGreaterExpr
+com.hp.hpl.sparta.xpath.AttrLessExpr
+com.hp.hpl.sparta.xpath.AttrNotEqualsExpr
+com.hp.hpl.sparta.xpath.AttrRelationalExpr
+com.hp.hpl.sparta.xpath.AttrTest
+com.hp.hpl.sparta.xpath.BooleanExpr
+com.hp.hpl.sparta.xpath.BooleanExprVisitor
+com.hp.hpl.sparta.xpath.ElementTest
+com.hp.hpl.sparta.xpath.ExprFactory
+com.hp.hpl.sparta.xpath.NodeTest
+com.hp.hpl.sparta.xpath.NodeTestVisitor
+com.hp.hpl.sparta.xpath.ParentNodeTest
+com.hp.hpl.sparta.xpath.PositionEqualsExpr
+com.hp.hpl.sparta.xpath.SimpleStreamTokenizer
+com.hp.hpl.sparta.xpath.Step
+com.hp.hpl.sparta.xpath.TextCompareExpr
+com.hp.hpl.sparta.xpath.TextEqualsExpr
+com.hp.hpl.sparta.xpath.TextExistsExpr
+com.hp.hpl.sparta.xpath.TextNotEqualsExpr
+com.hp.hpl.sparta.xpath.TextTest
+com.hp.hpl.sparta.xpath.ThisNodeTest
+com.hp.hpl.sparta.xpath.TrueExpr
+com.hp.hpl.sparta.xpath.Visitor
+com.hp.hpl.sparta.xpath.XPath
+com.hp.hpl.sparta.xpath.XPathException
+com.jwkj.APdeviceMonitorActivity:
+    60:66:public void regFilter()
+    138:138:protected void onExit()
+com.jwkj.CallActivity:
+    public static final int P2PCONECT
+    public static final int RTSPCONNECT
+    410:411:protected void onExit()
+com.jwkj.MonitorActivity:
+    android.widget.ImageView img_reverse
+    int height
+    1303:1304:protected void onExit()
+com.jwkj.P2PConnect:
+    public static final int P2P_STATE_NONE
+    public static final int P2P_STATE_CALLING
+    public static final int P2P_STATE_READY
+    public static final int P2P_STATE_ALARM
+    53:53:public static java.lang.String getDoorbellId()
+    106:106:public static java.lang.String getCurrent_call_id()
+    134:134:public static boolean isPlayBack()
+com.jwkj.PlayBackActivity:
+    407:408:protected void onExit()
+com.jwkj.PlayBackListActivity:
+    public static final int START_TIME
+    public static final int END_TIME
+com.jwkj.SettingListener:
+    439:455:public void vRetAlarmEmailResult(int,java.lang.String)
+    1371:1371:public void ACK_vRetSetGPIO(int,int)
+    1377:1377:public void ACK_vRetSetGPIO1_0(int,int)
+    1400:1404:public void ACK_vRetSetPreRecord(int,int)
+    1521:1521:public void vRetDefenceSwitchStatus(int)
+    1527:1527:public void vRetDefenceSwitchStatusResult(byte[])
+    1582:1582:public void vRetDeviceNotSupportAlarmCenter()
+com.jwkj.VideoActivity:
+    public static final int P2P_SURFACE_START_PLAYING_WIDTH
+    public static final int P2P_SURFACE_START_PLAYING_HEIGHT
+    618:619:protected void onExit()
+com.jwkj.WaittingActivity:
+    109:109:protected void onExit()
+com.jwkj.XCamera:
+    public static final int SUPPORT_SDK_VERSION
+    9:9:public XCamera()
+com.jwkj.activity.AddApDeviceActivity:
+    170:171:public void setTitle(java.lang.String)
+com.jwkj.activity.AddContactActivity:
+    android.widget.EditText contactId
+com.jwkj.activity.AddContactNextActivity:
+    private static final int RESULT_GETIMG_FROM_CAMERA
+    private static final int RESULT_GETIMG_FROM_GALLERY
+    private static final int RESULT_CUT_IMAGE
+com.jwkj.activity.AlarmActivity:
+    private static final java.lang.String TAG
+    public static final int USER_HASNOTVIEWED
+    131:148:public void insertAlarmRecord()
+com.jwkj.activity.AlarmRecordActivity:
+    android.app.AlertDialog mExitDialog
+    public static com.jwkj.adapter.AlarmRecordAapter2 adapter2
+    android.widget.ListView mlistview
+com.jwkj.activity.AlarmWithPictrueActivity:
+    public static final int USER_HASNOTVIEWED
+    243:248:public void startdown()
+    251:257:private void getImage()
+    77:77:static synthetic boolean access$4(com.jwkj.activity.AlarmWithPictrueActivity)
+    538:538:static synthetic android.os.Handler access$5(com.jwkj.activity.AlarmWithPictrueActivity)
+com.jwkj.activity.AlarmWithPictrueActivity$MyThread
+com.jwkj.activity.ApMonitorActivity:
+    private static final int UPTATE_INTERVAL_TIME
+    private static final int SPEED_SHRESHOLD
+    924:925:protected void onExit()
+com.jwkj.activity.BaseActivity:
+    23:24:protected void onExit()
+    public abstract int getActivityInfo()
+com.jwkj.activity.CutImageActivity:
+    public static final int TOUCH_EVENT_TYPE_ZOOM
+    public static final int TOUCH_EVENT_TYPE_DRAG
+    int bottom_height
+com.jwkj.activity.DoorBellActivity:
+    int alarm_id
+    int alarm_type
+    int group
+    int item
+    boolean isSupport
+    android.widget.LinearLayout layout_area_chanel
+    android.widget.TextView area_text
+    android.widget.TextView chanel_text
+    com.jwkj.widget.NormalDialog dialog
+    android.widget.TextView tv_type
+com.jwkj.activity.DoorBellNewActivity:
+    android.widget.TextView monitor_btn
+    android.widget.TextView ignore_btn
+    android.widget.TextView shield_btn
+    int alarm_type
+    int group
+    int item
+    boolean isSupport
+    android.widget.LinearLayout layout_area_chanel
+    android.widget.TextView area_text
+    android.widget.TextView chanel_text
+    android.widget.LinearLayout alarm_dialog
+    com.jwkj.widget.NormalDialog dialog
+    android.widget.TextView tv_info
+    android.widget.TextView tv_type
+    public static final int USER_HASNOTVIEWED
+com.jwkj.activity.ImageBrowser:
+    private android.app.AlertDialog mDeleteDialog
+    android.graphics.Bitmap mTempBitmap
+    int length
+    int selectedItem
+com.jwkj.activity.LoginActivity:
+    public static final int ANIMATION_END
+    public static final int ACCOUNT_NO_EXIST
+    android.widget.TextView mRegister_phone
+    android.widget.TextView mRegister_email
+    boolean isApEnter
+    com.jwkj.widget.NormalDialog dialog_enter_ap
+    boolean isExitAp
+com.jwkj.activity.LogoActivity:
+    88:97:public void gainIsApMode(java.lang.String)
+com.jwkj.activity.MainActivity:
+    private android.app.AlertDialog dialog_downapk
+    private android.widget.ProgressBar downApkBar
+com.jwkj.activity.MainControlActivity:
+    public static final int FRAG_MAIN
+    public static final int FRAG_TIME_CONTROL
+    public static final int FRAG_REMOTE_CONTROL
+    public static final int FRAG_ALARM_CONTROL
+    public static final int FRAG_VIDEO_CONTROL
+    public static final int FRAG_RECORD_CONTROL
+    public static final int FRAG_SECURITY_CONTROL
+    public static final int FRAG_NET_CONTROL
+    public static final int FRAG_DEFENCE_AREA_CONTROL
+    public static final int FRAG_SD_CARD_CONTROL
+    public static final int FRAG_LANGUAGE_CONTROL
+    public static final int FRAG_SMART_DEVICE
+    public static final int FRAG_MODIFY_WIFIPWD_CONTROL
+com.jwkj.activity.ModifyAccountPhoneActivity2:
+    public static final int CHANGE_BUTTON_TEXT
+com.jwkj.activity.ModifyAlarmIdActivity:
+    int position
+com.jwkj.activity.ModifyBoundEmailActivity:
+    private static final java.lang.String TAG
+    private static final int GET_TIMES
+com.jwkj.activity.ModifyContactActivity:
+    private static final int RESULT_GETIMG_FROM_CAMERA
+    private static final int RESULT_GETIMG_FROM_GALLERY
+    private static final int RESULT_CUT_IMAGE
+    com.jwkj.widget.NormalDialog dialog
+com.jwkj.activity.SearchListActivity:
+    private java.util.List data
+com.jwkj.activity.SettingBellRingActivity:
+    android.os.Vibrator vibrator
+    android.widget.RelativeLayout set_bellRing_btn
+    int vibrateState
+com.jwkj.activity.SettingSystemActivity:
+    public static final int SET_TYPE_COMMING_RING
+    public static final int SET_TYPE_ALLARM_RING
+    public static final java.lang.String ACTION_CHANGEBELL
+    int cRingType
+    int aRingType
+com.jwkj.activity.SysMsgActivity:
+    public static final java.lang.String REFRESH
+    public static final java.lang.String DELETE_REFESH
+com.jwkj.activity.VerifyPhoneActivity:
+    public static final int CHANGE_BUTTON_TEXT
+com.jwkj.adapter.APContactAdapter$ViewHolder:
+    99:99:public android.widget.TextView getOnline_state()
+    123:123:public android.widget.ImageView getIv_update()
+    141:141:public android.widget.RelativeLayout getR_online_state()
+com.jwkj.adapter.AlarmRecordAapter2
+com.jwkj.adapter.AlarmRecordAapter2$ImageFile
+com.jwkj.adapter.AlarmRecordAapter2$ImageThread
+com.jwkj.adapter.AlarmRecordAapter2$ViewHolder
+com.jwkj.adapter.AlarmRecordAdapter$ViewHolder:
+    105:105:public android.widget.ImageView getIv_alarm_pictrue()
+com.jwkj.adapter.ExpandAdapter
+com.jwkj.adapter.FilterUserAdapter
+com.jwkj.adapter.GalleryAdapter
+com.jwkj.adapter.GalleryAdapter$1
+com.jwkj.adapter.InfraredWifiAdapter:
+    private boolean isConnected
+    157:158:public void stopScan()
+com.jwkj.adapter.IpcListAdapter
+com.jwkj.adapter.IpcListAdapter$1
+com.jwkj.adapter.IpcListAdapter$2
+com.jwkj.adapter.IpcListAdapter$ViewHolder
+com.jwkj.adapter.MainAdapter:
+    1498:1504:public boolean isNeedModifyPwd(com.jwkj.data.Contact)
+    1507:1510:public void getAllBindAlarmId()
+com.jwkj.adapter.MainAdapter$ViewHolder:
+    169:169:public android.widget.ImageView getIv_ap_state()
+com.jwkj.adapter.MainAdapter$ViewHolder2
+com.jwkj.adapter.MainAdapter$ViewHolder3:
+    220:220:public android.widget.TextView getName()
+    262:262:public android.widget.ImageView getIv_update()
+com.jwkj.adapter.MainAdapter$ViewHolder4
+com.jwkj.adapter.MainAdapter$onConnectListner:
+    public abstract void onNvrClick(com.jwkj.data.Contact)
+com.jwkj.adapter.MessageAdapter
+com.jwkj.adapter.MessageAdapter$ViewHolder
+com.jwkj.adapter.RecordAdapter:
+    97:98:public void setList(java.util.List)
+    134:135:public void loadData()
+com.jwkj.adapter.SelectorDialogAdapter
+com.jwkj.adapter.SensorRecycleAdapter:
+    35:37:public SensorRecycleAdapter(android.content.Context)
+com.jwkj.adapter.SysMsgAdapter:
+    private android.app.AlertDialog mDeleteDialog
+com.jwkj.adapter.TellDetailAdapter
+com.jwkj.adapter.WifiAdapter:
+    33:40:public WifiAdapter(android.content.Context,int,int[],int[],java.lang.String[])
+com.jwkj.adapter.YearAdapter
+com.jwkj.adapter.YearAdapter$1
+com.jwkj.data.APContact:
+    25:30:public APContact(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+com.jwkj.data.APContactDB:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String COLUMN_ID
+    public static final java.lang.String COLUMN_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_CONTACT_NAME
+    public static final java.lang.String COLUMN_CONTACT_NAME_DATA_TYPE
+    public static final java.lang.String COLUMN_CONTACT_ID
+    public static final java.lang.String COLUMN_CONTACT_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_CONTACT_PASSWORD
+    public static final java.lang.String COLUMN_CONTACT_PASSWORD_DATA_TYPE
+    public static final java.lang.String COLUMN_ACTIVE_USER
+    public static final java.lang.String COLUMN_ACTIVE_USER_DATA_TYPE
+    public static final java.lang.String ActiviUser
+    40:40:public static java.lang.String getDeleteTableSQLString()
+    154:154:public int deleteByActiveUserIdAndContactId(java.lang.String,java.lang.String)
+com.jwkj.data.AlarmMaskDB:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String COLUMN_ID
+    public static final java.lang.String COLUMN_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_DEVICEID
+    public static final java.lang.String COLUMN_DEVICEID_DATA_TYPE
+    public static final java.lang.String COLUMN_ACTIVE_USER
+    public static final java.lang.String COLUMN_ACTIVE_USER_DATA_TYPE
+    31:31:public static java.lang.String getDeleteTableSQLString()
+com.jwkj.data.AlarmRecordDB:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String COLUMN_ID
+    public static final java.lang.String COLUMN_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_DEVICEID
+    public static final java.lang.String COLUMN_DEVICEID_DATA_TYPE
+    public static final java.lang.String COLUMN_ACTIVE_USER
+    public static final java.lang.String COLUMN_ACTIVE_USER_DATA_TYPE
+    public static final java.lang.String COLUMN_ALARM_TYPE
+    public static final java.lang.String COLUMN_ALARM_TYPE_DATA_TYPE
+    public static final java.lang.String COLUMN_ALARM_TIME
+    public static final java.lang.String COLUMN_ALARM_TIME_DATA_TYPE
+    public static final java.lang.String COLUMN_ALARM_GROUP
+    public static final java.lang.String COLUMN_ALARM_GROUP_DATA_TYPE
+    public static final java.lang.String COLUMN_ALARM_ITEM
+    public static final java.lang.String COLUMN_ALARM_ITEM_DATA_TYPE
+    44:44:public static java.lang.String getDeleteTableSQLString()
+com.jwkj.data.Contact:
+    92:93:public void setApModeState(int)
+    96:109:public int getApModeState()
+com.jwkj.data.ContactDB:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String COLUMN_ID
+    public static final java.lang.String COLUMN_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_CONTACT_NAME
+    public static final java.lang.String COLUMN_CONTACT_NAME_DATA_TYPE
+    public static final java.lang.String COLUMN_CONTACT_ID
+    public static final java.lang.String COLUMN_CONTACT_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_CONTACT_PASSWORD
+    public static final java.lang.String COLUMN_CONTACT_PASSWORD_DATA_TYPE
+    public static final java.lang.String COLUMN_CONTACT_TYPE
+    public static final java.lang.String COLUMN_CONTACT_TYPE_DATA_TYPE
+    public static final java.lang.String COLUMN_MESSAGE_COUNT
+    public static final java.lang.String COLUMN_MESSAGE_COUNT_DATA_TYPE
+    public static final java.lang.String COLUMN_ACTIVE_USER
+    public static final java.lang.String COLUMN_ACTIVE_USER_DATA_TYPE
+    public static final java.lang.String COLUMN_ACTIVE_USERPWD
+    public static final java.lang.String COLUMN_ACTIVE_USERPWD_DATA_TYPE
+    46:46:public static java.lang.String getDeleteTableSQLString()
+    194:194:public int deleteById(int)
+com.jwkj.data.DataManager:
+    public static final java.lang.String TAG
+    public static final java.lang.String DataBaseName
+    public static final int DataBaseVersion
+    20:20:public static synchronized java.util.List findMessageByActiveUserAndChatId(android.content.Context,java.lang.String,java.lang.String)
+    47:55:public static synchronized void clearMessageByActiveUserAndChatId(android.content.Context,java.lang.String,java.lang.String)
+    264:264:public static synchronized java.util.List findNearlyTellByActiveUser(android.content.Context,java.lang.String)
+    279:279:public static synchronized java.util.List findNearlyTellByActiveUserAndTellId(android.content.Context,java.lang.String,java.lang.String)
+    306:314:public static synchronized void deleteNearlyTellById(android.content.Context,int)
+    319:327:public static synchronized void deleteNearlyTellByTellId(android.content.Context,java.lang.String)
+    332:340:public static synchronized void clearNearlyTell(android.content.Context,java.lang.String)
+    420:428:public static synchronized void deleteContactById(android.content.Context,int)
+    478:487:public static synchronized void deleteAPContactByActiveUserAndContactId(android.content.Context,java.lang.String,java.lang.String)
+com.jwkj.data.MessageDB:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String COLUMN_ID
+    public static final java.lang.String COLUMN_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_FROMID
+    public static final java.lang.String COLUMN_FROMID_DATA_TYPE
+    public static final java.lang.String COLUMN_TOID
+    public static final java.lang.String COLUMN_TOID_DATA_TYPE
+    public static final java.lang.String COLUMN_MSG
+    public static final java.lang.String COLUMN_MSG_DATA_TYPE
+    public static final java.lang.String COLUMN_MSGTIME
+    public static final java.lang.String COLUMN_MSGTIME_DATA_TYPE
+    public static final java.lang.String COLUMN_ACTIVE_USER
+    public static final java.lang.String COLUMN_ACTIVE_USER_DATA_TYPE
+    public static final java.lang.String COLUMN_MSG_STATE
+    public static final java.lang.String COLUMN_MSG_STATE_DATA_TYPE
+    public static final java.lang.String COLUMN_MSG_FLAG
+    public static final java.lang.String COLUMN_MSG_FLAG_DATA_TYPE
+    37:37:public static java.lang.String getDeleteTableSQLString()
+    76:78:public void delete(int)
+    81:85:public void deleteByActiveUserAndChatId(java.lang.String,java.lang.String)
+    88:103:public void update(com.jwkj.data.Message)
+    119:159:public java.util.List findMessageByActiveUserAndChatId(java.lang.String,java.lang.String)
+com.jwkj.data.NearlyTell:
+    public int id
+    public int count
+    public static final int TELL_STATE_CALL_IN_REJECT
+    public static final int TELL_STATE_CALL_IN_ACCEPT
+    public static final int TELL_STATE_CALL_OUT_REJECT
+    public static final int TELL_STATE_CALL_OUT_ACCEPT
+com.jwkj.data.NearlyTellDB:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String COLUMN_ID
+    public static final java.lang.String COLUMN_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_TELL_ID
+    public static final java.lang.String COLUMN_TELL_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_TELL_TYPE
+    public static final java.lang.String COLUMN_TELL_TYPE_DATA_TYPE
+    public static final java.lang.String COLUMN_TELL_STATE
+    public static final java.lang.String COLUMN_TELL_STATE_DATA_TYPE
+    public static final java.lang.String COLUMN_TELL_TIME
+    public static final java.lang.String COLUMN_TELL_TIME_DATA_TYPE
+    public static final java.lang.String COLUMN_ACTIVE_USER
+    public static final java.lang.String COLUMN_ACTIVE_USER_DATA_TYPE
+    39:39:public static java.lang.String getDeleteTableSQLString()
+    74:102:public java.util.List findByActiveUserId(java.lang.String)
+    107:136:public java.util.List findByActiveUserIdAndTellId(java.lang.String,java.lang.String)
+    140:140:public int deleteByActiveUserId(java.lang.String)
+    145:145:public int deleteById(int)
+    150:150:public int deleteByTellId(java.lang.String)
+com.jwkj.data.SharedPreferencesManager:
+    public static final java.lang.String SP_FILE_GWELL
+    public static final java.lang.String KEY_RECENTNAME
+    public static final java.lang.String KEY_RECENTPASS
+    public static final java.lang.String KEY_RECENTCODE
+    public static final java.lang.String KEY_RECENTNAME_EMAIL
+    public static final java.lang.String KEY_RECENTPASS_EMAIL
+    public static final java.lang.String KEY_NAMES
+    public static final java.lang.String KEY_UPDATE_CHECKTIME
+    public static final java.lang.String KEY_C_VIBRATE_STATE
+    public static final java.lang.String KEY_C_SYS_BELL
+    public static final java.lang.String KEY_C_SD_BELL
+    public static final java.lang.String KEY_C_BELL_SELECTPOS
+    public static final java.lang.String KEY_C_MUTE_STATE
+    public static final java.lang.String KEY_C_BELL_TYPE
+    public static final java.lang.String KEY_A_VIBRATE_STATE
+    public static final java.lang.String KEY_A_SYS_BELL
+    public static final java.lang.String KEY_A_SD_BELL
+    public static final java.lang.String KEY_A_BELL_SELECTPOS
+    public static final java.lang.String KEY_A_MUTE_STATE
+    public static final java.lang.String KEY_A_BELL_TYPE
+    public static final java.lang.String NOTIFY_VERSION
+    public static final java.lang.String IS_SHOW_NOTIFY
+    public static final java.lang.String IS_REMEMBER_PASS
+    public static final java.lang.String IS_REMEMBER_PASS_EMAIL
+    public static final java.lang.String RECENT_LOGIN_TYPE
+    public static final java.lang.String IGONORE_ALARM_TIME
+    public static final java.lang.String ALARM_TIME_INTERVAL
+    public static final java.lang.String IS_AUTO_START
+    public static final java.lang.String IS_EMAIL_SENDSELF
+    public static final java.lang.String IS_AP_ENTER
+    public static final java.lang.String LAST_AUTO_CHECK_UPDATE_TIME
+    public static final int TYPE_BELL_SYS
+    public static final int TYPE_BELL_SD
+    82:84:public int getIntData(android.content.Context,java.lang.String,java.lang.String)
+    89:94:public void putIntData(android.content.Context,java.lang.String,java.lang.String,int)
+    97:102:public void putNotifyVersion(int,android.content.Context)
+    105:107:public int getNotifyVersion(android.content.Context)
+    414:416:public boolean getIsSendemailToSelf(android.content.Context)
+com.jwkj.data.SqlHelper:
+    7:7:public SqlHelper()
+    32:32:public static java.lang.String formDeleteTableSqlString(java.lang.String)
+com.jwkj.data.SysMessage:
+    public static final int MESSAGE_STATE_NO_READ
+    public static final int MESSAGE_STATE_READED
+    public static final int MESSAGE_TYPE_ADMIN
+com.jwkj.data.SysMessageDB:
+    public static final java.lang.String TABLE_NAME
+    public static final java.lang.String COLUMN_ID
+    public static final java.lang.String COLUMN_ID_DATA_TYPE
+    public static final java.lang.String COLUMN_MSG
+    public static final java.lang.String COLUMN_MSG_DATA_TYPE
+    public static final java.lang.String COLUMN_MSG_EN
+    public static final java.lang.String COLUMN_MSG_EN_DATA_TYPE
+    public static final java.lang.String COLUMN_MSGTIME
+    public static final java.lang.String COLUMN_MSGTIME_DATA_TYPE
+    public static final java.lang.String COLUMN_ACTIVE_USER
+    public static final java.lang.String COLUMN_ACTIVE_USER_DATA_TYPE
+    public static final java.lang.String COLUMN_MSGSTATE
+    public static final java.lang.String COLUMN_MSGSTATE_DATA_TYPE
+    public static final java.lang.String COLUMN_MSGSTYPE
+    public static final java.lang.String COLUMN_MSGSTYPE_DATA_TYPE
+    43:43:public static java.lang.String getDeleteTableSQLString()
+com.jwkj.entity.Account:
+    public java.lang.String accessKey
+com.jwkj.entity.Email:
+    48:48:public java.lang.String[] getUIEmailLists()
+    111:116:public int getUIEmailPosition(java.lang.String)
+com.jwkj.entity.LocalDevice:
+    20:20:public int getRtspFrag()
+    60:60:public java.net.InetAddress getAddress()
+com.jwkj.entity.Sensor:
+    public static final int SENSORCATEGORY_NORMAL
+    public static final int SENSORCATEGORY_SPECIAL
+    public static final int NameLen
+    71:72:public void setSensorCategory(int)
+    79:80:public void setSensorType(byte)
+    111:111:public byte getIsNameChanged()
+    115:116:public void setIsNameChanged(byte)
+    148:149:public boolean getSensorStateAtMode(int,int)
+    206:214:public void upDataSensorData(byte[],int)
+    222:222:public byte getSensorModeInfo(int)
+    231:232:public void setSensorModeInfo(int,byte)
+com.jwkj.fisheye.FishSubCmd
+com.jwkj.fisheye.FisheyeSetHandler:
+    68:77:public void SetFishWorkMode(java.lang.String,java.lang.String,int)
+    98:108:public void sSettingScheduleTimeGroup(java.lang.String,java.lang.String,byte[])
+    111:120:public void sClearScheduleTimeGroup(java.lang.String,java.lang.String,int)
+    123:131:public void sGetCurrentWorkMode(java.lang.String,java.lang.String)
+    150:158:public void sGetWorkModeSchedule(java.lang.String,java.lang.String)
+    161:170:public void sSetAllSensorSwitch(java.lang.String,java.lang.String,int)
+    173:182:public void sGetAllSensorSwitch(java.lang.String,java.lang.String,int)
+    185:196:public void sSetLowVolPushTimeInterval(java.lang.String,java.lang.String,int,short)
+    199:207:public void sGetLowVolPushTimeInterval(java.lang.String,java.lang.String)
+    287:297:public void sTurnSensor(java.lang.String,java.lang.String,byte[],byte)
+    321:330:public void sShareToMember(java.lang.String,java.lang.String,byte[])
+    338:348:public void sMemberAgree(java.lang.String,java.lang.String,byte,byte[])
+    356:368:public void sDeleteMember(java.lang.String,java.lang.String,int,int)
+    376:386:public void sDeleteDevice(java.lang.String,java.lang.String,int)
+    394:404:public void sMemberWhiteList(java.lang.String,java.lang.String,int)
+    429:437:public void sGetAllSpecialAlarmData(java.lang.String,java.lang.String)
+    465:474:public void sKeepClientCmd(java.lang.String,java.lang.String)
+com.jwkj.fragment.APContactFrag:
+    com.jwkj.widget.NormalDialog dialog
+com.jwkj.fragment.APModeFrag:
+    private android.os.Bundle bundle
+    81:89:public void callDevice()
+com.jwkj.fragment.AlarmControlFrag:
+    android.widget.ProgressBar progressBar_alarmId
+    android.widget.ImageView icon_add_alarm_id
+    com.lib.addBar.AddBar addBar
+    android.widget.TextView alarmId_text
+    int infrared_switch
+    int lamp_switch
+    int cur_modify_lamp_state
+    849:849:public void showProgress_alarmId()
+com.jwkj.fragment.ContactFrag:
+    public static final int CHANGE_REFRESHING_LABLE
+    private com.lib.quick_action_bar.QuickActionWidget mBar
+    android.os.Handler handler
+    com.jwkj.widget.NormalDialog dialog_update
+    282:287:private void addListHeader()
+    749:773:public void showQuickActionBar(android.view.View,com.jwkj.data.Contact)
+    776:820:private void showQuickActionBar_phone(android.view.View,com.jwkj.data.Contact)
+    823:1006:private void showQuickActionBar_npc(android.view.View,com.jwkj.data.Contact)
+    1009:1092:private void showQuickActionBar_ipc(android.view.View,com.jwkj.data.Contact)
+    1095:1158:private void showQuickActionBar_doorBell(android.view.View,com.jwkj.data.Contact)
+    1161:1186:private void showQuickActionBar_unknwon(android.view.View,com.jwkj.data.Contact)
+    1255:1277:private void connectWifi(java.lang.String,java.lang.String)
+    127:127:static synthetic void access$11(com.jwkj.fragment.ContactFrag,com.jwkj.data.Contact)
+com.jwkj.fragment.ContactFrag$10
+com.jwkj.fragment.ContactFrag$11
+com.jwkj.fragment.ContactFrag$11$1
+com.jwkj.fragment.ContactFrag$12
+com.jwkj.fragment.ContactFrag$12$1
+com.jwkj.fragment.ContactFrag$13
+com.jwkj.fragment.ContactFrag$13$1
+com.jwkj.fragment.ContactFrag$14
+com.jwkj.fragment.ContactFrag$14$1
+com.jwkj.fragment.ContactFrag$15
+com.jwkj.fragment.ContactFrag$16
+com.jwkj.fragment.ContactFrag$8:
+    225:232:public void onNvrClick(com.jwkj.data.Contact)
+com.jwkj.fragment.DefenceAreaControlFrag:
+    private static final int EXPAND_OR_SHRINK
+    private static final int END_EXPAND_OR_SHRINK
+com.jwkj.fragment.FaultFragment:
+    55:58:public void setClickRefresh()
+com.jwkj.fragment.RecordControlFrag:
+    int recordState
+    boolean isSDCard
+    857:860:public void showProgress_record_time()
+    917:919:public void showRecordSwitchImg()
+com.jwkj.fragment.RecordListFragment:
+    java.lang.String[] names
+    223:226:public void cancelDialog()
+com.jwkj.fragment.RemoteControlFrag:
+    int defenceState
+    int recordState
+com.jwkj.fragment.SdCardFrag:
+    boolean isSDCard
+com.jwkj.fragment.SecurityControlFrag:
+    240:242:public void showProgress_automatic_upgrade()
+com.jwkj.fragment.SmartDeviceFrag:
+    private static final int PopH
+    200:201:private void getAllSpecialSensorData()
+    241:241:private int getSensorPosition(com.jwkj.entity.Sensor)
+    600:606:public boolean onBackPressed()
+com.jwkj.fragment.SmartDeviceFrag$5:
+    522:530:public void onCancle(int)
+com.jwkj.fragment.UtilsFrag:
+    int screenWidth
+    int screenHeight
+com.jwkj.fragment.VideoControlFrag:
+    boolean isOpenModify
+com.jwkj.global.AccountPersist:
+    public static final java.lang.String ACCOUNT_SHARED_PREFERENCE
+    public static final java.lang.String ACC_INFO_3C
+    public static final java.lang.String ACC_INFO_PHONE
+    public static final java.lang.String ACC_INFO_EMAIL
+    public static final java.lang.String ACC_INFO_SESSION_ID
+    public static final java.lang.String ACC_INFO_COUNTRY_CODE
+    public static final java.lang.String CODE1
+    public static final java.lang.String CODE2
+    public static final java.lang.String ACTIVE
+com.jwkj.global.AppConfig:
+    12:12:public AppConfig()
+com.jwkj.global.AppConfig$DeBug
+com.jwkj.global.AppConfig$Relese:
+    public static final java.lang.String VERSION
+    public static final java.lang.String APTAG
+    28:28:public AppConfig$Relese()
+com.jwkj.global.AutoStartReceiver:
+    private static final java.lang.String action_boot
+com.jwkj.global.Constants
+com.jwkj.global.Constants$APmodeState
+com.jwkj.global.Constants$Action
+com.jwkj.global.Constants$ActivityInfo
+com.jwkj.global.Constants$ActivityStatus
+com.jwkj.global.Constants$CHANGE_FOCUS_ZOOM
+com.jwkj.global.Constants$ConnectType
+com.jwkj.global.Constants$DefenceState
+com.jwkj.global.Constants$DeviceFlag
+com.jwkj.global.Constants$DeviceState
+com.jwkj.global.Constants$FOCUS
+com.jwkj.global.Constants$FishBoption
+com.jwkj.global.Constants$Image
+com.jwkj.global.Constants$Languege
+com.jwkj.global.Constants$LenStateCode
+com.jwkj.global.Constants$LoginType
+com.jwkj.global.Constants$MessageType
+com.jwkj.global.Constants$ModifyAccountType
+com.jwkj.global.Constants$P2P
+com.jwkj.global.Constants$P2P_CALL
+com.jwkj.global.Constants$P2P_CALL$CALL_RESULT
+com.jwkj.global.Constants$P2P_SET
+com.jwkj.global.Constants$P2P_SET$ACK_RESULT
+com.jwkj.global.Constants$P2P_SET$ALARM_EMAIL_SET
+com.jwkj.global.Constants$P2P_SET$AUTOMATIC_UPGRADE
+com.jwkj.global.Constants$P2P_SET$BIND_ALARM_ID_SET
+com.jwkj.global.Constants$P2P_SET$BUZZER_SET
+com.jwkj.global.Constants$P2P_SET$DEFENCE_AREA_SET
+com.jwkj.global.Constants$P2P_SET$DEVICE_PASSWORD_SET
+com.jwkj.global.Constants$P2P_SET$DEVICE_TIME_SET
+com.jwkj.global.Constants$P2P_SET$DEVICE_UPDATE
+com.jwkj.global.Constants$P2P_SET$DEVICE_VISITOR_PASSWORD_SET
+com.jwkj.global.Constants$P2P_SET$INFRARED_SWITCH
+com.jwkj.global.Constants$P2P_SET$INIT_PASSWORD_SET
+com.jwkj.global.Constants$P2P_SET$MOTION_SET
+com.jwkj.global.Constants$P2P_SET$NET_TYPE_SET
+com.jwkj.global.Constants$P2P_SET$PRE_RECORD_SET
+com.jwkj.global.Constants$P2P_SET$RECORD_PLAN_TIME_SET
+com.jwkj.global.Constants$P2P_SET$RECORD_TIME_SET
+com.jwkj.global.Constants$P2P_SET$RECORD_TYPE_SET
+com.jwkj.global.Constants$P2P_SET$REMOTE_DEFENCE_SET
+com.jwkj.global.Constants$P2P_SET$REMOTE_RECORD_SET
+com.jwkj.global.Constants$P2P_SET$SD_FORMAT
+com.jwkj.global.Constants$P2P_SET$VIDEO_FORMAT_SET
+com.jwkj.global.Constants$P2P_SET$VIDEO_VOLUME_SET
+com.jwkj.global.Constants$P2P_SET$WIFI_SET
+com.jwkj.global.Constants$P2P_SET$WIRED_ALARM_INPUT
+com.jwkj.global.Constants$P2P_SET$WIRED_ALARM_OUT
+com.jwkj.global.Constants$P2P_TYPE
+com.jwkj.global.Constants$RegisterType
+com.jwkj.global.Constants$ReplaceStyle
+com.jwkj.global.Constants$SensorType
+com.jwkj.global.Constants$SettingConfig
+com.jwkj.global.Constants$SpecialSensorType
+com.jwkj.global.Constants$Update
+com.jwkj.global.Constants$sensorSwitch
+com.jwkj.global.FList:
+    81:81:public java.util.HashMap map()
+    92:96:public int getType(java.lang.String)
+    110:114:public int getState(java.lang.String)
+    185:193:public java.lang.String getContactId(java.lang.String)
+    345:354:public void updateApModelist()
+    357:357:public java.util.List getLocalDevices()
+    371:380:public java.util.List getUnsetPasswordLocalDevices()
+    394:402:public java.util.List getSetPasswordLocalDevices()
+    466:473:public java.net.InetAddress getLocalDeviceIp(java.lang.String)
+    579:593:public void gainDeviceMode(java.lang.String)
+    596:602:public boolean isApMode(java.lang.String)
+    690:699:public void gainIsApMode(java.lang.String)
+com.jwkj.global.LogService:
+    private static final java.lang.String TAG
+    private static final int MEMORY_LOG_FILE_MAX_SIZE
+    private static final int MEMORY_LOG_FILE_MONITOR_INTERVAL
+    private static final int SDCARD_LOG_FILE_SAVE_DAYS
+com.jwkj.global.MD5
+com.jwkj.global.MyApp:
+    public static final java.lang.String MAIN_SERVICE_START
+    public static final int NOTIFICATION_DOWN_ID
+    public static final java.lang.String LOGCAT
+com.jwkj.global.NpcCommon:
+    7:7:public NpcCommon()
+    22:22:public static boolean getNetWorkState()
+com.jwkj.listener.BadgeView:
+    public static final int POSITION_TOP_LEFT
+    public static final int POSITION_TOP_RIGHT
+    public static final int POSITION_BOTTOM_LEFT
+    public static final int POSITION_BOTTOM_RIGHT
+    public static final int POSITION_CENTER
+    private static final int DEFAULT_MARGIN_DIP
+    private static final int DEFAULT_LR_PADDING_DIP
+    private static final int DEFAULT_CORNER_RADIUS_DIP
+    private static final int DEFAULT_POSITION
+    private static final int DEFAULT_TEXT_COLOR
+    65:66:public BadgeView(android.content.Context)
+    84:85:public BadgeView(android.content.Context,android.view.View)
+    101:102:public BadgeView(android.content.Context,android.widget.TabWidget,int)
+    202:203:public void show(boolean)
+    212:213:public void show(android.view.animation.Animation)
+    220:221:public void hide()
+    230:231:public void hide(boolean)
+    240:241:public void hide(android.view.animation.Animation)
+    248:249:public void toggle()
+    258:259:public void toggle(boolean)
+    270:271:public void toggle(android.view.animation.Animation,android.view.animation.Animation)
+    290:295:private void hide(boolean,android.view.animation.Animation)
+    298:303:private void toggle(boolean,android.view.animation.Animation,android.view.animation.Animation)
+    313:326:public int increment(int)
+    337:337:public int decrement(int)
+    392:392:public android.view.View getTarget()
+    412:412:public int getBadgePosition()
+    424:425:public void setBadgePosition(int)
+    433:433:public int getHorizontalBadgeMargin()
+    442:442:public int getVerticalBadgeMargin()
+    453:455:public void setBadgeMargin(int)
+    467:469:public void setBadgeMargin(int,int)
+    476:476:public int getBadgeBackgroundColor()
+    486:488:public void setBadgeBackgroundColor(int)
+com.jwkj.listener.CrashHandler:
+    public static final java.lang.String TAG
+com.jwkj.listener.MainFragmentAdapter:
+    private static final java.lang.String TAG
+    17:19:public MainFragmentAdapter(android.support.v4.app.FragmentManager,java.util.List)
+com.jwkj.listener.MyAnimationDrawable
+com.jwkj.listener.MyAnimationDrawable$1
+com.jwkj.thread.MainThread:
+    private java.lang.String version
+    private int serVersion
+    private static final long SYSTEM_MSG_INTERVAL
+    long lastSysmsgTime
+com.jwkj.utils.ComparatorUserByFilterUser
+com.jwkj.utils.DensityUtil
+com.jwkj.utils.EncodingHandler:
+    private static final int BLACK
+    17:17:public EncodingHandler()
+com.jwkj.utils.FishAckUtils
+com.jwkj.utils.HashList:
+    70:73:public void clear()
+    77:77:public boolean contains(java.lang.Object)
+    82:82:public boolean isEmpty()
+    87:87:public java.lang.Object remove(int)
+    92:92:public boolean remove(java.lang.Object)
+    97:97:public boolean removeAll(java.util.Collection)
+    102:102:public boolean retainAll(java.util.Collection)
+    107:107:public java.lang.Object set(int,java.lang.Object)
+    112:112:public java.util.List subList(int,int)
+    117:117:public java.lang.Object[] toArray()
+    121:121:public java.lang.Object[] toArray(java.lang.Object[])
+com.jwkj.utils.ImageUtils:
+    private static final java.lang.String TAG
+    43:43:public ImageUtils()
+    54:54:public static android.graphics.Bitmap getBitmap(java.lang.String)
+    95:98:public static android.graphics.Bitmap getBitmap(byte[],int)
+    152:155:public static android.graphics.Point getSize(byte[])
+    180:181:public static android.graphics.Bitmap getBitmap(byte[],int,int)
+    203:203:public static android.graphics.Bitmap getBitmap(java.io.File)
+    214:215:public static void setImage(java.lang.String,android.widget.ImageView)
+    225:228:public static void setImage(java.io.File,android.widget.ImageView)
+    298:302:private static void clipBottom(android.graphics.Canvas,android.graphics.Paint,int,int,int)
+    382:392:public static byte[] getImageFromNetByUrl(java.lang.String)
+    397:409:public static void writeImageToDisk(byte[],java.lang.String,java.lang.String)
+    412:419:public static byte[] readInputStream(java.io.InputStream)
+com.jwkj.utils.LanguageComparator_EN
+com.jwkj.utils.PhoneWatcher:
+    boolean isWatchering
+com.jwkj.utils.T:
+    12:12:public T()
+    120:123:public static void hideToast()
+com.jwkj.utils.TcpClient:
+    public static final int SEARCH_AP_DEVICE
+com.jwkj.utils.UDPHelper:
+    public static final int HANDLER_MESSAGE_BIND_ERROR
+    public static final int HANDLER_MESSAGE_RECEIVE_MSG
+com.jwkj.utils.Utils:
+    63:63:public Utils()
+    89:99:public static java.lang.String ConvertTimeByString(java.lang.String)
+    134:142:public static android.graphics.Bitmap montageBitmap(android.graphics.Bitmap,android.graphics.Bitmap,int,int)
+    155:207:public static void upDate(android.content.Context)
+    224:232:public static java.util.HashMap getHash(java.lang.String)
+    239:256:public static java.lang.String getFormatTellDate(android.content.Context,java.lang.String)
+    388:390:public static int bytesToInt(byte[],int)
+    534:544:public static java.lang.String getIntentAddress(android.content.Context,java.lang.String)
+    566:583:public static java.lang.String bytesToHexString(byte[])
+    622:634:public static java.io.File createRecodeFile()
+    643:647:public static boolean isSD()
+    658:671:public static java.lang.String getVideoRecodeName(java.lang.String)
+    678:684:public static int[] intToBytes2(int)
+    751:755:public static byte[] gainWifiMode()
+    907:910:public static boolean checkPassword(java.lang.String)
+    969:975:public static byte[] intToBytes(int)
+com.jwkj.utils.Utils$1
+com.jwkj.utils.WifiUtils:
+    private static final int WIFICIPHER_WEP
+    private static final int WIFICIPHER_WPA
+    private static final int WIFICIPHER_NOPASS
+    private static final int WIFICIPHER_INVALID
+    42:44:private WifiUtils(android.net.wifi.WifiManager)
+    270:282:public boolean isScanExist(java.lang.String)
+    287:289:public java.util.List getLists()
+    317:320:public void SetWiFiEnAble(boolean)
+    334:341:public void disConnectWifi(java.lang.String)
+com.jwkj.wheel.widget.AbstractWheelAdapter:
+    57:62:protected void notifyDataChangedEvent()
+    68:73:protected void notifyDataInvalidatedEvent()
+com.jwkj.wheel.widget.AbstractWheelTextAdapter
+com.jwkj.wheel.widget.NumericWheelAdapter
+com.jwkj.wheel.widget.WheelAdapter
+com.jwkj.wheel.widget.WheelScroller:
+    private static final int SCROLLING_DURATION
+    public static final int MIN_DELTA_FOR_SCROLLING
+    107:109:public void setInterpolator(android.view.animation.Interpolator)
+com.jwkj.wheel.widget.WheelView:
+    private static final int ITEM_OFFSET_PERCENT
+    private static final int PADDING
+    private static final int DEF_VISIBLE_ITEMS
+    179:180:public void setInterpolator(android.view.animation.Interpolator)
+    188:188:public int getVisibleItems()
+    200:201:public void setVisibleItems(int)
+    251:252:public void addChangingListener(com.jwkj.wheel.widget.OnWheelChangedListener)
+    261:262:public void removeChangingListener(com.jwkj.wheel.widget.OnWheelChangedListener)
+    295:296:public void removeScrollingListener(com.jwkj.wheel.widget.OnWheelScrollListener)
+    323:324:public void addClickingListener(com.jwkj.wheel.widget.OnWheelClickedListener)
+    333:334:public void removeClickingListener(com.jwkj.wheel.widget.OnWheelClickedListener)
+    952:953:public void stopScrolling()
+com.jwkj.widget.AlarmHeaderView:
+    android.graphics.Bitmap tempBitmap
+    37:59:public void updateImage(java.lang.String,java.lang.String)
+com.jwkj.widget.BounceScrollView:
+    private com.jwkj.widget.MyListView listView
+    159:160:public void setListView(android.widget.ListView)
+com.jwkj.widget.EditorAndDeletePop:
+    62:62:public com.jwkj.entity.Sensor getSensor()
+    70:70:public int getPosition()
+    103:103:public com.jwkj.adapter.SensorRecycleAdapter$ViewHolder getHolder()
+com.jwkj.widget.EmailPopwindow
+com.jwkj.widget.EmailPopwindow$1
+com.jwkj.widget.EmailPopwindow$EmailAdapter
+com.jwkj.widget.EmailPopwindow$onSelected
+com.jwkj.widget.HeaderView:
+    70:70:public android.graphics.Bitmap getBitmap()
+com.jwkj.widget.ImputDialog:
+    31:33:public ImputDialog(android.content.Context,int)
+    36:38:protected ImputDialog(android.content.Context,boolean,android.content.DialogInterface$OnCancelListener)
+    68:69:public void inputDialogShow()
+    98:99:public void setEdtextType(int)
+    102:104:public void setEMS(int)
+    106:107:public void setMaxWidth(int)
+    110:111:public void setMaxCharater(int)
+    115:123:public void SetText(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    136:136:public void setInputType()
+com.jwkj.widget.MLVerticalSeekBar:
+    30:31:public MLVerticalSeekBar(android.content.Context)
+com.jwkj.widget.MyImageView:
+    public static final int IMAGE_WIDTH_HEIGHT
+com.jwkj.widget.MyInputDialog:
+    92:93:public void setOnButtonCancelListener(com.jwkj.widget.MyInputDialog$OnButtonCancelListener)
+    172:173:public void setInput1HintText(java.lang.String)
+    184:187:public void setInput1Type_number()
+com.jwkj.widget.MyMessageDialog
+com.jwkj.widget.MyMessageDialog$1
+com.jwkj.widget.MyMessageDialog$2
+com.jwkj.widget.MyMessageDialog$OnCustomDialogListener
+com.jwkj.widget.MyPassLinearLayout:
+    private static final java.lang.String TAG
+    142:142:public int getPasswordStatus()
+com.jwkj.widget.MyPwindow
+com.jwkj.widget.MyscrollView:
+    13:14:public MyscrollView(android.content.Context)
+com.jwkj.widget.NormalDialog:
+    private android.widget.AdapterView$OnItemClickListener onItemClickListener
+    public static final int DIALOG_STYLE_NORMAL
+    public static final int DIALOG_STYLE_LOADING
+    public static final int DIALOG_STYLE_UPDATE
+    public static final int DIALOG_STYLE_DOWNLOAD
+    public static final int DIALOG_STYLE_PROMPT
+    259:292:public void showSelectorDialog()
+    295:295:public java.lang.String getContentStr()
+    310:310:public java.lang.String getbtnStr1()
+    324:324:public java.lang.String getbtnStr2()
+    338:338:public java.lang.String getbtnStr3()
+    388:424:public void showPromoptDiaglog()
+    427:457:public void showWaitConnectionDialog()
+    489:515:public void successDialog()
+    699:700:public void setListData(java.lang.String[])
+    707:708:public void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)
+    715:716:public void cancel()
+    730:730:public void setBtnListener(android.widget.TextView,android.widget.TextView)
+com.jwkj.widget.NormalDialog$10
+com.jwkj.widget.NormalDialog$7
+com.jwkj.widget.NormalDialog$8
+com.jwkj.widget.NormalDialog$OnCustomCancelListner:
+    public abstract void onCancle(int)
+com.jwkj.widget.PictrueTextView:
+    124:127:public void setImageResource(int,int)
+    129:131:public void setTextPictrueColor(boolean)
+com.jwkj.widget.RotateLayout:
+    16:17:public RotateLayout(android.content.Context)
+com.jwkj.widget.VerticalSeekBar:
+    30:31:public void setInScrollingContainer(boolean)
+    215:216:void onStopTrackingTouch()
+com.lib.addBar.AddBar:
+    55:65:public void updateItem(int,java.lang.String)
+    203:204:public void setOnItemClickListener(com.lib.addBar.OnItemClickListener)
+    207:207:public int getItemCount()
+    211:211:public int getMax_count()
+com.lib.imagesee.BasePagerAdapter:
+    97:97:public int getCurrentPosition()
+    101:102:public void setOnItemChangeListener(com.lib.imagesee.BasePagerAdapter$OnItemChangeListener)
+com.lib.imagesee.EclairMotionEvent:
+    37:37:public int getPointerCount()
+    41:41:public int getPointerId(int)
+com.lib.imagesee.FileTouchImageView:
+    71:72:public void setScaleType(android.widget.ImageView$ScaleType)
+com.lib.imagesee.GalleryViewPager:
+    private static final int CLICK_ACTION_THRESHHOLD
+    234:235:public void setOnItemClickListener(com.lib.imagesee.GalleryViewPager$OnItemClickListener)
+com.lib.imagesee.ImageTools:
+    29:29:public ImageTools()
+    72:110:public static java.util.ArrayList getGalleryPhotos()
+    114:135:static java.io.File[] getImageFile()
+    139:139:public static int dpToPx(android.content.res.Resources,int)
+com.lib.imagesee.ImageTools$1
+com.lib.imagesee.ItemModel
+com.lib.imagesee.TouchImageView:
+    static final long DOUBLE_PRESS_INTERVAL
+    static final float FRICTION
+    static final int NONE
+    static final int DRAG
+    static final int ZOOM
+    static final int CLICK
+    90:90:public boolean isZoomToOriginalSize()
+    94:95:public void setZoomToOriginalSize(boolean)
+com.lib.imagesee.WrapMotionEvent:
+    60:60:public int getPointerCount()
+    64:65:public int getPointerId(int)
+com.lib.lockview.Ease:
+    private static final float DOMAIN
+    private static final float DURATION
+    private static final float START
+    23:23:Ease()
+com.lib.lockview.Ease$Cubic:
+    37:37:Ease$Cubic()
+com.lib.lockview.Ease$Linear
+com.lib.lockview.Ease$Linear$1
+com.lib.lockview.Ease$Quad:
+    62:62:Ease$Quad()
+com.lib.lockview.Ease$Quart:
+    85:85:Ease$Quart()
+com.lib.lockview.Ease$Quint
+com.lib.lockview.Ease$Quint$1
+com.lib.lockview.Ease$Quint$2
+com.lib.lockview.Ease$Quint$3
+com.lib.lockview.Ease$Sine
+com.lib.lockview.Ease$Sine$1
+com.lib.lockview.Ease$Sine$2
+com.lib.lockview.Ease$Sine$3
+com.lib.lockview.GlowPadView:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    private static final int STATE_IDLE
+    private static final int STATE_START
+    private static final int STATE_FIRST_TOUCH
+    private static final int STATE_TRACKING
+    private static final int STATE_SNAP
+    private static final int STATE_FINISH
+    private static final float SNAP_MARGIN_DEFAULT
+    private static final int WAVE_ANIMATION_DURATION
+    private static final int RETURN_TO_HOME_DELAY
+    private static final int RETURN_TO_HOME_DURATION
+    private static final int HIDE_ANIMATION_DELAY
+    private static final int HIDE_ANIMATION_DURATION
+    private static final int SHOW_ANIMATION_DURATION
+    private static final int SHOW_ANIMATION_DELAY
+    private static final int INITIAL_SHOW_HANDLE_DURATION
+    private static final int REVEAL_GLOW_DELAY
+    private static final int REVEAL_GLOW_DURATION
+    private static final float TAP_RADIUS_SCALE_ACCESSIBILITY_ENABLED
+    private static final float TARGET_SCALE_EXPANDED
+    private static final float TARGET_SCALE_COLLAPSED
+    private static final float RING_SCALE_EXPANDED
+    private static final float RING_SCALE_COLLAPSED
+    android.view.animation.Animation animation
+    319:326:private void dump()
+    329:332:public void suspendAnimations()
+    335:341:public void resumeAnimations()
+    661:667:public void setTargetResources(int)
+    670:670:public int getTargetResourceId()
+    694:694:public int getTargetDescriptionsResourceId()
+    717:717:public int getDirectionDescriptionsResourceId()
+    789:796:public void reset(boolean)
+    1267:1274:public void setEnableTarget(int,boolean)
+    1284:1290:public int getTargetPosition(int)
+    1295:1314:private boolean replaceTargetDrawables(android.content.res.Resources,int,int)
+    1332:1368:public boolean replaceTargetDrawablesIfPresent(android.content.ComponentName,java.lang.String,int)
+    1372:1372:public boolean isShowTargetsOnIdle()
+com.lib.lockview.GlowPadView$AnimationBundle:
+    private static final long serialVersionUID
+    170:171:public void setSuspended(boolean)
+com.lib.lockview.GlowPadView$OnTriggerListener:
+    public static final int NO_HANDLE
+    public static final int CENTER_HANDLE
+com.lib.lockview.PointCloud:
+    private static final float MIN_POINT_SIZE
+    private static final float MAX_POINT_SIZE
+    private static final int INNER_POINTS
+    private static final java.lang.String TAG
+    private static final float PI
+    165:166:public void setScale(float)
+    169:169:public float getScale()
+com.lib.lockview.PointCloud$GlowManager:
+    79:79:public float getX()
+    87:87:public float getY()
+    91:92:public void setAlpha(float)
+    95:95:public float getAlpha()
+    103:103:public float getRadius()
+com.lib.lockview.PointCloud$WaveManager:
+    56:56:public float getRadius()
+    64:64:public float getAlpha()
+com.lib.lockview.TargetDrawable:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    117:123:public TargetDrawable(com.lib.lockview.TargetDrawable)
+    139:148:public boolean isActive()
+    164:164:public void setAnimation(android.view.animation.Animation)
+    214:215:public void setScaleX(float)
+    218:219:public void setScaleY(float)
+    226:226:public float getX()
+    230:230:public float getY()
+    234:234:public float getScaleX()
+    238:238:public float getScaleY()
+    242:242:public float getAlpha()
+    254:254:public float getPositionX()
+    258:258:public float getPositionY()
+    283:284:public void setEnabled(boolean)
+com.lib.lockview.TargetDrawable$DrawableWithAlpha
+com.lib.lockview.Tweener:
+    private static final java.lang.String TAG
+    private static final boolean DEBUG
+    146:146:varargs com.lib.lockview.Tweener from(java.lang.Object,long,java.lang.Object[])
+    170:171:public static void reset()
+com.lib.pullToRefresh.EmptyViewMethodAccessor:
+    public abstract void setEmptyView(android.view.View)
+com.lib.pullToRefresh.FlipLoadingLayout:
+    static final int FLIP_ANIMATION_DURATION
+com.lib.pullToRefresh.ILoadingLayout:
+    public abstract void setLoadingDrawable(android.graphics.drawable.Drawable)
+    public abstract void setPullLabel(java.lang.CharSequence)
+    public abstract void setRefreshingLabel(java.lang.CharSequence)
+    public abstract void setReleaseLabel(java.lang.CharSequence)
+    public abstract void setTextTypeface(android.graphics.Typeface)
+com.lib.pullToRefresh.IPullToRefresh
+com.lib.pullToRefresh.IndicatorLayout:
+    static final int DEFAULT_ROTATION_ANIMATION_DURATION
+com.lib.pullToRefresh.LoadingLayout:
+    static final java.lang.String LOG_TAG
+    327:328:public void setPullLabel(java.lang.CharSequence)
+    331:332:public void setRefreshingLabel(java.lang.CharSequence)
+    335:336:public void setReleaseLabel(java.lang.CharSequence)
+    340:341:public void setTextTypeface(android.graphics.Typeface)
+com.lib.pullToRefresh.LoadingLayoutProxy:
+    41:44:public void setLoadingDrawable(android.graphics.drawable.Drawable)
+    48:51:public void setRefreshingLabel(java.lang.CharSequence)
+    55:58:public void setPullLabel(java.lang.CharSequence)
+    62:65:public void setReleaseLabel(java.lang.CharSequence)
+    68:71:public void setTextTypeface(android.graphics.Typeface)
+com.lib.pullToRefresh.OverscrollHelper:
+    static final java.lang.String LOG_TAG
+    static final float DEFAULT_OVERSCROLL_SCALE
+    26:26:public OverscrollHelper()
+com.lib.pullToRefresh.PullToRefreshAdapterViewBase:
+    100:100:public boolean getShowIndicator()
+    160:161:public void setAdapter(android.widget.ListAdapter)
+    221:222:public void setOnItemClickListener(android.widget.AdapterView$OnItemClickListener)
+    226:227:public final void setOnLastItemVisibleListener(com.lib.pullToRefresh.PullToRefreshBase$OnLastItemVisibleListener)
+    230:231:public final void setOnScrollListener(android.widget.AbsListView$OnScrollListener)
+    234:235:public final void setScrollEmptyView(boolean)
+com.lib.pullToRefresh.PullToRefreshBase:
+    static final boolean DEBUG
+    static final boolean USE_HW_LAYERS
+    static final java.lang.String LOG_TAG
+    static final float FRICTION
+    public static final int SMOOTH_SCROLL_DURATION_MS
+    public static final int SMOOTH_SCROLL_LONG_DURATION_MS
+    static final int DEMO_SCROLL_INTERVAL
+    static final java.lang.String STATE_STATE
+    static final java.lang.String STATE_MODE
+    static final java.lang.String STATE_CURRENT_MODE
+    static final java.lang.String STATE_SCROLLING_REFRESHING_ENABLED
+    static final java.lang.String STATE_SHOW_REFRESHING_VIEW
+    static final java.lang.String STATE_SUPER
+    145:153:public final boolean demo()
+    163:163:public final boolean getFilterTouchEvents()
+    201:201:public final boolean isDisableScrollingWhileRefreshing()
+    224:224:public final boolean isScrollingWhileRefreshingEnabled()
+    393:394:public void setDisableScrollingWhileRefreshing(boolean)
+    398:399:public final void setFilterTouchEvents(boolean)
+    406:407:public void setLastUpdatedLabel(java.lang.CharSequence)
+    414:415:public void setLoadingDrawable(android.graphics.drawable.Drawable)
+    422:424:public void setLoadingDrawable(android.graphics.drawable.Drawable,com.lib.pullToRefresh.PullToRefreshBase$Mode)
+    443:444:public void setOnPullEventListener(com.lib.pullToRefresh.PullToRefreshBase$OnPullEventListener)
+    454:456:public final void setOnRefreshListener(com.lib.pullToRefresh.PullToRefreshBase$OnRefreshListener2)
+    463:464:public void setPullLabel(java.lang.CharSequence)
+    471:473:public void setPullLabel(java.lang.CharSequence,com.lib.pullToRefresh.PullToRefreshBase$Mode)
+    482:483:public final void setPullToRefreshEnabled(boolean)
+    487:488:public final void setPullToRefreshOverScrollEnabled(boolean)
+    492:493:public final void setRefreshing()
+    497:500:public final void setRefreshing(boolean)
+    507:508:public void setRefreshingLabel(java.lang.CharSequence)
+    515:518:public void setRefreshingLabel(java.lang.CharSequence,com.lib.pullToRefresh.PullToRefreshBase$Mode)
+    525:526:public void setReleaseLabel(java.lang.CharSequence)
+    533:535:public void setReleaseLabel(java.lang.CharSequence,com.lib.pullToRefresh.PullToRefreshBase$Mode)
+    538:539:public void setScrollAnimationInterpolator(android.view.animation.Interpolator)
+    543:544:public final void setShowViewWhileRefreshing(boolean)
+    671:671:protected int getPullToRefreshScrollDurationLonger()
+    1057:1058:protected final void smoothScrollToLonger(int)
+    1342:1351:private final void smoothScrollToAndBack(int)
+    1308:1308:static synthetic void access$5(com.lib.pullToRefresh.PullToRefreshBase,int,long,long,com.lib.pullToRefresh.PullToRefreshBase$OnSmoothScrollFinishedListener)
+com.lib.pullToRefresh.PullToRefreshBase$3
+com.lib.pullToRefresh.RotateLoadingLayout:
+    static final int ROTATION_ANIMATION_DURATION
+com.lib.pullToRefresh.SoundPullEventListener
+com.lib.pullToRefresh.Utils:
+    static final java.lang.String LOG_TAG
+    5:5:public Utils()
+com.lib.pullToRefresh.ViewCompat:
+    24:24:public ViewCompat()
+    43:46:public static void setLayerType(android.view.View,int)
+com.lib.pullToRefresh.ViewCompat$SDK11
+com.lib.pullToRefresh.ViewCompat$SDK16:
+    57:57:ViewCompat$SDK16()
+com.lib.quick_action_bar.QuickAction
+com.lib.quick_action_bar.QuickActionBar
+com.lib.quick_action_bar.QuickActionBar$1
+com.lib.quick_action_bar.QuickActionBar$2
+com.lib.quick_action_bar.QuickActionWidget
+com.lib.quick_action_bar.QuickActionWidget$OnQuickActionClickListener
+com.lib.slideexpandable.AbstractSlideExpandableListAdapter:
+    130:135:public void setAnimationDuration(int)
+    145:145:public boolean isAnyItemExpanded()
+    321:330:public boolean collapseLastOpen()
+    public abstract android.view.View getArrowView(android.view.View)
+com.lib.slideexpandable.ActionSlideExpandableListView:
+    1:1:public bridge synthetic void enableExpandOnItemClick()
+    1:1:public bridge synthetic boolean collapse()
+com.lib.slideexpandable.ExpandCollapseAnimation:
+    public static final int COLLAPSE
+    public static final int EXPAND
+com.lib.slideexpandable.OnItemClickListener
+com.lib.slideexpandable.SlideExpandableListAdapter:
+    45:45:public android.view.View getArrowView(android.view.View)
+com.lib.slideexpandable.SlideExpandableListView:
+    37:40:public boolean collapse()
+    58:66:public void enableExpandOnItemClick()
+com.lib.slideexpandable.SlideExpandableListView$1
+com.mediatek.elian.ElianNative:
+    9:14:public static boolean LoadLib()
+    public native int GetLibVersion()
+    public native int GetProtoVersion()
+com.nostra13.universalimageloader.cache.disc.DiscCacheAware:
+    public abstract java.io.File getDirectory()
+    public abstract boolean remove(java.lang.String)
+    public abstract void close()
+    public abstract void clear()
+com.nostra13.universalimageloader.cache.disc.impl.BaseDiscCache:
+    public static final int DEFAULT_BUFFER_SIZE
+    public static final int DEFAULT_COMPRESS_QUALITY
+    private static final java.lang.String ERROR_ARG_NULL
+    private static final java.lang.String TEMP_IMAGE_POSTFIX
+    93:93:public java.io.File getDirectory()
+    148:148:public boolean remove(java.lang.String)
+    154:154:public void close()
+    158:164:public void clear()
+    179:180:public void setBufferSize(int)
+    183:184:public void setCompressFormat(android.graphics.Bitmap$CompressFormat)
+    187:188:public void setCompressQuality(int)
+com.nostra13.universalimageloader.cache.disc.impl.LimitedAgeDiscCache
+com.nostra13.universalimageloader.cache.disc.impl.UnlimitedDiscCache:
+    40:41:public UnlimitedDiscCache(java.io.File,java.io.File)
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache:
+    static final java.lang.String JOURNAL_FILE
+    static final java.lang.String JOURNAL_FILE_TEMP
+    static final java.lang.String JOURNAL_FILE_BACKUP
+    static final java.lang.String MAGIC
+    static final java.lang.String VERSION_1
+    static final long ANY_SEQUENCE_NUMBER
+    private static final java.lang.String CLEAN
+    private static final java.lang.String DIRTY
+    private static final java.lang.String REMOVE
+    private static final java.lang.String READ
+    491:491:public java.io.File getDirectory()
+    499:499:public synchronized long getMaxSize()
+    504:504:public synchronized int getMaxFileCount()
+    512:514:public synchronized void setMaxSize(long)
+    522:522:public synchronized long size()
+    531:531:public synchronized long fileCount()
+    637:637:public synchronized boolean isClosed()
+    648:652:public synchronized void flush()
+    702:702:private static java.lang.String inputStreamToString(java.io.InputStream)
+    87:87:static synthetic com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor access$1700(com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache,java.lang.String,long)
+    87:87:static synthetic java.lang.String access$1800(java.io.InputStream)
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor:
+    781:793:public java.io.InputStream newInputStream(int)
+    801:802:public java.lang.String getString(int)
+    840:847:public void set(int,java.lang.String)
+    872:878:public void abortUnlessCommitted()
+com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Snapshot:
+    727:727:public com.nostra13.universalimageloader.cache.disc.impl.ext.DiskLruCache$Editor edit()
+    737:737:public java.io.InputStream getInputStream(int)
+    742:742:public java.lang.String getString(int)
+    747:747:public long getLength(int)
+com.nostra13.universalimageloader.cache.disc.impl.ext.LruDiscCache:
+    public static final int DEFAULT_BUFFER_SIZE
+    public static final int DEFAULT_COMPRESS_QUALITY
+    private static final java.lang.String ERROR_ARG_NULL
+    private static final java.lang.String ERROR_ARG_NEGATIVE
+    69:70:public LruDiscCache(java.io.File,com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator,long)
+    126:126:public java.io.File getDirectory()
+    192:195:public boolean remove(java.lang.String)
+    202:207:public void close()
+    212:221:public void clear()
+    228:229:public void setBufferSize(int)
+    232:233:public void setCompressFormat(android.graphics.Bitmap$CompressFormat)
+    236:237:public void setCompressQuality(int)
+com.nostra13.universalimageloader.cache.disc.impl.ext.StrictLineReader:
+    private static final byte CR
+    private static final byte LF
+com.nostra13.universalimageloader.cache.disc.impl.ext.Util:
+    30:31:private Util()
+    35:43:static java.lang.String readFully(java.io.Reader)
+com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator
+com.nostra13.universalimageloader.cache.memory.BaseMemoryCache:
+    66:67:public void clear()
+com.nostra13.universalimageloader.cache.memory.LimitedMemoryCache:
+    private static final int MAX_NORMAL_CACHE_SIZE_IN_MB
+    private static final int MAX_NORMAL_CACHE_SIZE
+    100:103:public void clear()
+com.nostra13.universalimageloader.cache.memory.MemoryCacheAware:
+    public abstract void clear()
+com.nostra13.universalimageloader.cache.memory.impl.FIFOLimitedMemoryCache
+com.nostra13.universalimageloader.cache.memory.impl.FuzzyKeyMemoryCache:
+    74:75:public void clear()
+com.nostra13.universalimageloader.cache.memory.impl.LRULimitedMemoryCache
+com.nostra13.universalimageloader.cache.memory.impl.LargestLimitedMemoryCache
+com.nostra13.universalimageloader.cache.memory.impl.LimitedAgeMemoryCache
+com.nostra13.universalimageloader.cache.memory.impl.LruMemoryCache:
+    128:129:public void clear()
+com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache:
+    86:88:public void clear()
+com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache
+com.nostra13.universalimageloader.core.DefaultConfigurationFactory:
+    54:137:public DefaultConfigurationFactory()
+com.nostra13.universalimageloader.core.DisplayBitmapTask:
+    private static final java.lang.String LOG_DISPLAY_IMAGE_IN_IMAGEAWARE
+    private static final java.lang.String LOG_TASK_CANCELLED_IMAGEAWARE_REUSED
+    private static final java.lang.String LOG_TASK_CANCELLED_IMAGEAWARE_COLLECTED
+com.nostra13.universalimageloader.core.DisplayImageOptions$Builder:
+    237:238:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showStubImage(int)
+    248:249:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageOnLoading(int)
+    258:259:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageOnLoading(android.graphics.drawable.Drawable)
+    270:271:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageForEmptyUri(int)
+    281:282:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageForEmptyUri(android.graphics.drawable.Drawable)
+    293:294:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageOnFail(int)
+    304:305:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder showImageOnFail(android.graphics.drawable.Drawable)
+    315:316:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder resetViewBeforeLoading()
+    324:325:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder resetViewBeforeLoading(boolean)
+    335:336:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder cacheInMemory()
+    352:352:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder cacheOnDisc()
+    362:362:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder cacheOnDisc(boolean)
+    396:398:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder decodingOptions(android.graphics.BitmapFactory$Options)
+    403:404:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder delayBeforeLoading(int)
+    409:410:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder extraForDownloader(java.lang.Object)
+    415:416:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder considerExifParams(boolean)
+    425:426:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder preProcessor(com.nostra13.universalimageloader.core.process.BitmapProcessor)
+    435:436:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder postProcessor(com.nostra13.universalimageloader.core.process.BitmapProcessor)
+    444:446:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder displayer(com.nostra13.universalimageloader.core.display.BitmapDisplayer)
+    450:451:com.nostra13.universalimageloader.core.DisplayImageOptions$Builder syncLoading(boolean)
+    459:460:public com.nostra13.universalimageloader.core.DisplayImageOptions$Builder handler(android.os.Handler)
+com.nostra13.universalimageloader.core.ImageLoader:
+    static final java.lang.String LOG_INIT_CONFIG
+    static final java.lang.String LOG_DESTROY
+    static final java.lang.String LOG_LOAD_IMAGE_FROM_MEMORY_CACHE
+    private static final java.lang.String WARNING_RE_INIT_CONFIG
+    private static final java.lang.String ERROR_WRONG_ARGUMENTS
+    private static final java.lang.String ERROR_NOT_INIT
+    private static final java.lang.String ERROR_INIT_CONFIG_WITH_NULL
+    109:109:public boolean isInited()
+    125:126:public void displayImage(java.lang.String,com.nostra13.universalimageloader.core.imageaware.ImageAware)
+    143:144:public void displayImage(java.lang.String,com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.listener.ImageLoadingListener)
+    161:162:public void displayImage(java.lang.String,com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.DisplayImageOptions)
+    182:183:public void displayImage(java.lang.String,com.nostra13.universalimageloader.core.imageaware.ImageAware,com.nostra13.universalimageloader.core.DisplayImageOptions,com.nostra13.universalimageloader.core.listener.ImageLoadingListener)
+    303:304:public void displayImage(java.lang.String,android.widget.ImageView,com.nostra13.universalimageloader.core.DisplayImageOptions)
+    320:321:public void displayImage(java.lang.String,android.widget.ImageView,com.nostra13.universalimageloader.core.listener.ImageLoadingListener)
+    340:341:public void displayImage(java.lang.String,android.widget.ImageView,com.nostra13.universalimageloader.core.DisplayImageOptions,com.nostra13.universalimageloader.core.listener.ImageLoadingListener)
+    365:366:public void displayImage(java.lang.String,android.widget.ImageView,com.nostra13.universalimageloader.core.DisplayImageOptions,com.nostra13.universalimageloader.core.listener.ImageLoadingListener,com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener)
+    380:381:public void loadImage(java.lang.String,com.nostra13.universalimageloader.core.listener.ImageLoadingListener)
+    400:401:public void loadImage(java.lang.String,com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.listener.ImageLoadingListener)
+    419:420:public void loadImage(java.lang.String,com.nostra13.universalimageloader.core.DisplayImageOptions,com.nostra13.universalimageloader.core.listener.ImageLoadingListener)
+    444:445:public void loadImage(java.lang.String,com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.DisplayImageOptions,com.nostra13.universalimageloader.core.listener.ImageLoadingListener)
+    474:484:public void loadImage(java.lang.String,com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.DisplayImageOptions,com.nostra13.universalimageloader.core.listener.ImageLoadingListener,com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener)
+    498:498:public android.graphics.Bitmap loadImageSync(java.lang.String)
+    514:514:public android.graphics.Bitmap loadImageSync(java.lang.String,com.nostra13.universalimageloader.core.DisplayImageOptions)
+    532:532:public android.graphics.Bitmap loadImageSync(java.lang.String,com.nostra13.universalimageloader.core.assist.ImageSize)
+    551:558:public android.graphics.Bitmap loadImageSync(java.lang.String,com.nostra13.universalimageloader.core.assist.ImageSize,com.nostra13.universalimageloader.core.DisplayImageOptions)
+    578:579:public com.nostra13.universalimageloader.cache.memory.MemoryCache getMemoryCache()
+    588:590:public void clearMemoryCache()
+    600:600:public com.nostra13.universalimageloader.cache.disc.DiskCache getDiscCache()
+    609:610:public com.nostra13.universalimageloader.cache.disc.DiskCache getDiskCache()
+    621:622:public void clearDiscCache()
+    630:632:public void clearDiskCache()
+    639:639:public java.lang.String getLoadingUriForView(com.nostra13.universalimageloader.core.imageaware.ImageAware)
+    647:647:public java.lang.String getLoadingUriForView(android.widget.ImageView)
+    658:659:public void cancelDisplayTask(com.nostra13.universalimageloader.core.imageaware.ImageAware)
+    668:669:public void cancelDisplayTask(android.widget.ImageView)
+    682:683:public void denyNetworkDownloads(boolean)
+    693:694:public void handleSlowNetwork(boolean)
+    702:703:public void pause()
+    707:708:public void resume()
+    718:719:public void stop()
+    727:732:public void destroy()
+com.nostra13.universalimageloader.core.ImageLoader$1
+com.nostra13.universalimageloader.core.ImageLoader$SyncImageLoadingListener
+com.nostra13.universalimageloader.core.ImageLoaderConfiguration:
+    127:127:public static com.nostra13.universalimageloader.core.ImageLoaderConfiguration createDefault(android.content.Context)
+com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder:
+    private static final java.lang.String WARNING_OVERLAP_DISK_CACHE_PARAMS
+    private static final java.lang.String WARNING_OVERLAP_DISK_CACHE_NAME_GENERATOR
+    private static final java.lang.String WARNING_OVERLAP_MEMORY_CACHE
+    private static final java.lang.String WARNING_OVERLAP_EXECUTOR
+    public static final int DEFAULT_THREAD_POOL_SIZE
+    public static final int DEFAULT_THREAD_PRIORITY
+    208:210:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder memoryCacheExtraOptions(int,int)
+    221:221:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder discCacheExtraOptions(int,int,com.nostra13.universalimageloader.core.process.BitmapProcessor)
+    234:237:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder diskCacheExtraOptions(int,int,com.nostra13.universalimageloader.core.process.BitmapProcessor)
+    254:259:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder taskExecutor(java.util.concurrent.Executor)
+    281:286:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder taskExecutorForCachedImages(java.util.concurrent.Executor)
+    308:321:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder threadPriority(int)
+    333:334:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder denyCacheImageMultipleSizesInMemory()
+    342:347:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder tasksProcessingOrder(com.nostra13.universalimageloader.core.assist.QueueProcessingType)
+    359:366:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder memoryCacheSize(int)
+    379:389:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder memoryCacheSizePercentage(int)
+    414:414:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder discCacheSize(int)
+    426:433:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder diskCacheSize(int)
+    439:439:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder discCacheFileCount(int)
+    451:458:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder diskCacheFileCount(int)
+    464:464:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder discCacheFileNameGenerator(com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator)
+    474:479:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder diskCacheFileNameGenerator(com.nostra13.universalimageloader.cache.disc.naming.FileNameGenerator)
+    485:485:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder discCache(com.nostra13.universalimageloader.cache.disc.DiskCache)
+    521:522:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder imageDownloader(com.nostra13.universalimageloader.core.download.ImageDownloader)
+    532:533:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder imageDecoder(com.nostra13.universalimageloader.core.decode.ImageDecoder)
+    553:554:public com.nostra13.universalimageloader.core.ImageLoaderConfiguration$Builder writeDebugLogs()
+com.nostra13.universalimageloader.core.ImageLoaderEngine:
+    140:141:void denyNetworkDownloads(boolean)
+    151:152:void handleSlowNetwork(boolean)
+    159:160:void pause()
+    164:168:void resume()
+    178:187:void stop()
+com.nostra13.universalimageloader.core.LoadAndDisplayImageTask:
+    private static final java.lang.String LOG_WAITING_FOR_RESUME
+    private static final java.lang.String LOG_RESUME_AFTER_PAUSE
+    private static final java.lang.String LOG_DELAY_BEFORE_LOADING
+    private static final java.lang.String LOG_START_DISPLAY_IMAGE_TASK
+    private static final java.lang.String LOG_WAITING_FOR_IMAGE_LOADED
+    private static final java.lang.String LOG_GET_IMAGE_FROM_MEMORY_CACHE_AFTER_WAITING
+    private static final java.lang.String LOG_LOAD_IMAGE_FROM_NETWORK
+    private static final java.lang.String LOG_LOAD_IMAGE_FROM_DISK_CACHE
+    private static final java.lang.String LOG_RESIZE_CACHED_IMAGE_FILE
+    private static final java.lang.String LOG_PREPROCESS_IMAGE
+    private static final java.lang.String LOG_POSTPROCESS_IMAGE
+    private static final java.lang.String LOG_CACHE_IMAGE_IN_MEMORY
+    private static final java.lang.String LOG_CACHE_IMAGE_ON_DISK
+    private static final java.lang.String LOG_PROCESS_IMAGE_BEFORE_CACHE_ON_DISK
+    private static final java.lang.String LOG_TASK_CANCELLED_IMAGEAWARE_REUSED
+    private static final java.lang.String LOG_TASK_CANCELLED_IMAGEAWARE_COLLECTED
+    private static final java.lang.String LOG_TASK_INTERRUPTED
+    private static final java.lang.String ERROR_PRE_PROCESSOR_NULL
+    private static final java.lang.String ERROR_POST_PROCESSOR_NULL
+    private static final java.lang.String ERROR_PROCESSOR_FOR_DISK_CACHE_NULL
+com.nostra13.universalimageloader.core.ProcessAndDisplayImageTask:
+    private static final java.lang.String LOG_POSTPROCESS_IMAGE
+com.nostra13.universalimageloader.core.assist.FailReason:
+    37:37:public com.nostra13.universalimageloader.core.assist.FailReason$FailType getType()
+    42:42:public java.lang.Throwable getCause()
+com.nostra13.universalimageloader.core.assist.ImageSize:
+    private static final int TO_STRING_MAX_LENGHT
+    private static final java.lang.String SEPARATOR
+com.nostra13.universalimageloader.core.assist.deque.BlockingDeque:
+    public abstract void addFirst(java.lang.Object)
+    public abstract void addLast(java.lang.Object)
+    public abstract boolean offerFirst(java.lang.Object)
+    public abstract boolean offerLast(java.lang.Object)
+    public abstract void putFirst(java.lang.Object)
+    public abstract void putLast(java.lang.Object)
+    public abstract boolean offerFirst(java.lang.Object,long,java.util.concurrent.TimeUnit)
+    public abstract boolean offerLast(java.lang.Object,long,java.util.concurrent.TimeUnit)
+    public abstract java.lang.Object takeFirst()
+    public abstract java.lang.Object takeLast()
+    public abstract java.lang.Object pollFirst(long,java.util.concurrent.TimeUnit)
+    public abstract java.lang.Object pollLast(long,java.util.concurrent.TimeUnit)
+    public abstract boolean removeFirstOccurrence(java.lang.Object)
+    public abstract boolean removeLastOccurrence(java.lang.Object)
+    public abstract boolean add(java.lang.Object)
+    public abstract boolean offer(java.lang.Object)
+    public abstract void put(java.lang.Object)
+    public abstract boolean offer(java.lang.Object,long,java.util.concurrent.TimeUnit)
+    public abstract java.lang.Object remove()
+    public abstract java.lang.Object poll()
+    public abstract java.lang.Object take()
+    public abstract java.lang.Object poll(long,java.util.concurrent.TimeUnit)
+    public abstract java.lang.Object element()
+    public abstract java.lang.Object peek()
+    public abstract boolean remove(java.lang.Object)
+    public abstract boolean contains(java.lang.Object)
+    public abstract int size()
+    public abstract java.util.Iterator iterator()
+    public abstract void push(java.lang.Object)
+com.nostra13.universalimageloader.core.assist.deque.Deque:
+    public abstract void addFirst(java.lang.Object)
+    public abstract void addLast(java.lang.Object)
+    public abstract boolean offerFirst(java.lang.Object)
+    public abstract boolean offerLast(java.lang.Object)
+    public abstract java.lang.Object removeFirst()
+    public abstract java.lang.Object removeLast()
+    public abstract java.lang.Object pollFirst()
+    public abstract java.lang.Object pollLast()
+    public abstract java.lang.Object getFirst()
+    public abstract java.lang.Object getLast()
+    public abstract java.lang.Object peekFirst()
+    public abstract java.lang.Object peekLast()
+    public abstract boolean removeFirstOccurrence(java.lang.Object)
+    public abstract boolean removeLastOccurrence(java.lang.Object)
+    public abstract boolean add(java.lang.Object)
+    public abstract boolean offer(java.lang.Object)
+    public abstract java.lang.Object remove()
+    public abstract java.lang.Object poll()
+    public abstract java.lang.Object element()
+    public abstract java.lang.Object peek()
+    public abstract void push(java.lang.Object)
+    public abstract java.lang.Object pop()
+    public abstract boolean remove(java.lang.Object)
+    public abstract boolean contains(java.lang.Object)
+    public abstract int size()
+    public abstract java.util.Iterator iterator()
+    public abstract java.util.Iterator descendingIterator()
+com.nostra13.universalimageloader.core.assist.deque.LIFOLinkedBlockingDeque:
+    private static final long serialVersionUID
+com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque:
+    private static final long serialVersionUID
+    165:178:public LinkedBlockingDeque(java.util.Collection)
+    294:296:public void addFirst(java.lang.Object)
+    342:352:public void putFirst(java.lang.Object)
+    377:390:public boolean offerFirst(java.lang.Object,long,java.util.concurrent.TimeUnit)
+    430:432:public java.lang.Object removeLast()
+    446:451:public java.lang.Object pollLast()
+    469:477:public java.lang.Object takeLast()
+    501:513:public java.lang.Object pollLast(long,java.util.concurrent.TimeUnit)
+    530:532:public java.lang.Object getLast()
+    546:551:public java.lang.Object peekLast()
+    573:585:public boolean removeLastOccurrence(java.lang.Object)
+    738:739:public void push(java.lang.Object)
+    745:745:public java.lang.Object pop()
+    1007:1007:public java.util.Iterator descendingIterator()
+    1133:1146:private void writeObject(java.io.ObjectOutputStream)
+    1155:1167:private void readObject(java.io.ObjectInputStream)
+com.nostra13.universalimageloader.core.assist.deque.LinkedBlockingDeque$DescendingItr
+com.nostra13.universalimageloader.core.decode.BaseImageDecoder:
+    protected static final java.lang.String LOG_SUBSAMPLE_IMAGE
+    protected static final java.lang.String LOG_SCALE_IMAGE
+    protected static final java.lang.String LOG_ROTATE_IMAGE
+    protected static final java.lang.String LOG_FLIP_IMAGE
+    protected static final java.lang.String ERROR_CANT_DECODE_IMAGE
+com.nostra13.universalimageloader.core.decode.ImageDecodingInfo:
+    107:107:public java.lang.String getOriginalImageUri()
+com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer
+com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer
+com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer$RoundedDrawable
+com.nostra13.universalimageloader.core.display.RoundedVignetteBitmapDisplayer
+com.nostra13.universalimageloader.core.display.RoundedVignetteBitmapDisplayer$RoundedVignetteDrawable
+com.nostra13.universalimageloader.core.download.BaseImageDownloader:
+    public static final int DEFAULT_HTTP_CONNECT_TIMEOUT
+    public static final int DEFAULT_HTTP_READ_TIMEOUT
+    protected static final int BUFFER_SIZE
+    protected static final java.lang.String ALLOWED_URI_CHARS
+    protected static final int MAX_REDIRECT_COUNT
+    protected static final java.lang.String CONTENT_CONTACTS_URI_PREFIX
+    private static final java.lang.String ERROR_UNSUPPORTED_SCHEME
+    75:79:public BaseImageDownloader(android.content.Context,int,int)
+com.nostra13.universalimageloader.core.imageaware.ImageViewAware:
+    65:66:public ImageViewAware(android.widget.ImageView,boolean)
+com.nostra13.universalimageloader.core.imageaware.NonViewAware
+com.nostra13.universalimageloader.core.imageaware.ViewAware:
+    public static final java.lang.String WARN_CANT_SET_DRAWABLE
+    public static final java.lang.String WARN_CANT_SET_BITMAP
+com.nostra13.universalimageloader.core.listener.PauseOnScrollListener
+com.nostra13.universalimageloader.utils.DiskCacheUtils
+com.nostra13.universalimageloader.utils.ImageSizeUtils:
+    private static final int DEFAULT_MAX_BITMAP_DIMENSION
+    45:46:private ImageSizeUtils()
+com.nostra13.universalimageloader.utils.IoUtils:
+    public static final int DEFAULT_BUFFER_SIZE
+    public static final int DEFAULT_IMAGE_TOTAL_SIZE
+    public static final int CONTINUE_LOADING_PERCENTAGE
+    38:39:private IoUtils()
+    52:52:public static boolean copyStream(java.io.InputStream,java.io.OutputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener)
+com.nostra13.universalimageloader.utils.L:
+    private static final java.lang.String LOG_FORMAT
+    33:34:private L()
+    43:44:public static void enableLogging()
+    53:54:public static void disableLogging()
+    68:69:public static void writeLogs(boolean)
+    94:95:public static varargs void e(java.lang.Throwable,java.lang.String,java.lang.Object[])
+com.nostra13.universalimageloader.utils.MemoryCacheUtils:
+    private static final java.lang.String URI_AND_SIZE_SEPARATOR
+    private static final java.lang.String WIDTH_AND_HEIGHT_SEPARATOR
+    39:40:private MemoryCacheUtils()
+    68:74:public static java.util.List findCachedBitmapsForImageUri(java.lang.String,com.nostra13.universalimageloader.cache.memory.MemoryCache)
+    84:90:public static java.util.List findCacheKeysForImageUri(java.lang.String,com.nostra13.universalimageloader.cache.memory.MemoryCache)
+    100:109:public static void removeFromCache(java.lang.String,com.nostra13.universalimageloader.cache.memory.MemoryCache)
+com.nostra13.universalimageloader.utils.StorageUtils:
+    private static final java.lang.String EXTERNAL_STORAGE_PERMISSION
+    private static final java.lang.String INDIVIDUAL_DIR_NAME
+    38:39:private StorageUtils()
+com.p2p.core.BaseCoreActivity:
+    58:73:protected boolean isOnFront()
+    protected abstract void onExit()
+com.p2p.core.BaseP2PView:
+    private int current_Top
+    private int current_Right
+    private int current_Bottom
+    private int current_Left
+    private android.view.animation.ScaleAnimation scaleAnimation
+    private com.p2p.core.BaseP2PView$MyAsyncTask myAsyncTask
+    protected abstract int getCurrentWidth()
+    protected abstract int getCurrentHeight()
+    protected abstract void setVideoScale(int,int,float)
+    protected abstract void changeNormalSize()
+    96:96:public int getMaxWidth()
+    100:100:public int getMaxHeight()
+    104:104:public int getMinWidth()
+    108:108:public int getMinHeight()
+    124:124:public int getStartBottonm()
+    266:267:private void setPosition(int,int,int,int)
+    275:312:void setScale(float)
+    318:324:public void doScaleAnim()
+    46:46:static synthetic int access$0(com.p2p.core.BaseP2PView)
+    45:45:static synthetic int access$1(com.p2p.core.BaseP2PView)
+    45:45:static synthetic int access$2(com.p2p.core.BaseP2PView)
+    45:45:static synthetic int access$3(com.p2p.core.BaseP2PView)
+    42:42:static synthetic android.app.Activity access$4(com.p2p.core.BaseP2PView)
+com.p2p.core.BaseP2PView$MyAsyncTask
+com.p2p.core.BaseP2PView$MyAsyncTask$1
+com.p2p.core.BasePlayBackActivity:
+    private static final int PAUSE
+    private static final int START
+    private static final int JUMP
+    private static final int NEXT
+    private static final int PREVIOUS
+    private static final int NAMEPLAY
+com.p2p.core.GestureDetector:
+    private static final int SHOW_PRESS
+    private static final int LONG_PRESS
+    private static final int TAP
+    168:169:public GestureDetector(com.p2p.core.GestureDetector$OnGestureListener,android.os.Handler)
+    173:174:public GestureDetector(com.p2p.core.GestureDetector$OnGestureListener)
+    177:178:public GestureDetector(android.content.Context,com.p2p.core.GestureDetector$OnGestureListener)
+    181:183:public GestureDetector(android.content.Context,com.p2p.core.GestureDetector$OnGestureListener,android.os.Handler)
+    248:249:public void setIsLongpressEnabled(boolean)
+    255:255:public boolean isLongpressEnabled()
+com.p2p.core.MediaPlayer:
+    private static final java.lang.String TAG
+    private android.view.Surface mSurface
+    private static java.lang.Object buf
+    public static final int MESG_TYPE_GET_DISK_INFO
+    public static final int MESG_TYPE_FORMAT_DISK
+    public static final int MESG_SDCARD_NO_EXIST
+    public static final int MESG_SET_GPIO_INFO
+    public static final int MESG_TYPE_RET_DEFENCE_SWITCH_STATE
+    public static final int MESG_TYPE_GET_ALARM_TYPE_MOTOR_PRESET_POS
+    public static final int MESG_TYPE_SET_MOTOR_PRESET_POS
+    public static final int MESG_TYPE_LOOK_MOTOR_PRESET_POS
+    public static final int MESG_TYPE_RET_ALARM_TYPE_MOTOR_PRESET_POS
+    public static final int IP_CONFIG
+    public static final int MESG_GET_ALARM_CENTER_PARAMETER
+    public static final int MESG_DELETE_ALARMDEVICEID
+    public static final int MESG_TYPE_RET_LAN_IPC_LIST
+    public static final int MESG_CONTROL_CAMERA
+    public static final int MESG_TYPE_FISHEYE_SETTING
+    public static final int MESG_TYPE_FISHEYE_MEMBERLIST
+    public static final int MESG_TYPE_DEVIECE_NOT_SUPPORT_RET
+    public static final int MESG_TYPE_RET_DEVICE_LANGUAGE
+com.p2p.core.MediaPlayer$IFFMpegPlayer
+com.p2p.core.P2PHandler:
+    323:324:public void vSendWiFiCmd(int,byte[],int,byte[],int)
+    574:583:public void setAlarmEmail(java.lang.String,java.lang.String,java.lang.String)
+    766:793:public void getRecordFiles(java.lang.String,java.lang.String,int)
+    823:831:public java.lang.String sendMessage(java.lang.String,java.lang.String)
+    1030:1094:private void call_alter(java.lang.String,java.lang.String,boolean,int,java.lang.String,java.lang.String,java.lang.String,int,java.lang.String)
+    1197:1198:public void setBindFlag(int)
+    1206:1207:public void setRecvAVDataEnable(boolean)
+    1497:1503:public void vgetLampStatus(java.lang.String,java.lang.String)
+    1533:1552:public void vSendDataToURAT(java.lang.String,java.lang.String,byte[],int,boolean)
+    1563:1572:public void sMesgGetAlarmPresetMotorPos(java.lang.String,java.lang.String,byte[])
+    1583:1592:public void sMesgSetAlarmPresetMotorPos(java.lang.String,java.lang.String,byte[])
+    1603:1611:public void sMesgPresetMotorPos(java.lang.String,java.lang.String,byte[])
+    1621:1627:public void sIpConfig(java.lang.String,java.lang.String,byte[])
+    1630:1653:public void getAlarmCenterParameters(java.lang.String,java.lang.String)
+    1667:1713:public void setAlarmCenterParameters(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,int)
+    1731:1738:public void setSystemMessageIndex(int,int)
+    1750:1750:public int setScreenShotpath(java.lang.String,java.lang.String)
+    1856:1856:public int GetAllarmImage(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    1866:1866:public int GetAllarmImageProgress()
+    1873:1874:public void CancelGetAllarmImage()
+    1877:1880:public static byte[] intToByte2(int)
+    1884:1889:public static byte[] intToByte4(int)
+    1898:1910:public void getNvrIpcList(java.lang.String,java.lang.String)
+    1919:1922:public java.lang.String RTSPPwd(java.lang.String)
+    1935:1938:public java.lang.String HTTPDecrypt(java.lang.String,java.lang.String,int)
+    1951:1954:public java.lang.String HTTPEncrypt(java.lang.String,java.lang.String,int)
+    1965:1965:public byte[] P2PEntryPassword(int)
+com.p2p.core.P2PInterface.ISetting:
+    public abstract void ACK_vRetSetGPIO(int,int)
+    public abstract void ACK_vRetSetGPIO1_0(int,int)
+    public abstract void ACK_vRetSetPreRecord(int,int)
+    public abstract void vRetAlarmEmailResult(int,java.lang.String)
+    public abstract void vRetDefenceSwitchStatus(int)
+    public abstract void vRetDefenceSwitchStatusResult(byte[])
+    public abstract void vRetDeviceNotSupportAlarmCenter()
+com.p2p.core.P2PValue
+com.p2p.core.P2PValue$AlarmType
+com.p2p.core.P2PValue$DeviceMode
+com.p2p.core.P2PValue$DeviceType
+com.p2p.core.P2PValue$UpdateState
+com.p2p.core.P2PValue$VideoMode
+com.p2p.core.P2PView:
+    static final java.lang.String TAG
+    static final boolean SUPPORT_ZOOM
+    static final boolean SUPPORT_ZOOM_FOCUS
+    340:340:protected int getCurrentWidth()
+    344:344:public int getmHeight()
+    350:350:protected int getCurrentHeight()
+    357:365:protected void setVideoScale(int,int,float)
+    396:396:public void changeNormalSize()
+com.p2p.core.ViewConfiguration:
+    private static final int SCROLL_BAR_SIZE
+    private static final int SCROLL_BAR_FADE_DURATION
+    private static final int SCROLL_BAR_DEFAULT_DELAY
+    private static final int FADING_EDGE_LENGTH
+    private static final int PRESSED_STATE_DURATION
+    private static final int LONG_PRESS_TIMEOUT
+    private static final int GLOBAL_ACTIONS_KEY_TIMEOUT
+    private static final int TAP_TIMEOUT
+    private static final int JUMP_TAP_TIMEOUT
+    private static final int DOUBLE_TAP_TIMEOUT
+    private static final int ZOOM_CONTROLS_TIMEOUT
+    private static final int EDGE_SLOP
+    private static final int TOUCH_SLOP
+    private static final int PAGING_TOUCH_SLOP
+    private static final int DOUBLE_TAP_SLOP
+    private static final int WINDOW_TOUCH_SLOP
+    private static final int MINIMUM_FLING_VELOCITY
+    private static final int MAXIMUM_FLING_VELOCITY
+    private static final int MAXIMUM_DRAWING_CACHE_SIZE
+    230:230:public static int getScrollBarSize()
+    238:238:public int getScaledScrollBarSize()
+    245:245:public static int getScrollBarFadeDuration()
+    252:252:public static int getScrollDefaultDelay()
+    262:262:public static int getFadingEdgeLength()
+    269:269:public int getScaledFadingEdgeLength()
+    277:277:public static int getPressedStateDuration()
+    303:303:public static int getJumpTapTimeout()
+    323:323:public static int getEdgeSlop()
+    331:331:public int getScaledEdgeSlop()
+    356:356:public int getScaledPagingTouchSlop()
+    388:388:public static int getWindowTouchSlop()
+    397:397:public int getScaledWindowTouchSlop()
+    444:444:public static int getMaximumDrawingCacheSize()
+    453:453:public int getScaledMaximumDrawingCacheSize()
+    464:464:public static long getZoomControlsTimeout()
+    475:475:public static long getGlobalActionKeyTimeout()
+    485:485:public static float getScrollFriction()
+com.p2p.core.global.Config:
+    6:6:public Config()
+com.p2p.core.global.Config$AppConfig:
+    public static final java.lang.String VERSION
+    8:8:public Config$AppConfig()
+com.p2p.core.global.Constants:
+    3:3:public Constants()
+com.p2p.core.global.Constants$ACK_RET_TYPE
+com.p2p.core.global.Constants$ActivityStatus
+com.p2p.core.global.Constants$MsgSection:
+    10:10:public Constants$MsgSection()
+com.p2p.core.global.Constants$P2P_CALL
+com.p2p.core.global.Constants$P2P_CALL$CALL_RESULT
+com.p2p.core.global.Constants$P2P_SETTING
+com.p2p.core.global.Constants$P2P_SETTING$SETTING_TYPE
+com.p2p.core.global.Constants$P2P_TYPE
+com.p2p.core.global.Constants$P2P_WINDOW
+com.p2p.core.global.Constants$P2P_WINDOW$Action
+com.p2p.core.global.Constants$SettingConfig
+com.p2p.core.global.Constants$SystemMessgeType
+com.p2p.core.global.Constants$ZOOM
+com.p2p.core.network.AlarmRecordResult
+com.p2p.core.network.AlarmRecordResult$SAlarmRecord
+com.p2p.core.network.GetAlarmRecordListResult
+com.p2p.core.network.GetAlarmRecordListResult$GXAlarmRecord
+com.p2p.core.network.GetBindDeviceAccountResult
+com.p2p.core.network.GetDeviceListResult
+com.p2p.core.network.GetStartInfoResult
+com.p2p.core.network.MallUrlResult
+com.p2p.core.network.NetManager:
+    private static final java.lang.String SERVER1
+    private static final java.lang.String SERVER2
+    private static final java.lang.String SERVER3
+    private static final java.lang.String SERVER4
+    public static final int LOGIN_SUCCESS
+    public static final int LOGIN_USER_UNEXIST
+    public static final int LOGIN_PWD_ERROR
+    public static final int GET_PHONE_CODE_SUCCESS
+    public static final int GET_PHONE_CODE_PHONE_USED
+    public static final int GET_PHONE_CODE_PHONE_FORMAT_ERROR
+    public static final int GET_PHONE_CODE_TOO_TIMES
+    public static final int VERIFY_CODE_SUCCESS
+    public static final int VERIFY_CODE_ERROR
+    public static final int VERIFY_CODE_TIME_OUT
+    public static final int REGISTER_SUCCESS
+    public static final int REGISTER_EMAIL_FORMAT_ERROR
+    public static final int REGISTER_PHONE_USED
+    public static final int REGISTER_EMAIL_USED
+    public static final int REGISTER_PHONE_CODE_ERROR
+    public static final int REGISTER_PHONE_FORMAT_ERROR
+    public static final int REGISTER_PASSWORD_NO_MATCH
+    public static final int GET_ACCOUNT_SUCCESS
+    public static final int SET_ACCOUNT_SUCCESS
+    public static final int SET_ACCOUNT_PWD_ERROR
+    public static final int SET_ACCOUNT_EMAIL_FORMAT_ERROR
+    public static final int SET_ACCOUNT_EMAIL_USED
+    public static final int MODIFY_LOGIN_PWD_SUCCESS
+    public static final int MODIFY_LOGIN_PWD_INCONSISTENCE
+    public static final int MODIFY_LOGIN_PWD_OLD_PWD_ERROR
+    public static final int GET_DEVICE_LIST_SUCCESS
+    public static final int GET_DEVICE_LIST_EMPTY
+    public static final int GET_BIND_DEVICE_ACCOUNT_SUCCESS
+    public static final int MODIFY_BIND_DEVICE_ACCOUNT_SUCCESS
+    public static final int GET_ALARM_RECORD_SUCCESS
+    public static final int GET_ALARM_RECORD_EMPTY
+    public static final int GET_SYSTEM_MESSAGE_SUCCESS
+    public static final int GET_START_LOGO_INFO
+    public static final int SESSION_ID_ERROR
+    public static final int UNKNOWN_ERROR
+    public static final int CONNECT_CHANGE
+    public static final int JSON_PARSE_ERROR
+    325:338:public org.json.JSONObject getDeviceList(java.lang.String,java.lang.String)
+    342:356:public org.json.JSONObject getBindDeviceAccountList(java.lang.String,java.lang.String,java.lang.String)
+    360:376:public org.json.JSONObject getAlarmRecordList(java.lang.String,java.lang.String,java.lang.String,int,int)
+    435:455:public int setBindDeviceAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    459:477:public int modifyNikeName(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    481:499:public int deleteBindDeviceAccount(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+    526:547:public org.json.JSONObject login(java.lang.String,java.lang.String,java.lang.String)
+    550:564:public org.json.JSONObject getAlarmMessage(java.lang.String,java.lang.String,int,int)
+    650:663:public org.json.JSONObject getSystemMessage(java.lang.String,java.lang.String,java.lang.String,int,int)
+    666:680:public org.json.JSONObject getSystemMessageByMsgId(java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int)
+    683:694:public org.json.JSONObject getLogoStartInfo(java.lang.String,java.lang.String,java.lang.String)
+    697:708:public org.json.JSONObject getMallUrl(java.lang.String,java.lang.String,java.lang.String)
+    711:722:public org.json.JSONObject setStoreId(java.lang.String,java.lang.String,java.lang.String)
+    751:753:public static com.p2p.core.network.AlarmRecordResult getAlarmRecords(org.json.JSONObject)
+    756:758:public static com.p2p.core.network.GetDeviceListResult createGetDeviceListResult(org.json.JSONObject)
+    762:764:public static com.p2p.core.network.GetBindDeviceAccountResult createGetBindDeviceAccountResult(org.json.JSONObject)
+    768:770:public static com.p2p.core.network.GetAlarmRecordListResult createGetAlarmRecordListResult(org.json.JSONObject)
+    773:775:public static com.p2p.core.network.SystemMessageResult GetSystemMessageResult(org.json.JSONObject)
+    778:780:public static com.p2p.core.network.GetStartInfoResult createGetStartInfoResult(org.json.JSONObject)
+    783:785:public static com.p2p.core.network.MallUrlResult getMallUrlResult(org.json.JSONObject)
+    788:790:public static com.p2p.core.network.SetStoreIdResult setStoreIdResult(org.json.JSONObject)
+com.p2p.core.network.SetStoreIdResult
+com.p2p.core.network.SystemMessageResult
+com.p2p.core.network.SystemMessageResult$SystemMessage
+com.p2p.core.update.UpdateManager:
+    private static final java.lang.String UPDATE_URL
+    public static final int HANDLE_MSG_DOWNING
+    public static final int HANDLE_MSG_DOWN_SUCCESS
+    public static final int HANDLE_MSG_DOWN_FAULT
+    private int download_state
+com.p2p.core.utils.DES:
+    19:19:public DES()
+    51:68:public static java.lang.String bytesToHexString(byte[])
+com.p2p.core.utils.DelayThread
+com.p2p.core.utils.DelayThread$OnRunListener
+com.p2p.core.utils.HomeWatcher:
+    static final java.lang.String TAG
+com.p2p.core.utils.MD5:
+    static final int S11
+    static final int S12
+    static final int S13
+    static final int S14
+    static final int S21
+    static final int S22
+    static final int S23
+    static final int S24
+    static final int S31
+    static final int S32
+    static final int S33
+    static final int S34
+    static final int S41
+    static final int S42
+    static final int S43
+    static final int S44
+com.p2p.core.utils.MyUtils:
+    185:196:public static long convertTimeStringToInterval(java.lang.String)
+    235:241:public static byte[] intToBytes2(int)
+    268:270:public static int bytesToInt(byte[],int)
+com.p2p.shake.ShakeData:
+    public static final int DEFAULT_LEFT_LENGTH
+    public static final int DEFAULT_RIGHT_COUNT
+    public static final int DEFAULT_STRING_PARAMETER_LENGTH
+    134:145:public static int putString(java.nio.ByteBuffer,java.lang.String,int)
+    149:159:public static java.lang.String getString(java.nio.ByteBuffer,int)
+    207:208:public void setName(java.lang.String)
+com.p2p.shake.ShakeData$Cmd:
+    public static final int GET_DEVICE_LIST
+    public static final int RECEIVE_DEVICE_LIST
+    public static final int NO_ASSOCIATED_DATA_PACKET
+    12:12:public ShakeData$Cmd()
+com.p2p.shake.ShakeManager:
+    public static final int HANDLE_ID_SEARCH_END
+    public static final int HANDLE_ID_RECEIVE_DEVICE_INFO
+    public static final int HANDLE_ID_APDEVICE_END
+    public static final int HANDLE_ID_ONEAPDEVICE
+    62:65:public boolean isShaking()
+com.p2p.shake.ShakeThread:
+    public static final int DEFAULT_PORT
+    public static final int RECEIVE_IPC_INFO
+    public static final int CLOSE_SERVER
+com.yoosee.BuildConfig
+com.yoosee.Manifest
+com.yoosee.Manifest$permission
+com.yoosee.R:
+    10:10:public R()
+com.yoosee.R$anim
+com.yoosee.R$array
+com.yoosee.R$attr
+com.yoosee.R$color
+com.yoosee.R$dimen
+com.yoosee.R$drawable
+com.yoosee.R$id
+com.yoosee.R$layout
+com.yoosee.R$raw
+com.yoosee.R$string
+com.yoosee.R$style
+com.yoosee.R$styleable:
+    public static final int DrableButton_drawableid
+    public static final int DrableButton_drawableidp
+    public static final int DrableButton_orientation
+    public static final int DrableButton_textcolor
+    public static final int DrableButton_textcolorp
+    public static final int DrableButton_textid
+    public static final int GlowPadView_alwaysTrackFinger
+    public static final int GlowPadView_android_gravity
+    public static final int GlowPadView_directionDescriptions
+    public static final int GlowPadView_feedbackCount
+    public static final int GlowPadView_glowRadius
+    public static final int GlowPadView_handleDrawable
+    public static final int GlowPadView_innerRadius
+    public static final int GlowPadView_outerRadius
+    public static final int GlowPadView_outerRingDrawable
+    public static final int GlowPadView_pointDrawable
+    public static final int GlowPadView_snapMargin
+    public static final int GlowPadView_targetDescriptions
+    public static final int GlowPadView_targetDrawables
+    public static final int GlowPadView_vibrationDuration
+    public static final int ImageviewTextView_it_drawableid
+    public static final int ImageviewTextView_it_drawableidp
+    public static final int ImageviewTextView_it_drawableidup
+    public static final int ImageviewTextView_it_orientation
+    public static final int ImageviewTextView_it_textcolor
+    public static final int ImageviewTextView_it_textcolorp
+    public static final int ImageviewTextView_it_textcolorup
+    public static final int ImageviewTextView_it_textid
+    public static final int PullToRefresh_ptrAdapterViewBackground
+    public static final int PullToRefresh_ptrAnimationStyle
+    public static final int PullToRefresh_ptrDrawable
+    public static final int PullToRefresh_ptrDrawableBottom
+    public static final int PullToRefresh_ptrDrawableEnd
+    public static final int PullToRefresh_ptrDrawableStart
+    public static final int PullToRefresh_ptrDrawableTop
+    public static final int PullToRefresh_ptrHeaderBackground
+    public static final int PullToRefresh_ptrHeaderSubTextColor
+    public static final int PullToRefresh_ptrHeaderTextAppearance
+    public static final int PullToRefresh_ptrHeaderTextColor
+    public static final int PullToRefresh_ptrListViewExtrasEnabled
+    public static final int PullToRefresh_ptrMode
+    public static final int PullToRefresh_ptrOverScroll
+    public static final int PullToRefresh_ptrRefreshableViewBackground
+    public static final int PullToRefresh_ptrRotateDrawableWhilePulling
+    public static final int PullToRefresh_ptrScrollingWhileRefreshingEnabled
+    public static final int PullToRefresh_ptrShowIndicator
+    public static final int PullToRefresh_ptrSubHeaderTextAppearance
+    public static final int RoundAngleImageView_roundHeight
+    public static final int RoundAngleImageView_roundWidth
+    3892:3892:public R$styleable()
+demo.Pinyin4jAppletDemo
+demo.Pinyin4jAppletDemo$1
+demo.Pinyin4jAppletDemo$2
+demo.Pinyin4jAppletDemo$3
+it.sauronsoftware.base64.Base64
+it.sauronsoftware.base64.Base64InputStream
+it.sauronsoftware.base64.Base64OutputStream
+it.sauronsoftware.base64.Shared
+net.sourceforge.pinyin4j.ChineseToPinyinResource$ChineseToPinyinResourceHolder:
+    private ChineseToPinyinResource$ChineseToPinyinResourceHolder()
+net.sourceforge.pinyin4j.ChineseToPinyinResource$Field
+net.sourceforge.pinyin4j.GwoyeuRomatzyhResource
+net.sourceforge.pinyin4j.GwoyeuRomatzyhResource$1
+net.sourceforge.pinyin4j.GwoyeuRomatzyhResource$GwoyeuRomatzyhSystemResourceHolder
+net.sourceforge.pinyin4j.GwoyeuRomatzyhTranslator
+net.sourceforge.pinyin4j.PinyinFormatter
+net.sourceforge.pinyin4j.PinyinHelper:
+    public static java.lang.String[] toHanyuPinyinStringArray(char,net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat)
+    private static java.lang.String[] getFormattedHanyuPinyinStringArray(char,net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat)
+    public static java.lang.String[] toTongyongPinyinStringArray(char)
+    public static java.lang.String[] toWadeGilesPinyinStringArray(char)
+    public static java.lang.String[] toMPS2PinyinStringArray(char)
+    public static java.lang.String[] toYalePinyinStringArray(char)
+    private static java.lang.String[] convertToTargetPinyinStringArray(char,net.sourceforge.pinyin4j.PinyinRomanizationType)
+    public static java.lang.String[] toGwoyeuRomatzyhStringArray(char)
+    private static java.lang.String[] convertToGwoyeuRomatzyhStringArray(char)
+    public static java.lang.String toHanyuPinyinString(java.lang.String,net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat,java.lang.String)
+    private static java.lang.String getFirstHanyuPinyinString(char,net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat)
+    private PinyinHelper()
+net.sourceforge.pinyin4j.PinyinRomanizationResource
+net.sourceforge.pinyin4j.PinyinRomanizationResource$1
+net.sourceforge.pinyin4j.PinyinRomanizationResource$PinyinRomanizationSystemResourceHolder
+net.sourceforge.pinyin4j.PinyinRomanizationTranslator
+net.sourceforge.pinyin4j.PinyinRomanizationType
+net.sourceforge.pinyin4j.TextHelper
+net.sourceforge.pinyin4j.format.HanyuPinyinCaseType
+net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat
+net.sourceforge.pinyin4j.format.HanyuPinyinToneType
+net.sourceforge.pinyin4j.format.HanyuPinyinVCharType
+net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination

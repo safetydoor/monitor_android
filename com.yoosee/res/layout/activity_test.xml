@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="fill_parent"  
+    android:layout_height="fill_parent"  
+    android:orientation="vertical" >  
+    		<com.jwkj.widget.HeaderView
+			    android:id="@+id/header_img"
+              	android:layout_width="@dimen/contact_modify_header_width_height"
+		        android:layout_height="@dimen/contact_modify_header_width_height"
+			    />
+</RelativeLayout> 

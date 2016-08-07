@@ -1,0 +1,131 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_left_right_margin"
+            android:layout_marginRight="@dimen/item_left_right_margin"
+            android:layout_marginTop="@dimen/item_group_margin_top"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/change_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ctl_setting_bar_height"
+                android:background="@drawable/tiao_bg_single" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/inner_margin_left"
+                    android:text="@string/device_manger_password"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/account_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:contentDescription="@string/imagedes" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/change_super_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ctl_setting_bar_height"
+                android:layout_marginTop="@dimen/item_group_margin_top"
+                android:background="@drawable/tiao_bg_single"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/inner_margin_left"
+                    android:text="@string/device_visitor_password"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/super_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/arrow"
+                    android:visibility="gone"
+                    android:contentDescription="@string/imagedes" />
+                 <ProgressBar
+                    android:id="@+id/progressBar_visitor_password"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="@dimen/inner_item_progress_width_height"
+                    android:layout_height="@dimen/inner_item_progress_width_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:indeterminateDrawable="@anim/progress_white"
+                    android:indeterminateDuration="560000" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/automatic_upgrade"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/ctl_setting_bar_height"
+                android:layout_marginTop="@dimen/item_group_margin_top"
+                android:background="@drawable/tiao_bg_single"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_automatic_upgrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/inner_margin_left"
+                    android:text="@string/automatic_upgrade"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_normal"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/img_automatic_upgrade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:background="@drawable/ic_checkbox_off"
+                    android:contentDescription="@string/imagedes"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar_automatic_upgrade"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="@dimen/inner_item_progress_width_height"
+                    android:layout_height="@dimen/inner_item_progress_width_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/inner_margin_right"
+                    android:indeterminateDrawable="@anim/progress_white"
+                    android:indeterminateDuration="560000" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
