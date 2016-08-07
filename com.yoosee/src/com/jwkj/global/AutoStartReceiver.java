@@ -31,6 +31,7 @@ public class AutoStartReceiver extends BroadcastReceiver {
 					NpcCommon.mThreeNum = activeUser.three_number;
 
 					Intent service = new Intent(MyApp.MAIN_SERVICE_START);
+					service.setPackage(mContext.getPackageName());
 					context.startService(service);
 					MyApp.app.showNotification();
 				}

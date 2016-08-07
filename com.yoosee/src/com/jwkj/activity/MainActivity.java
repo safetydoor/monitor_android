@@ -215,36 +215,36 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		public void handleMessage(Message msg) {
 			// TODO Auto-generated method stub
 			int value = msg.arg1;
-			switch (msg.what) {
-			case UpdateManager.HANDLE_MSG_DOWNING:
-				if ((System.currentTimeMillis() - last_time) > 1000) {
-					MyApp.app.showDownNotification(
-							UpdateManager.HANDLE_MSG_DOWNING, value);
-					last_time = System.currentTimeMillis();
-				}
-				break;
-			case UpdateManager.HANDLE_MSG_DOWN_SUCCESS:
-				// MyApp.app.showDownNotification(UpdateManager.HANDLE_MSG_DOWN_SUCCESS,0);
-				MyApp.app.hideDownNotification();
-				// T.showShort(mContext, R.string.down_success);
-				Intent intent = new Intent(Intent.ACTION_VIEW);
-				File file = new File(Environment.getExternalStorageDirectory()
-						+ "/" + Constants.Update.SAVE_PATH + "/"
-						+ Constants.Update.FILE_NAME);
-				if (!file.exists()) {
-					return;
-				}
-				intent.setDataAndType(Uri.fromFile(file),
-						Constants.Update.INSTALL_APK);
-				mContext.startActivity(intent);
-				break;
-			case UpdateManager.HANDLE_MSG_DOWN_FAULT:
-
-				MyApp.app.showDownNotification(
-						UpdateManager.HANDLE_MSG_DOWN_FAULT, value);
-				T.showShort(mContext, R.string.down_fault);
-				break;
-			}
+//			switch (msg.what) {
+//			case UpdateManager.HANDLE_MSG_DOWNING:
+//				if ((System.currentTimeMillis() - last_time) > 1000) {
+//					MyApp.app.showDownNotification(
+//							UpdateManager.HANDLE_MSG_DOWNING, value);
+//					last_time = System.currentTimeMillis();
+//				}
+//				break;
+//			case UpdateManager.HANDLE_MSG_DOWN_SUCCESS:
+//				// MyApp.app.showDownNotification(UpdateManager.HANDLE_MSG_DOWN_SUCCESS,0);
+//				MyApp.app.hideDownNotification();
+//				// T.showShort(mContext, R.string.down_success);
+//				Intent intent = new Intent(Intent.ACTION_VIEW);
+//				File file = new File(Environment.getExternalStorageDirectory()
+//						+ "/" + Constants.Update.SAVE_PATH + "/"
+//						+ Constants.Update.FILE_NAME);
+//				if (!file.exists()) {
+//					return;
+//				}
+//				intent.setDataAndType(Uri.fromFile(file),
+//						Constants.Update.INSTALL_APK);
+//				mContext.startActivity(intent);
+//				break;
+//			case UpdateManager.HANDLE_MSG_DOWN_FAULT:
+//
+//				MyApp.app.showDownNotification(
+//						UpdateManager.HANDLE_MSG_DOWN_FAULT, value);
+//				T.showShort(mContext, R.string.down_fault);
+//				break;
+//			}
 		}
 	};
 
@@ -337,6 +337,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 						new Account());
 				NpcCommon.mThreeNum = "";
 				Intent i = new Intent(MyApp.MAIN_SERVICE_START);
+				i.setPackage(mContext.getPackageName());
 				stopService(i);
 				dialog=new NormalDialog(mContext);
 				dialog.showLoadingDialog2();
@@ -348,8 +349,10 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 				AccountPersist.getInstance().setActiveAccount(mContext,
 						new Account());
 				Intent i = new Intent(MyApp.MAIN_SERVICE_START);
+				i.setPackage(mContext.getPackageName());
 				stopService(i);
 				Intent login = new Intent(mContext, LoginActivity.class);
+				login.setPackage(mContext.getPackageName());
 				startActivity(login);
 				finish();
 			} else if (intent.getAction().equals(Constants.Action.ACTION_EXIT)) {
@@ -479,6 +482,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
 	private void connect() {
 		Intent service = new Intent(MyApp.MAIN_SERVICE_START);
+		service.setPackage(getPackageName());
 		startService(service);
 		if (AppConfig.DeBug.isWrightAllLog) {
 			Intent log = new Intent(MyApp.LOGCAT);
