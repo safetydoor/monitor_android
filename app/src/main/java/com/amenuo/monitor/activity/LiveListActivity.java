@@ -1,19 +1,16 @@
 package com.amenuo.monitor.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.amenuo.monitor.R;
 import com.amenuo.monitor.adapter.LiveAdapter;
 import com.amenuo.monitor.manager.LiveManager;
-import com.amenuo.monitor.manager.LumpCategoryManager;
-import com.amenuo.monitor.manager.LumpManager;
 import com.amenuo.monitor.model.LiveModel;
 import com.amenuo.monitor.utils.Constants;
 import com.amenuo.monitor.utils.HttpRequest;

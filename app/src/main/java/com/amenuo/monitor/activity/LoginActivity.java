@@ -116,6 +116,7 @@ public class LoginActivity extends Activity implements OnClickListener, LoginTas
             // perform the user login attempt.
             showProgress(true);
             if (NetUtils.isAvailable(this)){
+//                onLoginResult(true);
                 mAuthTask = new LoginTask(this);
                 mAuthTask.execute(phoneNumber, password);
             }else {

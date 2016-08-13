@@ -1,14 +1,12 @@
 package com.amenuo.monitor.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.widget.ImageView;
 
 import com.amenuo.monitor.R;
 import com.amenuo.monitor.action.LoginStateAction;
-import com.squareup.picasso.Picasso;
 
 public class LaunchActivity extends ActionBarActivity {
 

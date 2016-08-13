@@ -1,205 +1,205 @@
 # view res/layout/activity_about.xml #generated:36
 -keep class android.support.v4.view.ViewPager { <init>(...); }
 
-# view AndroidManifest.xml #generated:569
+# view AndroidManifest.xml #generated:567
 -keep class com.jwkj.APdeviceMonitorActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:47
+# view AndroidManifest.xml #generated:45
 -keep class com.jwkj.CallActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:97
+# view AndroidManifest.xml #generated:95
 -keep class com.jwkj.MonitorActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:252
+# view AndroidManifest.xml #generated:250
 -keep class com.jwkj.PlayBackActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:243
+# view AndroidManifest.xml #generated:241
 -keep class com.jwkj.PlayBackListActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:106
+# view AndroidManifest.xml #generated:104
 -keep class com.jwkj.VideoActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:577
+# view AndroidManifest.xml #generated:575
 -keep class com.jwkj.WaittingActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:89
+# view AndroidManifest.xml #generated:87
 -keep class com.jwkj.activity.AboutActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:130
+# view AndroidManifest.xml #generated:128
 -keep class com.jwkj.activity.AccountInfoActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:310
+# view AndroidManifest.xml #generated:308
 -keep class com.jwkj.activity.AddAlarmMaskIdActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:560
+# view AndroidManifest.xml #generated:558
 -keep class com.jwkj.activity.AddApDeviceActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:332
+# view AndroidManifest.xml #generated:330
 -keep class com.jwkj.activity.AddContactActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:343
+# view AndroidManifest.xml #generated:341
 -keep class com.jwkj.activity.AddContactNextActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:523
+# view AndroidManifest.xml #generated:521
 -keep class com.jwkj.activity.AddWaitActicity { <init>(...); }
 
-# view AndroidManifest.xml #generated:173
+# view AndroidManifest.xml #generated:171
 -keep class com.jwkj.activity.AlarmActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:611
+# view AndroidManifest.xml #generated:609
 -keep class com.jwkj.activity.AlarmPictrueActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:487
+# view AndroidManifest.xml #generated:485
 -keep class com.jwkj.activity.AlarmPushAccountActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:205
+# view AndroidManifest.xml #generated:203
 -keep class com.jwkj.activity.AlarmRecordActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:234
+# view AndroidManifest.xml #generated:232
 -keep class com.jwkj.activity.AlarmSetActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:593
+# view AndroidManifest.xml #generated:591
 -keep class com.jwkj.activity.AlarmWithPictrueActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:432
+# view AndroidManifest.xml #generated:430
 -keep class com.jwkj.activity.AltogetherRegisterActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:602
+# view AndroidManifest.xml #generated:600
 -keep class com.jwkj.activity.ApMonitorActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:477
+# view AndroidManifest.xml #generated:475
 -keep class com.jwkj.activity.CreateQRcodeActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:122
+# view AndroidManifest.xml #generated:120
 -keep class com.jwkj.activity.CutImageActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:184
+# view AndroidManifest.xml #generated:182
 -keep class com.jwkj.activity.DeviceUpdateActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:541
+# view AndroidManifest.xml #generated:539
 -keep class com.jwkj.activity.DoorBellActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:550
+# view AndroidManifest.xml #generated:548
 -keep class com.jwkj.activity.DoorBellNewActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:423
+# view AndroidManifest.xml #generated:421
 -keep class com.jwkj.activity.ForgetPassword { <init>(...); }
 
-# view AndroidManifest.xml #generated:215
+# view AndroidManifest.xml #generated:213
 -keep class com.jwkj.activity.ForwardActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:225
+# view AndroidManifest.xml #generated:223
 -keep class com.jwkj.activity.ForwardDownActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:269
+# view AndroidManifest.xml #generated:267
 -keep class com.jwkj.activity.ImageBrowser { <init>(...); }
 
-# view AndroidManifest.xml #generated:496
+# view AndroidManifest.xml #generated:494
 -keep class com.jwkj.activity.ImageSeeActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:138
+# view AndroidManifest.xml #generated:136
 -keep class com.jwkj.activity.LocalDeviceListActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:37
+# view AndroidManifest.xml #generated:35
 -keep class com.jwkj.activity.LoginActivity { <init>(...); }
 
 # view AndroidManifest.xml #generated:15
 -keep class com.jwkj.activity.LogoActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:25
+# view AndroidManifest.xml #generated:23
 -keep class com.jwkj.activity.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:163
+# view AndroidManifest.xml #generated:161
 -keep class com.jwkj.activity.MainControlActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:394
+# view AndroidManifest.xml #generated:392
 -keep class com.jwkj.activity.ModifyAccountEmailActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:405
+# view AndroidManifest.xml #generated:403
 -keep class com.jwkj.activity.ModifyAccountPhoneActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:414
+# view AndroidManifest.xml #generated:412
 -keep class com.jwkj.activity.ModifyAccountPhoneActivity2 { <init>(...); }
 
-# view AndroidManifest.xml #generated:299
+# view AndroidManifest.xml #generated:297
 -keep class com.jwkj.activity.ModifyAlarmIdActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:585
+# view AndroidManifest.xml #generated:583
 -keep class com.jwkj.activity.ModifyApWifiPwd { <init>(...); }
 
-# view AndroidManifest.xml #generated:287
+# view AndroidManifest.xml #generated:285
 -keep class com.jwkj.activity.ModifyBoundEmailActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:354
+# view AndroidManifest.xml #generated:352
 -keep class com.jwkj.activity.ModifyContactActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:365
+# view AndroidManifest.xml #generated:363
 -keep class com.jwkj.activity.ModifyLoginPasswordActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:321
+# view AndroidManifest.xml #generated:319
 -keep class com.jwkj.activity.ModifyNpcPasswordActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:441
+# view AndroidManifest.xml #generated:439
 -keep class com.jwkj.activity.ModifyNpcVisitorPasswordActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:194
+# view AndroidManifest.xml #generated:192
 -keep class com.jwkj.activity.QRCodeActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:468
+# view AndroidManifest.xml #generated:466
 -keep class com.jwkj.activity.QRcodeActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:505
+# view AndroidManifest.xml #generated:503
 -keep class com.jwkj.activity.RadarAddActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:532
+# view AndroidManifest.xml #generated:530
 -keep class com.jwkj.activity.RadarAddFirstActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:60
+# view AndroidManifest.xml #generated:58
 -keep class com.jwkj.activity.RegisterActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:71
+# view AndroidManifest.xml #generated:69
 -keep class com.jwkj.activity.RegisterActivity2 { <init>(...); }
 
-# view AndroidManifest.xml #generated:278
+# view AndroidManifest.xml #generated:276
 -keep class com.jwkj.activity.SearchListActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:147
+# view AndroidManifest.xml #generated:145
 -keep class com.jwkj.activity.SettingBellRingActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:155
+# view AndroidManifest.xml #generated:153
 -keep class com.jwkj.activity.SettingSdBellActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:114
+# view AndroidManifest.xml #generated:112
 -keep class com.jwkj.activity.SettingSystemActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:260
+# view AndroidManifest.xml #generated:258
 -keep class com.jwkj.activity.SysMsgActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:376
+# view AndroidManifest.xml #generated:374
 -keep class com.jwkj.activity.SysNotifyActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:450
+# view AndroidManifest.xml #generated:448
 -keep class com.jwkj.activity.ThreeAddContactActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:385
+# view AndroidManifest.xml #generated:383
 -keep class com.jwkj.activity.UnbindPhoneActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:80
+# view AndroidManifest.xml #generated:78
 -keep class com.jwkj.activity.VerifyPhoneActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:514
+# view AndroidManifest.xml #generated:512
 -keep class com.jwkj.activity.WaitDeviceNetworkActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:459
+# view AndroidManifest.xml #generated:457
 -keep class com.jwkj.activity.WifiListActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:630
+# view AndroidManifest.xml #generated:628
 -keep class com.jwkj.global.AutoStartReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:625
+# view AndroidManifest.xml #generated:623
 -keep class com.jwkj.global.LogService { <init>(...); }
 
-# view AndroidManifest.xml #generated:620
+# view AndroidManifest.xml #generated:618
 -keep class com.jwkj.global.MainService { <init>(...); }
 
 # view AndroidManifest.xml #generated:10

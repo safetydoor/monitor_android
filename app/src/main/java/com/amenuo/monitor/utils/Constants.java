@@ -9,5 +9,6 @@ public class Constants {
 
     public static final String KEY_SP_LUMP_LAST_REQUEST_TIME = "KEY_SP_LUMP_LAST_REQUEST_TIME";
     public static final String KEY_SP_LIVE_LAST_REQUEST_TIME = "KEY_SP_LIVE_LAST_REQUEST_TIME";
+    public static final String WECHAT_APP_ID = "wxd930ea5d5a258f4f";
 
 }

@@ -19,12 +19,13 @@ import com.squareup.picasso.Transformation;
 /**
  * Created by laps on 7/5/16.
  */
-public class MainLumpView extends FrameLayout {
+public class MainLumpView extends FrameLayout implements View.OnClickListener {
 
     private MainLumpImageView mLumpBgView;
     private ImageView mLumpIconView;
     private TextView mTextView;
     private ImageView mDeleteImageView;
+    private OnDeleteListener mDeleteListener;
 
     public MainLumpView(Context context) {
         this(context, null);
@@ -38,6 +39,7 @@ public class MainLumpView extends FrameLayout {
         mTextView = (TextView) root.findViewById(R.id.main_lump_text);
         mTextView.setVisibility(View.GONE);
         mDeleteImageView = (ImageView) root.findViewById(R.id.main_lump_delete);
+        mDeleteImageView.setOnClickListener(this);
     }
 
     public void setBgImageResource(int resId) {
@@ -54,28 +56,16 @@ public class MainLumpView extends FrameLayout {
     }
 
     public void setIconImageUrl(String url){
-        Transformation transformation = new RoundedTransformationBuilder()
-                .cornerRadiusDp(4)
-                .borderWidthDp(0)
-                .oval(false)
-                .build();
         Picasso.with(this.getContext())
                 .load(url)
                 .fit()
-                .transform(transformation)
                 .into(this.mLumpIconView);
     }
 
     public void setIconImageResource(int resId){
-        Transformation transformation = new RoundedTransformationBuilder()
-                .cornerRadiusDp(4)
-                .borderWidthDp(0)
-                .oval(false)
-                .build();
         Picasso.with(this.getContext())
                 .load(resId)
                 .fit()
-                .transform(transformation)
                 .into(this.mLumpIconView);
     }
 
@@ -96,8 +86,18 @@ public class MainLumpView extends FrameLayout {
         }
     }
 
-    public void setOnDeleteListener(OnClickListener listener){
-        mDeleteImageView.setOnClickListener(listener);
+    public void setOnDeleteListener(OnDeleteListener listener){
+        this.mDeleteListener = listener;
     }
 
+    @Override
+    public void onClick(View view) {
+        if (this.mDeleteListener != null){
+            this.mDeleteListener.onDelete(this);
+        }
+    }
+
+    public interface OnDeleteListener{
+        public void onDelete(View v);
+    }
 }

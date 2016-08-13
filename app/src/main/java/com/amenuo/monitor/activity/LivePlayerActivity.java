@@ -2,17 +2,14 @@ package com.amenuo.monitor.activity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.amenuo.monitor.R;
-import com.amenuo.monitor.utils.PLog;
 import com.amenuo.monitor.view.TitleBar;
 
 import io.vov.vitamio.LibsChecker;
