@@ -31,5 +31,6 @@
     <string name="text_about">关于</string>
     <string name="text_exit">退出</string>
     <string name="text_follow">关注</string>
-
+    <string name="text_loadmore">点击加载更多</string>
+    <string name="text_loading">正在加载中...</string>
 </resources>

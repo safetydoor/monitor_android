@@ -11,11 +11,12 @@ import okhttp3.RequestBody;
  */
 public class HttpRequest {
 
+    public static final int LIVE_REQUEST_SIZE = 20;
     public static final String BAIDU_API_KEY = "ade93ea486e5d4ced4bc8552978d17e6";
-    private static final String DOMAIN = "http://www.tcyxk.com";
+    private static final String DOMAIN = "http://115.28.213.201:8088";
     private static final String LUMP_CATEGORY_LIST_PATH = "/category/list";
     private static final String AD_LIST_PATH = "/ad/list";
-    private static final String LIVE_LIST_PATH = "/live/list";
+    private static final String LIVE_LIST_PATH = "/live/list?page=%d&size=%d";
     private static final String REGISTER_PATH = "/user/add";
     private static final OkHttpClient mOkHttpClient = new OkHttpClient();
     public static final MediaType JSON
@@ -26,8 +27,8 @@ public class HttpRequest {
         enqueue(url, responseCallback);
     }
 
-    public static void requestLives(Callback responseCallback) {
-        String url = DOMAIN + LIVE_LIST_PATH;
+    public static void requestLives(int page, Callback responseCallback) {
+        String url = DOMAIN + String.format(LIVE_LIST_PATH, page, LIVE_REQUEST_SIZE);
         enqueue(url, responseCallback);
     }
 

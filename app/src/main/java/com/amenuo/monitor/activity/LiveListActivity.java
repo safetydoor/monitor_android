@@ -27,12 +27,13 @@ import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
 
-public class LiveListActivity extends AppCompatActivity {
+public class LiveListActivity extends AppCompatActivity implements LiveAdapter.LiveAdapterListener {
 
     private ListView mListView;
     private LiveAdapter mLiveAdapter;
     private TitleBar mTitleBar;
     private ProgressBar mProgressBar;
+    private int page = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,11 +56,13 @@ public class LiveListActivity extends AppCompatActivity {
             }
         });
         mLiveAdapter = new LiveAdapter(this);
+        mLiveAdapter.setmLiveAdapterListener(this);
         mListView.setAdapter(mLiveAdapter);
 
-        if (canRequest()){
+//        if (canRequest()){
+            loading(true);
             requestData();
-        }
+//        }
     }
 
     private Boolean canRequest(){
@@ -73,9 +76,8 @@ public class LiveListActivity extends AppCompatActivity {
     }
 
     private void requestData(){
-        loading(true);
 
-        HttpRequest.requestLives(new Callback() {
+        HttpRequest.requestLives(page, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 runOnUiThread(new Runnable() {
@@ -103,8 +105,18 @@ public class LiveListActivity extends AppCompatActivity {
                         });
                     } else {
                         String result = object.getString("result");
-                        LiveManager.getInstance().saveJson(result);
-                        SPHelper.getInstance().setLong(Constants.KEY_SP_LIVE_LAST_REQUEST_TIME , System.currentTimeMillis());
+                        if (result.equals("[]")){
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    PToast.show("没有了");
+                                }
+                            });
+                        }else{
+                            LiveManager.getInstance().addLiveListByJson(result);
+                            page++;
+//                            SPHelper.getInstance().setLong(Constants.KEY_SP_LIVE_LAST_REQUEST_TIME , System.currentTimeMillis());
+                        }
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -141,5 +153,10 @@ public class LiveListActivity extends AppCompatActivity {
         intent.putExtra("name", liveModel.getName());
         intent.putExtra("address", liveModel.getAddress());
         startActivity(intent);
+    }
+
+    @Override
+    public void onLoadmore() {
+        requestData();
     }
 }

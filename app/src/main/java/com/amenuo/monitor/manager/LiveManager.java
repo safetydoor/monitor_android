@@ -30,19 +30,24 @@ public class LiveManager {
 
     public List<LiveModel> getLiveList() {
         if (liveList == null) {
-            liveList = readLiveList();
+            liveList = new ArrayList<LiveModel>(); //readLiveList();
         }
         return liveList;
-    }
-
-    public void setLiveList(List<LiveModel> liveList) {
-        this.liveList = liveList;
     }
 
     public void saveJson(String json) {
         try {
             liveList = jsonToList(json);
             FileHelper.writeFile(fileName, json);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addLiveListByJson(String json) {
+        try {
+            List<LiveModel> liveList = jsonToList(json);
+            this.liveList.addAll(liveList);
         } catch (Exception e) {
             e.printStackTrace();
         }
