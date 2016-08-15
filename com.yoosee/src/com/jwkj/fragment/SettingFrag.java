@@ -119,6 +119,9 @@ public class SettingFrag extends BaseFragment implements OnClickListener {
 			account_set.setVisibility(RelativeLayout.GONE);
 			sys_set.setBackgroundResource(R.drawable.tiao_bg_up);
 		}
+
+		mCheckUpdateTextView.setVisibility(View.GONE);
+		center_about.setVisibility(View.GONE);
 	}
 
 	public void regFilter() {

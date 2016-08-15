@@ -215,36 +215,36 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 		public void handleMessage(Message msg) {
 			// TODO Auto-generated method stub
 			int value = msg.arg1;
-//			switch (msg.what) {
-//			case UpdateManager.HANDLE_MSG_DOWNING:
-//				if ((System.currentTimeMillis() - last_time) > 1000) {
-//					MyApp.app.showDownNotification(
-//							UpdateManager.HANDLE_MSG_DOWNING, value);
-//					last_time = System.currentTimeMillis();
-//				}
-//				break;
-//			case UpdateManager.HANDLE_MSG_DOWN_SUCCESS:
-//				// MyApp.app.showDownNotification(UpdateManager.HANDLE_MSG_DOWN_SUCCESS,0);
-//				MyApp.app.hideDownNotification();
-//				// T.showShort(mContext, R.string.down_success);
-//				Intent intent = new Intent(Intent.ACTION_VIEW);
-//				File file = new File(Environment.getExternalStorageDirectory()
-//						+ "/" + Constants.Update.SAVE_PATH + "/"
-//						+ Constants.Update.FILE_NAME);
-//				if (!file.exists()) {
-//					return;
-//				}
-//				intent.setDataAndType(Uri.fromFile(file),
-//						Constants.Update.INSTALL_APK);
-//				mContext.startActivity(intent);
-//				break;
-//			case UpdateManager.HANDLE_MSG_DOWN_FAULT:
-//
-//				MyApp.app.showDownNotification(
-//						UpdateManager.HANDLE_MSG_DOWN_FAULT, value);
-//				T.showShort(mContext, R.string.down_fault);
-//				break;
-//			}
+			switch (msg.what) {
+			case UpdateManager.HANDLE_MSG_DOWNING:
+				if ((System.currentTimeMillis() - last_time) > 1000) {
+					MyApp.app.showDownNotification(
+							UpdateManager.HANDLE_MSG_DOWNING, value);
+					last_time = System.currentTimeMillis();
+				}
+				break;
+			case UpdateManager.HANDLE_MSG_DOWN_SUCCESS:
+				// MyApp.app.showDownNotification(UpdateManager.HANDLE_MSG_DOWN_SUCCESS,0);
+				MyApp.app.hideDownNotification();
+				// T.showShort(mContext, R.string.down_success);
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				File file = new File(Environment.getExternalStorageDirectory()
+						+ "/" + Constants.Update.SAVE_PATH + "/"
+						+ Constants.Update.FILE_NAME);
+				if (!file.exists()) {
+					return;
+				}
+				intent.setDataAndType(Uri.fromFile(file),
+						Constants.Update.INSTALL_APK);
+				mContext.startActivity(intent);
+				break;
+			case UpdateManager.HANDLE_MSG_DOWN_FAULT:
+
+				MyApp.app.showDownNotification(
+						UpdateManager.HANDLE_MSG_DOWN_FAULT, value);
+				T.showShort(mContext, R.string.down_fault);
+				break;
+			}
 		}
 	};
 
@@ -393,6 +393,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 					.equals(Constants.Action.ACTION_UPDATE)) {
 				if (null != dialog_update && dialog_update.isShowing()) {
 					Log.e("my", "isShowing");
+					return;
+				}
+
+				// 不做更新操作
+				Boolean canUpdate = false;
+				if (!canUpdate){
 					return;
 				}
 
