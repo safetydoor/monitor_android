@@ -130,10 +130,10 @@ public class MediaController extends FrameLayout {
       Activity activity = (Activity) mContext;
       if (activity != null){
         if (activity.getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT){
-          Log.e("lpp","SCREEN_ORIENTATION_LANDSCAPE");
+          Log.e("lpp:%s","SCREEN_ORIENTATION_LANDSCAPE");
           activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }else{
-          Log.e("lpp","SCREEN_ORIENTATION_PORTRAIT");
+          Log.e("lpp:%s","SCREEN_ORIENTATION_PORTRAIT");
           activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
       }

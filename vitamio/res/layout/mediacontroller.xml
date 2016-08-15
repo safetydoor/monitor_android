@@ -30,7 +30,7 @@
             android:layout_marginRight="5dp"
             android:background="@drawable/mediacontroller_button"
             android:contentDescription="@string/mediacontroller_play_pause"
-            android:src="@drawable/mediacontroller_pause" />
+            android:src="@drawable/mediacontroller_fullscreen" />
 
         <TextView
             android:id="@+id/mediacontroller_time_current"

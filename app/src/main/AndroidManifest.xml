@@ -49,6 +49,7 @@
             android:label="@string/title_activity_live_list"></activity>
         <activity
             android:name=".activity.LivePlayerActivity"
+            android:screenOrientation="landscape"
             android:label="@string/title_activity_live_player" />
         <activity
             android:name=".activity.RegisterActivity"

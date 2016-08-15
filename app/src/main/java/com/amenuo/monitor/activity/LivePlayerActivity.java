@@ -2,14 +2,20 @@ package com.amenuo.monitor.activity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
+import android.graphics.Point;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.amenuo.monitor.R;
+import com.amenuo.monitor.action.FullScreenAction;
 import com.amenuo.monitor.view.TitleBar;
 
 import io.vov.vitamio.LibsChecker;
@@ -24,11 +30,14 @@ public class LivePlayerActivity extends AppCompatActivity implements MediaPlayer
     private ProgressBar pb;
     private TextView downloadRateView, loadRateView;
     private TitleBar mTitleBar;
+    private int screenWidth = 0;
+    private int screenHeight = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_player);
+        FullScreenAction.setToFullScreen(this);
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String address = intent.getStringExtra("address");
@@ -48,6 +57,15 @@ public class LivePlayerActivity extends AppCompatActivity implements MediaPlayer
         loadRateView = (TextView) findViewById(R.id.load_rate);
 
         readyForPlay(address);
+
+        WindowManager windowManager = getWindowManager();
+        Display display = windowManager.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        screenWidth = Math.min(size.x, size.y);
+        screenHeight = Math.max(size.x, size.y);
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(screenHeight, screenWidth);
+//        mVideoView.setLayoutParams(params);
     }
 
 
@@ -111,16 +129,18 @@ public class LivePlayerActivity extends AppCompatActivity implements MediaPlayer
     @Override
     protected void onStop() {
         super.onStop();
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+//        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
-//    @Override
-//    public void onConfigurationChanged(Configuration newConfig) {
-//        super.onConfigurationChanged(newConfig);
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
 //        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
-//            mTitleBar.setVisibility(View.GONE);
-//        }else{
-//            mTitleBar.setVisibility(View.VISIBLE);
+//            ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(screenHeight, screenWidth);
+//            mVideoView.setLayoutParams(params);
+//        }else {
+//            ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(screenWidth, screenHeight);
+//            mVideoView.setLayoutParams(params);
 //        }
-//    }
+    }
 }
